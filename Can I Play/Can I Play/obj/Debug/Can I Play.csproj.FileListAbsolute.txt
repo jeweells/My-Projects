@@ -1,0 +1,10 @@
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\bin\Debug\Can I Play.exe.config
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\bin\Debug\Can I Play.exe
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\bin\Debug\Can I Play.pdb
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can_I_Play.Form1.resources
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can_I_Play.Properties.Resources.resources
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can I Play.csproj.GenerateResource.Cache
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can I Play.exe
+c:\users\jeweells\documents\visual studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can I Play.pdb
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can_I_Play.ShowHistoryForm.resources
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\Can I Play\Can I Play\obj\Debug\Can I Play.csprojResolveAssemblyReference.cache

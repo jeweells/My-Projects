@@ -1,0 +1,7 @@
+V0.0:
+(fixed)-Titulo no muestra el numero de intentos
+-No hay forma de saber el resultado de cada intento
+-No se guarda la configuracion anterior
+(fixed)-El promedio no realiza los calculos correctamente
+(fixed(creo))-La fuente no se muestra en computadoras que no incluyan la fuente
+-Si se cierra mientras se solicita el ping ocurre error
