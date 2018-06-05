@@ -1,0 +1,15 @@
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\bin\Debug\TryUntilGet.exe.config
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\bin\Debug\TryUntilGet.exe
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\bin\Debug\TryUntilGet.pdb
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.MainForm.resources
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.Properties.Resources.resources
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.csproj.GenerateResource.Cache
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.exe
+c:\users\jeweells\documents\visual studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.pdb
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.MessageBox.resources
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.csprojResolveAssemblyReference.cache
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\bin\Debug\TryUntilGet.exe.manifest
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\bin\Debug\TryUntilGet.application
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.TrustInfo.xml
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.exe.manifest
+C:\Users\Jeweells\Documents\Visual Studio 2017\Projects\TryUntilGet\TryUntilGet\obj\Debug\TryUntilGet.application
