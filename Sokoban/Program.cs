@@ -1,10 +1,232 @@
-﻿#undef SHOWDEQUEUEDSTATE
+﻿// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: Homework 6
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: Date: June 08, 2018
+// :: Author: Abraham José Pacheco Becerra
+// :: E-Mail: abraham.pacheco6319@gmail.com
+// :: Description: Solves the sokoban game for minimal pushes using A* algorithm
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: Compilation
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: It has been successfully proved in Visual Studio Community 2017 15.2
+// :: Also https://repl.it/@jeweells/Sokoban
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: Input
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: A line containing the map of the sokoban level, this level must be square, this means, the level has
+// :: the same amount of columns and rows.
+// :: How to define which elements are in the level?
+// :: J player
+// :: C box
+// :: . empty square
+// :: * wall
+// :: F final for a box
+// :: Example: ...................*.C.....*......CJ*.....F*.F..................
+// :: That line has 64 characters, hence, sqrt(64) = 8 columns and rows
+// :: Which represents the following map
+// :: ........
+// :: ........
+// :: ...*.C..
+// :: ...*....
+// :: ..CJ*...
+// :: ..F*.F..
+// :: ........
+// :: ........
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: Output
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: This will return the directions the player must move in the first line and the number of pushes
+// :: (minimal pushes) realized in the second line.
+// :: Taking into account to read this ouput:
+// :: n player moves up
+// :: s player moves down
+// :: e player moves right
+// :: o player moves left
+// :: Example:
+// :: For the following input: FF*...FFC.C...*C*...CJ..............
+// :: That line has 36 characters, hence, sqrt(36) = 6 columns and rows
+// :: This represents the following map
+// :: FF*...
+// :: FFC.C.
+// :: ..*C*.
+// :: ..CJ..
+// :: ......
+// :: ......
+// :: And the output will be:
+// :: eennnoosoosoneeeneesoooossseenoenseennoooessosoonnensossenn
+// :: 14
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: Explanation
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :: In order to find the best amount of pushes A* algorithm is required.
+// :: A state is a 'photo' every time a move is made.
+// :: A* uses, for every state, a heuristic of reaching the final state + the cumulated cost of reaching this state
+// :: For the sokoban game, the cumulated cost is simple: if the player has been moved to the right 3 times,
+// :: the cumulated cost is 3
+// :: The heuristic used in this program is calculated as follows:
+// :: -Find the distances of every box to the closest goal and sum them all
+// ::
+// :: Either the heuristic and the cumulated cost are summed and this represents 'f' a number which will be used
+// :: to insert this state in a priority queue sorted by this f, where the minimal f will be dequeued first
+// :: A* needs a structure where to store visited states so that it's not needed to pass through the same state every
+// :: time a move is made.
+// ::
+// :: Two states are the same, for finding minimal pushes and some other cases, if the boxes are in the same position
+// :: and the player is in the same reachable area.
+// ::
+// :: The reachable area is the area the player can move freely. HOWEVER, in this program the reachable area of
+// :: the player will ONLY be the sides of boxes where the player can move to.
+// ::
+// :: This way a lot of memory and time is saved, since for every state this area needs to be calculated and stored
+// ::
+// :: The player will 'jump' to the side of a box (the cost of doing this is 0, since we are finding the least
+// :: amount of pushes).
+// ::
+// :: No need to worry about the player jumping, once the solution is found, it is possible to fill the states where
+// :: the player has jumped by moving the player normally from the state A to the state B (using another A*
+// :: algorithm where the heuristic is the only thing that changes, and it is the minimal distance without
+// :: taking into account the obstacles (Manhattan distance) from the player position to its 'goal').
+// ::
+// :: Zobrish hash, in order to store the visited states and be able to check quickly if the state X has been visited,
+// :: we need to use a hash set and the zobrish hash. To implement this we generate two grids the same size as the
+// :: sokoban grid and fill them with random numbers. One grid will indicate there's a free, wall, final or player
+// :: (it doesn't matter) position while the other grid will indicate there's a box.
+// ::
+// :: Calculating this hash code will be divided in two parts in order to save time:
+// :: Having a variable stores the hashcode starting in 0
+// :: 1)The initial state is created and we need to calculate the hashcode by checking EVERY position.
+// :: 	-If it's a wall, final, free or player position we take the number in this position from the first 'random' grid
+// :: 	and XOR it with the variable
+// :: 	-If it's a box we take the number in this position from the second 'random' grid and XOR it with the variable
+// :: 2)A box was moved and the hashcode needs to be updated
+// :: 	-Find the random number in the second grid where the box was before the move, we call this A
+// :: 	-Find the random number in the second grid where the box is, we call this B
+// :: 	-Find the random number in the first grid where the box was before the move, we call this C
+// :: 	-Find the random number in the first grid where the box is, we call this D
+// :: 	-Now what's left is XORing all that with the hashcode, so the result will be: hashcode = hashcode XOR A XOR B XOR C XOR D
+// :: 	What did we do? Applying the following concept:
+// :: 	-If hashcode = A XOR B
+// :: 	-And we do hashcode XOR B, we will get A, in other words... A XOR B XOR A = B
+// ::
+// :: Deadlocks, what are they?
+// ::
+// :: A deadlock occurs when no matter what the player does it is not possible to solve the game.
+// :: Hence, we can't let the player to waste time moving boxes when there's no a solution.
+// :: There are a lot of deadlocks but in this program only few were applied
+// ::
+// :: -Simple deadlock
+// :: This deadlock occurs when a box is pushed aside a wall and thanks to this it will no longer can be pushed
+// :: Calculating this deadlock is simple and fast using BFS, this is done once.
+// :: For each box, is moved taking into account that no matter the position this was moved to, there must be a free position
+// :: in the opposite position (e.g. if moved horizontally, there must have free positions either left and right of the box to
+// :: perform this move). Also, after pushing this box, we need to check this box is movable again, with this we can create the
+// :: successors. Every time we make a move, we store that position, when this has finished we will have a zone where the boxes
+// :: can move freely.
+// ::
+// :: -Diagonal deadlock
+// :: This deadlock occurs when a box is pushed and if we try to push this box or any box ubicated diagonally to this box
+// :: and we find that we'll no longer have the possibility of moving a box in this diagonall to a goal
+// :: Calculating this deadlock is a bit harder for the time this uses, every time a box is pushed we check it's diagonals
+// :: starting from the box position, if a free position isn't found in some of these two diagonals, then this turns out into a
+// :: diagonal deadlock. Once a free position is found, this diagonal can't be a diagonal deadlock.
+// :: We need to have into account that there can't be boxes in these diagonals, if we find a goal, it's taken as a free position.
+// :: if this has a box above it's taken as a wall
+// ::
+// :: -Deadlock between boxes
+// :: This deadlock occurs when pushing a box close to another box makes that all boxes can't be pushed to a goal anymore
+// :: Calculating this deadlock is simple, everytime a box is pushed, we check if the box can be moved horizontally or vertically
+// :: if this box can be moved because a box is there, we store this box and this box will act as a wall now and check if the box
+// :: that is blocking this box can be moved horizontally or vertically. If there's a box blocking the movement of this box,
+// :: we store this box and check if the other box can be moved and so on, until all a box can be moved (which means this is NOT
+// :: a deadlock between boxes) or no nearby boxes can be moved (which means this IS a deadlock between boxes).
+// :: If the box pushed is in a goal, this deadlock will no be computed
+// ::
+// :: Other characteristics
+// ::
+// :: -The grid is stored in a lineal array (it's faster to access a position and will use less memory when storing the positions)
+// ::
+// :: -Each state has a previous state so that the path can be formed once a solution is found
+// ::
+// :: -While finding the simple deadlocks it is possible to find which goals a box can reach. These are stored too.
+// ::
+// :: -The grid is padded by walls the whole surrounding
+// :: e.g:
+// :: for the following grid:
+// :: ...
+// :: JCF
+// :: ...
+// :: will be padded as:
+// :: *****
+// :: *...*
+// :: *JCF*
+// :: *...*
+// :: *****
+// :: Why? As we're using a lineal array to store the grid, moving left or right can be seen as jumping up or down to the next row:
+// :: ...                    ..J
+// :: JCF Moving it left ->  .CF
+// :: ...                    ...
+// :: Of course this can be calculated by bounds such as columns * (int)(position/columns) and columns * (int)(position/ columns + 1)
+// :: But this takes more time than only padding the grid
+// ::
+// :: -As in the game of Sudoku, headsets can be found while boxes can reach some goals, but if there's a hidden set, we can know that
+// :: it is imposible for a box to reach X goal because that will be occupied by another box.
+// :: e.g: B1{1,2,3,4} B2{1,2} B3{1,2} B4{1,3,4}
+// :: Here we see the box B1 can reach the goals 1,2,3,4 the box B2 can reach the goals 1,2 and so on
+// :: but here there's a hidden set, since B2 and B3 can reach the goals 1,2. It only has these posibilities:
+// :: B2 in 1
+// :: B3 in 2
+// :: or
+// :: B2 in 2
+// :: B3 in 1
+// :: No more than that can happen, so, goals 1, 2 are occupied by B2 and B3 so in B1 the reachable goals will be {3,4} and not
+// :: {1,2,3,4}, so will that in B4 as {3,4}
+// :: Passing from B1{1,2,3,4} B2{1,2} B3{1,2} B4{1,3,4}
+// :: 		  to B1{3,4} B2{1,2} B3{1,2} B4{3,4}
+// :: Of course this is one of the simplest cases. This can be extended for more goals in every box and combinations such as (1,2)-(2,3)-(1,3)
+// :: or (1,2,3,4)-(1,2,3,5)-(1,2,4,5)-(1,3,4,5)-(2,3,4,5)
+// ::
+// :: How to find these hidden sets?
+// ::
+// :: First we need to build a graph, identifying which node is a goal and which is not.
+// :: The edge will go from a box to its reachable goal and vice-versa (bidirectional)
+// :: We need a set of boxes selected.
+// :: (1)
+// :: Create a queue of boxes selected that are not in the set of boxes selected
+// :: Now we need to walk throughout the graph, starting from one box (this will be done for each box)
+// :: We use states where will be stored
+// :: 	-A set of goals visited
+// :: 	-A set of boxes visited (this will have the selected box to start with)
+// :: 	-A set of current targets (starting from the goals the box selected can reach)
+// :: 	-And of course the current box or goal
+// :: The way we walk throughout the graph will be as follows:
+// :: 	-Starting from the box we go to all reachable goals that are not in the set of goals visited, pushing each state onto a stack,
+// :: 	for each state a goal will be stored in goals visited
+// :: 	-Now we go to all boxes that are not in the boxes visited, pushing each state onto a stack, for each state a box will be stored in boxes visited
+// :: 	-Before pushing a box, the state will be a goal and we check all the targets that box can reach, if there's one that is not in the list of targets
+// :: 	we add it on current targets of that state
+// :: 	-After popping a goal, we see if this goal was visited, if not we see if its goals visited are the same than its current targets
+// :: 	if they are the same we need to see if this goal is part of the targets of the FIRST state, if this happens then we have a match
+// :: 	-A match contains current targets and boxes visted. This means that all boxes that are not in boxes visited will no longer point
+// :: 	to the goals that are in current targets, and the boxes visited will only point to the current targets
+// :: 	-If a match never occurs then we start with another box in the queue of boxes selected
+// :: This boxes visited are added into the set of boxes selected and we go to (1)
+// :: If the queue is empty then we have no more hidden sets.
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#define HOMEWORK6
+
+#if !HOMEWORK6
+#define DEBUG
+#undef SHOWDEQUEUEDSTATE
 #undef SHOWREMOVEGOALSRESULT
 #undef DISPLAYDIAGONALDEADLOCKS
-#undef USEONECORE // IF THIS IS UNDEFINED, DEBUG MAP PREVIEWS WON'T APPEAR
-#define DISPLAYCORRALDEADLOCK
-#undef FOCUSONEBOXTOGOAL
-
+#undef DISPLAYPLAYERREACHABLEAREA
+#undef DISPLAYSMARTPLAYERREACHABLEAREA
+#define USEONECORE
+#else
+#undef DEBUG
+#define USEONECORE
+#endif
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -200,14 +422,300 @@ namespace Sokoban
 			}
 		}
 	}
-	
+
+	class GraphForBoxGoals
+	{
+		public class Node
+		{
+			public bool isgoal;
+			public int value;
+			public List<Edge> edges = new List<Edge>();
+		}
+		public class Edge
+		{
+			public Node n;
+		}
+		int[][] boxtogoals;
+		int[] boxpositions;
+		public GraphForBoxGoals(int[] boxpositions, int[][] boxtogoals, HashSet<int> goals)
+		{
+			this.boxtogoals = boxtogoals;
+			this.boxpositions = boxpositions;
+			foreach (int k in goals) // Creating a node for each goal
+			{
+				Node t = new Node();
+				t.isgoal = true;
+				t.value = k;
+				this.goals.Add(t);
+			}
+			List<Node> boxes = new List<Node>(); // Saving boxes apart
+			for (int i = 0; i < boxpositions.Length; i++)
+			{
+				Node t = new Node(); // Create a node
+				t.value = boxpositions[i];
+				t.isgoal = false;
+				foreach (int g in boxtogoals[i]) // Create an edge for each goal it points
+				{
+					Edge e = new Edge();
+					Edge e2 = new Edge();
+					e2.n = t;
+					e.n = this.goals.Find(x => x.value == g); // To a goal
+					t.edges.Add(e); // Add the edge to the box
+					e.n.edges.Add(e2);// Add an edge to the goal
+				}
+				boxes.Add(t); // Save the box
+			}
+
+			this.boxes.AddRange(boxes); // Saves all boxes
+#if DEBUG && SHOWREMOVEGOALSRESULT && USEONECORE
+				foreach (Node n in this.boxes)
+				{
+					Console.Write(n.value + " -> ");
+					foreach (Edge e in n.edges)
+					{
+						if (e.n == n) Console.Write(e.n.value + ",");
+						else Console.Write(e.n.value + ",");
+					}
+					Console.Write("\n");
+				}
+#endif
+		}
+		public List<Node> boxes = new List<Node>();
+		public List<Node> goals = new List<Node>();
+		public int[][] RemoveUniques(out bool solvable)
+		{
+			solvable = false;
+			HashSet<Node> checkeds = new HashSet<Node>();
+			repeat:
+			PriorityQueue<Node> pq = new PriorityQueue<Node>();
+			foreach (Node n in boxes.Except(checkeds))
+			{
+				pq.Enqueue(n.edges.Count, n);
+			}
+			while (pq.Count != 0)
+			{
+				if (RemoveUniquesFrom(pq.Dequeue(), checkeds)) goto repeat;
+			}
+			int[][] boxtogoals2 = new int[boxtogoals.Length][];
+			List<int> boxp = boxpositions.ToList();
+			foreach (Node n in boxes)
+			{
+				List<int> hs = new List<int>();
+				foreach (Edge e in n.edges)
+				{
+					hs.Add(e.n.value);
+				}
+				boxtogoals2[boxp.IndexOf(n.value)] = hs.ToArray();
+				if (hs.Count == 0) return null;
+			}
+			solvable = true;
+			return boxtogoals2;
+		}
+		bool RemoveUniquesFrom(Node n, HashSet<Node> checkeds)
+		{
+			HashSet<Node> tobevisited = new HashSet<Node>();
+			foreach (Edge e in n.edges)
+			{
+				tobevisited.Add(e.n);
+			}
+			HashSet<Node> boxpairs = new HashSet<Node>(), goalpairs = new HashSet<Node>();
+			if (DeepVisitNoRepeat(n, boxpairs, goalpairs, goals.Count - 1))
+			{
+#if DEBUG && SHOWREMOVEGOALSRESULT && USEONECORE
+					Console.WriteLine("BoxPairs");
+					foreach (Node item in boxpairs)
+					{
+						Console.WriteLine(item.value);
+					}
+					Console.WriteLine("GoalPairs");
+					foreach (Node item in goalpairs)
+					{
+						Console.WriteLine(item.value);
+					}
+#endif
+				foreach (Node nod in boxes)
+				{
+					if (boxpairs.Contains(nod)) // Deletes what it's not in goalpairs
+					{
+						for (int i = 0; i < nod.edges.Count; i++)
+						{
+							if (!goalpairs.Contains(nod.edges[i].n))
+							{
+
+								nod.edges.RemoveAt(i);
+								i--;
+							}
+						}
+					}
+					else // Delets what it's in goalpairs
+					{
+						for (int i = 0; i < nod.edges.Count; i++)
+						{
+							if (goalpairs.Contains(nod.edges[i].n))
+							{
+								nod.edges.RemoveAt(i);
+								i--;
+							}
+						}
+					}
+				}
+				checkeds.UnionWith(boxpairs);
+				return true;
+			}
+			return false;
+		}
+		class State
+		{
+			public Node n;
+			public HashSet<Node> bvisited;
+			public HashSet<Node> rvisited;
+			public HashSet<Node> targets;
+			public State p;
+		}
+		// It is recommended to set hiddensetmaxLength less than N where N are the number of elements, otherwise this might get stuck or throw unexpected
+		// results
+		private bool DeepVisitNoRepeat(Node start, HashSet<Node> boxpairs, HashSet<Node> goalpairs, int hiddensetmaxlength)
+		{
+			if (start.edges.Count == 0) return false;
+			HashSet<Edge> visited = new HashSet<Edge>();
+			Stack<State> pending = new Stack<State>();
+			State s = new State() { n = start.edges[0].n, p = null };
+			s.targets = new HashSet<Node>();
+			for (int i = 0; i < start.edges.Count; i++)
+			{
+				s.targets.Add(start.edges[i].n);
+			}
+			s.rvisited = new HashSet<Node>();
+			s.bvisited = new HashSet<Node>() { start };
+			pending.Push(s);
+			int cases = 0;
+			object lockstack = new object();
+			ParallelOptions po = new ParallelOptions();
+			po.MaxDegreeOfParallelism =
+#if USEONECORE
+					1;
+#else
+					Environment.ProcessorCount;
+#endif
+			while (pending.Count != 0)
+			{
+				cases++;
+				State t = pending.Pop();
+				if (t.targets.Count >= hiddensetmaxlength) continue; // In case there are no hiddensets this is needed
+				if (t.n.isgoal) // If this is a goal
+				{
+					if (t.targets.Contains(t.n)) // if this is a goal we need to visit
+					{
+						t.rvisited = new HashSet<Node>(t.rvisited);
+						t.rvisited.Add(t.n); // Add it as visited
+					}
+					// If we have visited all the goals we needed to visit and this goal is one of the ones we need to visit (this is needed so that
+					// this can finish in goal that the starting box can reach)
+					if (t.targets.All(a => t.rvisited.Contains(a)) && s.targets.Contains(t.n))
+					{
+#if DEBUG && USEONECORE
+							Console.Write("t=" + t.n.value + " -> ");
+							foreach (Edge item in t.n.edges)
+							{
+								Console.Write(item.n.value + ", ");
+							}
+							Console.Write(" | Visited: ");
+							foreach (Node item in t.rvisited)
+							{
+								Console.Write(item.value + ", ");
+							}
+							Console.Write(" | Targets: ");
+							foreach (Node item in t.targets)
+							{
+								Console.Write(item.value + ", ");
+							}
+							Console.Write("\n");
+							Console.WriteLine("Cases: " + cases);
+#endif
+						goalpairs.UnionWith(t.targets); // Add the targets that were needed to visit
+						boxpairs.UnionWith(t.bvisited); // Add the boxes visited throughout the path
+						return true;
+					}
+
+				}
+				Parallel.ForEach(t.n.edges, po, (e) => // For each adyacent node
+				{
+					if (!e.n.isgoal) // e.n is a box and t.n is a goal
+					{
+						if (t.bvisited.Contains(e.n)) return; // if such box was visited... continue
+						State s1 = new State() // The box wasn't visited so we add it
+						{ // Copying references to save memory, only will copy if it's necessary
+							n = e.n,
+							p = t,
+							rvisited = t.rvisited,
+							targets = t.targets,
+							bvisited = t.bvisited
+						};
+						bool copy = true;
+						foreach (Edge e1 in e.n.edges) // Adds new targets if the box this goal aims points to a goal that is not in targets
+						{
+							if (!t.targets.Contains(e1.n)) // The goal is not in targets
+							{
+								if (copy) // A copy is needed
+								{
+									s1.targets = new HashSet<Node>(t.targets);
+									copy = false;
+								}
+								s1.targets.Add(e1.n); // Adds the goal to the targets
+							}
+						};
+						lock (lockstack)
+						{
+							pending.Push(s1); // Push the box to be checked
+						}
+					}
+					else // e.n is a goal and t.n is a box
+					{
+						if (t.rvisited.Contains(e.n)) return; // if this box has visited such goal... continue
+						else if (!t.targets.Contains(e.n)) return; // if this box doesn't contain that goal in its targets.. continue
+						State s1 = new State() // The box is in targets and wasn't visited
+						{ // Copies references to save memory
+							n = e.n,
+							p = t,
+							rvisited = t.rvisited,
+							targets = t.targets
+						};
+						if (!t.bvisited.Contains(t.n)) // If this box wasn't visited
+						{
+							s1.bvisited = new HashSet<Node>(t.bvisited); // Copies the boxes visited
+							s1.bvisited.Add(t.n); // Adds this box as visited
+						}
+						else { s1.bvisited = t.bvisited; } // If this box was visited, only copies the reference
+						lock (lockstack)
+						{
+							pending.Push(s1); // Pushes the goal
+						}
+					}
+				});
+			}
+			return false;
+		}
+	}
+
+
 	public class SokobanSolver
 	{
+		State solution = null;
+		int numberofnowalls = 0;
+		int numberofboxes = 0;
+		bool canbesolved;
+		char[] Grid;
+		int columns;
+		State initial;
+		HashSet<int> goals = new HashSet<int>();
+		ZobrishHash zh;
 		HashSet<int> nodeadlocks = new HashSet<int>();
 		int[][] boxtogoals;
 		class State
 		{
-			public bool[] playerreachablearea;
+			public State(ZobrishHash zh) { this.zh = zh; }
+			ZobrishHash zh;
+			public List<int> sideboxesreachable;
 			public int boxpushes;
 			public State previousState = null;
 			public int[] boxpositions;
@@ -217,21 +725,6 @@ namespace Sokoban
 			public int f;
 			public int cumulatedlength;
 
-			public State Clone()
-			{
-				State s = new State();
-				s.playerposition = playerposition;
-				s.playerreachablearea = playerreachablearea.ToArray();
-				s.previousState = previousState;
-				s.boxpushes = boxpushes;
-				s.boxpositions = boxpositions.ToArray();
-				s.heuristic = heuristic;
-				s.f = f;
-				s.cumulatedlength = cumulatedlength;
-				s.hashcode = hashcode;
-				s.hashcodecalculated = hashcodecalculated;
-				return s;
-			}
 			public static bool operator ==(State a, State b)
 			{
 				if ((object)a == null && (object)b == null) return true;
@@ -254,19 +747,19 @@ namespace Sokoban
 			public override int GetHashCode()
 			{
 				if (hashcodecalculated) return hashcode;
-				hashcode = ZobrishHash.GetZobrishHash(this);
+				hashcode = zh.GetZobrishHash(this);
 				hashcodecalculated = true;
 				return hashcode;
 			}
 			public void SetHashCode()
 			{
-				hashcode = ZobrishHash.GetZobrishHash(this);
+				hashcode = zh.GetZobrishHash(this);
 				hashcodecalculated = true;
 			}
 			public void SetHashCodeAfterMove(int before, int now)
 			{
 				hashcodecalculated = true;
-				hashcode = ZobrishHash.GetZobrishHashAfterMove(this, before, now);
+				hashcode = zh.GetZobrishHashAfterMove(this, before, now);
 			}
 			bool hashcodecalculated = false;
 			public int hashcode;
@@ -275,23 +768,28 @@ namespace Sokoban
 		{
 			WALL = '*', BOX = 'C', FREE = '.', PLAYER = 'J', GOAL = 'F'
 		}
-		static char[] Grid;
-		int columns;
-		State initial = new State();
-		HashSet<int> goals = new HashSet<int>();
+
+
 		//HashSet<int> nodeadlocks = new HashSet<int>();
 		class StateComparerByPlayerZone : EqualityComparer<State>
 		{
+			int gridlength;
+			public StateComparerByPlayerZone(int gridlength)
+			{
+				this.gridlength = gridlength;
+			}
 			object locktimesortplayertosideboxdistance = new object();
 			public override bool Equals(State x, State y)
 			{
 
 				if (x == null || y == null) return false;
-				if (InsideGrid(y.playerposition) && !x.playerreachablearea[y.playerposition])
+				if (x.GetHashCode() != y.GetHashCode()) return false;
+				if (!x.sideboxesreachable.Contains(y.playerposition))
 				{
 					return false;
 				}
-				return x.GetHashCode() == y.GetHashCode();
+				if (x.boxpushes > y.boxpushes) return false;
+				return true;
 			}
 			public override int GetHashCode(State obj)
 			{
@@ -313,16 +811,29 @@ namespace Sokoban
 		{
 			if (columns <= 0) return;
 			if (Grid.Length % columns != 0) return;
-			this.columns = columns;
-			SokobanSolver.Grid = new char[Grid.Length];
+			this.columns = columns + 2;
+			this.Grid = new char[Grid.Length + 2 * (this.columns + Grid.Length / columns)];
+			for(int i = 0, endi = this.columns; i < endi; ++i) // Padds the grid top and bottom with walls
+			{
+				this.Grid[i] = this.Grid[i + this.Grid.Length - this.columns] = (char)Elements.WALL;
+			}
+			// Pads the grid left and right
+			for (int i = this.columns; i < this.Grid.Length; i+= this.columns)
+			{
+				this.Grid[i] = this.Grid[i + this.columns - 1] = (char)Elements.WALL;
+			}
 			List<int> boxpos = new List<int>();
+			int pads = 0;
+			zh = new ZobrishHash(this.Grid.Length);
+			initial = new State(zh);
 			for (int i = 0; i < Grid.Length; i++)
 			{
-				if (Grid[i] == (char)Elements.BOX) { boxpos.Add(i); }
-				else if (Grid[i] == (char)Elements.PLAYER) { initial.playerposition = i; }
-				else if (Grid[i] == (char)Elements.WALL) { SokobanSolver.Grid[i] = (char)Elements.WALL; continue; }
-				else if (Grid[i] == (char)Elements.GOAL) { SokobanSolver.Grid[i] = (char)Elements.GOAL; goals.Add(i); continue; }
-				SokobanSolver.Grid[i] = (char)Elements.FREE;
+				while (this.Grid[i + pads] == (char)Elements.WALL) pads++;
+				if (Grid[i] == (char)Elements.BOX) { boxpos.Add(i + pads); }
+				else if (Grid[i] == (char)Elements.PLAYER) { initial.playerposition = i + pads; }
+				else if (Grid[i] == (char)Elements.WALL) { this.Grid[i + pads] = (char)Elements.WALL; continue; }
+				else if (Grid[i] == (char)Elements.GOAL) { this.Grid[i + pads] = (char)Elements.GOAL; goals.Add(i + pads); continue; }
+				this.Grid[i + pads] = (char)Elements.FREE;
 
 				if (Grid[i] != (char)Elements.WALL) numberofnowalls++;
 			}
@@ -392,7 +903,6 @@ namespace Sokoban
 				Console.WriteLine("There's no solution found");
 		}
 
-		bool canbesolved;
 
 		void PrintDeadLocks()
 		{
@@ -441,279 +951,10 @@ namespace Sokoban
 			}
 			else return true;
 		}
-		class GraphForBoxGoals
-		{
-			public class Node
-			{
-				public bool isgoal;
-				public int value;
-				public List<Edge> edges = new List<Edge>();
-			}
-			public class Edge
-			{
-				public Node n;
-			}
-			int[][] boxtogoals;
-			int[] boxpositions;
-			public GraphForBoxGoals(int[] boxpositions, int[][] boxtogoals, HashSet<int> goals)
-			{
-				this.boxtogoals = boxtogoals;
-				this.boxpositions = boxpositions;
-				foreach (int k in goals) // Creating a node for each goal
-				{
-					Node t = new Node();
-					t.isgoal = true;
-					t.value = k;
-					this.goals.Add(t);
-				}
-				List<Node> boxes = new List<Node>(); // Saving boxes apart
-				for (int i = 0; i < boxpositions.Length; i++)
-				{
-					Node t = new Node(); // Create a node
-					t.value = boxpositions[i];
-					t.isgoal = false;
-					foreach (int g in boxtogoals[i]) // Create an edge for each goal it points
-					{
-						Edge e = new Edge();
-						Edge e2 = new Edge();
-						e2.n = t;
-						e.n = this.goals.Find(x => x.value == g); // To a goal
-						t.edges.Add(e); // Add the edge to the box
-						e.n.edges.Add(e2);// Add an edge to the goal
-					}
-					boxes.Add(t); // Save the box
-				}
-				
-				this.boxes.AddRange(boxes); // Saves all boxes
-#if DEBUG && SHOWREMOVEGOALSRESULT && USEONECORE
-				foreach (Node n in this.boxes)
-				{
-					Console.Write(n.value + " -> ");
-					foreach (Edge e in n.edges)
-					{
-						if (e.n == n) Console.Write(e.n.value + ",");
-						else Console.Write(e.n.value + ",");
-					}
-					Console.Write("\n");
-				}
-#endif
-			}
-			public List<Node> boxes = new List<Node>();
-			public List<Node> goals = new List<Node>();
-			public int[][] RemoveUniques(out bool solvable)
-			{
-				solvable = false;
-				HashSet<Node> checkeds = new HashSet<Node>();
-				repeat:
-				PriorityQueue<Node> pq = new PriorityQueue<Node>();
-				foreach (Node n in boxes.Except(checkeds))
-				{
-					pq.Enqueue(n.edges.Count, n);
-				}
-				while(pq.Count != 0)
-				{
-					if (RemoveUniquesFrom(pq.Dequeue(), checkeds)) goto repeat;
-				}
-				int[][] boxtogoals2 = new int[boxtogoals.Length][];
-				List<int> boxp = boxpositions.ToList();
-				foreach (Node n in boxes)
-				{
-					List<int> hs = new List<int>();
-					foreach (Edge e in n.edges)
-					{
-						hs.Add(e.n.value);
-					}
-					boxtogoals2[boxp.IndexOf(n.value)] = hs.ToArray();
-					if (hs.Count == 0) return null;
-				}
-				solvable = true;
-				return boxtogoals2;
-			}
-			bool RemoveUniquesFrom(Node n, HashSet<Node> checkeds)
-			{
-				HashSet<Node> tobevisited = new HashSet<Node>();
-				foreach (Edge e in n.edges)
-				{
-					tobevisited.Add(e.n);
-				}
-				HashSet<Node> boxpairs = new HashSet<Node>(), goalpairs = new HashSet<Node>();
-				if (DeepVisitNoRepeat(n, boxpairs, goalpairs, goals.Count - 1))
-				{
-#if DEBUG && SHOWREMOVEGOALSRESULT && USEONECORE
-					Console.WriteLine("BoxPairs");
-					foreach (Node item in boxpairs)
-					{
-						Console.WriteLine(item.value);
-					}
-					Console.WriteLine("GoalPairs");
-					foreach (Node item in goalpairs)
-					{
-						Console.WriteLine(item.value);
-					}
-#endif
-					foreach (Node nod in boxes)
-					{
-						if(boxpairs.Contains(nod)) // Deletes what it's not in goalpairs
-						{
-							for (int i = 0; i < nod.edges.Count; i++)
-							{
-								if (!goalpairs.Contains(nod.edges[i].n))
-								{
-
-									nod.edges.RemoveAt(i);
-									i--;
-								}
-							}
-						}
-						else // Delets what it's in goalpairs
-						{
-							for (int i = 0; i < nod.edges.Count; i++)
-							{
-								if (goalpairs.Contains(nod.edges[i].n))
-								{
-									nod.edges.RemoveAt(i);
-									i--;
-								}
-							}
-						}
-					}
-					checkeds.UnionWith(boxpairs);
-					return true;
-				}
-				return false;
-			}
-			class State
-			{
-				public Node n;
-				public HashSet<Node> bvisited;
-				public HashSet<Node> rvisited;
-				public HashSet<Node> targets;
-				public State p;
-			}
-			private bool DeepVisitNoRepeat(Node start, HashSet<Node> boxpairs, HashSet<Node> goalpairs, int hiddensetmaxlength)
-			{
-				if (start.edges.Count == 0) return false;
-				HashSet<Edge> visited = new HashSet<Edge>();
-				Stack<State> pending = new Stack<State>();
-				State s = new State() { n = start.edges[0].n, p = null };
-				s.targets = new HashSet<Node>();
-				for (int i = 0; i < start.edges.Count; i++)
-				{
-					s.targets.Add(start.edges[i].n);
-				}
-				s.rvisited = new HashSet<Node>();
-				s.bvisited = new HashSet<Node>(){ start };
-				pending.Push(s);
-				int cases = 0;
-				object lockstack = new object();
-				ParallelOptions po = new ParallelOptions();
-				po.MaxDegreeOfParallelism =
-#if USEONECORE
-					1;
-#else
-					Environment.ProcessorCount;
-#endif
-				while(pending.Count != 0)
-				{
-					cases++;
-					State t = pending.Pop();
-					if (t.targets.Count >= hiddensetmaxlength) continue;
-					if(t.n.isgoal)
-					{
-						if (t.targets.Contains(t.n))
-						{
-							t.rvisited = new HashSet<Node>(t.rvisited);
-							t.rvisited.Add(t.n);
-						}
-						if (t.targets.All(a => t.rvisited.Contains(a)) && s.targets.Contains(t.n))
-						{
-#if DEBUG && USEONECORE
-							Console.Write("t=" + t.n.value + " -> ");
-							foreach (Edge item in t.n.edges)
-							{
-								Console.Write(item.n.value + ", ");
-							}
-							Console.Write(" | Visited: ");
-							foreach (Node item in t.rvisited)
-							{
-								Console.Write(item.value + ", ");
-							}
-							Console.Write(" | Targets: ");
-							foreach (Node item in t.targets)
-							{
-								Console.Write(item.value + ", ");
-							}
-							Console.Write("\n");
-							Console.WriteLine("Cases: " + cases);
-#endif
-							goalpairs.UnionWith(t.targets);
-							boxpairs.UnionWith(t.bvisited);
-							return true;
-						}
-
-					}
-					Parallel.ForEach(t.n.edges, po, (e) =>
-					{
-						if (!e.n.isgoal) // e.n is a box and t.n is a goal
-						{
-							if (t.bvisited.Contains(e.n)) return;
-							State s1 = new State()
-							{
-								n = e.n,
-								p = t,
-								rvisited = t.rvisited,
-								targets = t.targets,
-								bvisited = t.bvisited
-							};
-							bool copy = true;
-							foreach (Edge e1 in e.n.edges) // Adds new targets
-							{
-								if (!t.targets.Contains(e1.n))
-								{
-									if (copy)
-									{
-										s1.targets = new HashSet<Node>(t.targets);
-										copy = false;
-									}
-									s1.targets.Add(e1.n);
-								}
-							};
-							lock(lockstack)
-							{
-								pending.Push(s1);
-							}
-						}
-						else // e.n is a goal and t.n is a box
-						{
-							if (t.rvisited.Contains(e.n)) return;
-							else if (!t.targets.Contains(e.n)) return;
-							State s1 = new State()
-							{
-								n = e.n,
-								p = t,
-								rvisited = t.rvisited,
-								targets = t.targets
-							};
-							if (!t.bvisited.Contains(t.n))
-							{
-								s1.bvisited = new HashSet<Node>(t.bvisited);
-								s1.bvisited.Add(t.n);
-							}
-							else { s1.bvisited = t.bvisited; }
-							lock (lockstack)
-							{
-								pending.Push(s1);
-							}
-						}
-					});
-				}
-				return false;
-			}
-		}
 
 		bool CleanBoxToGoals(State s) // Returns false if after cleaning a box has no goal set
 		{
-			
+
 			// previous  CleanBoxToGoals version
 			HashSet<int> uniques = new HashSet<int>();
 			reset:
@@ -783,31 +1024,23 @@ namespace Sokoban
 				int npos = playerp + a;
 				if (visited.Contains(npos) || pending.Contains(npos)) continue;
 				int upperbound = Grid.Length, lowerbound = 0;
-				if (a == 1) upperbound = columns * (playerp / columns + 1);
-				else if (a == -1) lowerbound = columns * (playerp / columns);
 				if (npos >= lowerbound && npos < upperbound && Grid[npos] != (char) Elements.WALL)
 				{
 					pending.Add(npos);
 				}
-
 			}
 		}
-		enum Direction { LEFT, RIGHT, UP, DOWN }
+		public enum Direction { LEFT, RIGHT, UP, DOWN }
 		bool CanBePushed(int bp, Direction dir)
 		{
 			int n = 0;
-			int lowerbound = 0 , upperbound =  Grid.Length;
 			switch (dir)
 			{
 				case Direction.LEFT:
 					n = -1;
-					lowerbound = columns * (bp / columns);
-					upperbound = columns * (bp / columns + 1);
 					break;
 				case Direction.RIGHT:
 					n = 1;
-					lowerbound = columns * (bp / columns);
-					upperbound = columns * (bp / columns + 1);
 					break;
 				case Direction.UP:
 					n = -columns;
@@ -818,8 +1051,8 @@ namespace Sokoban
 			}
 			int np = bp + n;
 			int pushpos = bp - n;
-			if (np < lowerbound || np >= upperbound ||
-				pushpos < lowerbound || pushpos >= upperbound || Grid[pushpos] == (char) Elements.WALL || Grid[np] == (char) Elements.WALL) return false;
+			if (!InsideGrid(np) && !InsideGrid(pushpos) ||
+				Grid[pushpos] == (char) Elements.WALL || Grid[np] == (char) Elements.WALL) return false;
 			return true;
 		}
 
@@ -833,8 +1066,8 @@ namespace Sokoban
 			bool movex = true, movey = true;
 			if (up < 0 || Grid[up] == (char) Elements.WALL) movey = false;
 			if (down >= Grid.Length || Grid[down] == (char)Elements.WALL) movey = false;
-			if (left < 0 || left < columns * (bp / columns) || Grid[left] == (char)Elements.WALL) movex = false;
-			if (right >= Grid.Length || right >= columns * (bp / columns + 1) || Grid[right] == (char)Elements.WALL) movex = false;
+			if (left < 0 || Grid[left] == (char)Elements.WALL) movex = false;
+			if (right >= Grid.Length || Grid[right] == (char)Elements.WALL) movex = false;
 			return !movex && !movey;
 		}
 		void GenerateSuccessorsForBox(int boxp, HashSet<int> pending, HashSet<int> visited)
@@ -868,7 +1101,7 @@ namespace Sokoban
 
 		void PrintStateChain(State s)
 		{
-			
+
 			Console.Clear();
 			Stack<State> sortedStates = new Stack<State>();
 
@@ -911,7 +1144,7 @@ namespace Sokoban
 					Console.Write("{0, -50} {1, 10} ms this is {2, 8:P2} called {3, 10} \n", "Time wasted in checking if visited contains:", visitedmeasurer.ElapsedMilliseconds, (double)visitedmeasurer.ElapsedMilliseconds / solvingtimemeasurer.ElapsedMilliseconds, visitedmeasurer.CountCalls);
 					Console.Write("{0, -50} {1, 10} ms this is {2, 8:P2} called {3, 10} \n", "Time wasted in smartplayerarea:", smartplayearreachableareameasurer.ElapsedMilliseconds, (double)smartplayearreachableareameasurer.ElapsedMilliseconds / solvingtimemeasurer.ElapsedMilliseconds, smartplayearreachableareameasurer.CountCalls);
 
-					
+
 #endif
 					Thread.Sleep(100);
 					Console.SetCursorPosition(0,0);
@@ -942,7 +1175,7 @@ namespace Sokoban
 					{
 
 						Console.BackgroundColor = ConsoleColor.Cyan;
-						Console.ForegroundColor = ConsoleColor.Cyan;
+						Console.ForegroundColor = ConsoleColor.Black;
 					}
 					else
 					{
@@ -959,7 +1192,7 @@ namespace Sokoban
 						{
 
 							Console.BackgroundColor = ConsoleColor.Cyan;
-							Console.ForegroundColor = ConsoleColor.Cyan;
+							Console.ForegroundColor = ConsoleColor.Black;
 						}
 						else
 						{
@@ -974,7 +1207,7 @@ namespace Sokoban
 						{
 
 							Console.BackgroundColor = ConsoleColor.Cyan;
-							Console.ForegroundColor = ConsoleColor.Cyan;
+							Console.ForegroundColor = ConsoleColor.Black;
 						}
 						else
 						{
@@ -989,7 +1222,7 @@ namespace Sokoban
 						{
 
 							Console.BackgroundColor = ConsoleColor.Cyan;
-							Console.ForegroundColor = ConsoleColor.Cyan;
+							Console.ForegroundColor = ConsoleColor.Black;
 						}
 						else
 						{
@@ -1004,7 +1237,7 @@ namespace Sokoban
 						{
 
 							Console.BackgroundColor = ConsoleColor.Cyan;
-							Console.ForegroundColor = ConsoleColor.Cyan;
+							Console.ForegroundColor = ConsoleColor.Black;
 						}
 						else
 						{
@@ -1022,7 +1255,7 @@ namespace Sokoban
 		}
 		bool IsInALockedBoxPool(State s, int box, HashSet<int> walls)
 		{
-			if (box < 0 || box >= Grid.Length) return true;
+			if (!InsideGrid(box)) return true;
 			HashSet<int> checking = new HashSet<int>();
 			walls.Add(box);
 			bool movex = true, movey = true;
@@ -1045,7 +1278,7 @@ namespace Sokoban
 			}
 
 
-			if (left < 0 || left < columns * (box / columns) || Grid[left] == (char)Elements.WALL || walls.Contains(left))
+			if (left < 0 || Grid[left] == (char)Elements.WALL || walls.Contains(left))
 			{
 				movex = false;
 			}
@@ -1053,7 +1286,7 @@ namespace Sokoban
 			{
 				if (IsInALockedBoxPool(s, left, walls)) movex = false;
 			}
-			if (right >= Grid.Length || right >= columns * (box / columns + 1) || Grid[right] == (char)Elements.WALL || walls.Contains(right))
+			if (right >= Grid.Length || Grid[right] == (char)Elements.WALL || walls.Contains(right))
 			{
 				movex = false;
 			}
@@ -1063,7 +1296,7 @@ namespace Sokoban
 			}
 			return !movex && !movey;
 		}
-		
+
 		bool IsDeadLockBetweenBoxes(State s)
 		{
 			foreach (int box in s.boxpositions)
@@ -1073,78 +1306,21 @@ namespace Sokoban
 			return false;
 		}
 
-		private bool DeadLock(State tmpstate)
-		{
-			bool locked = true; // Checks if all boxes are locked
-			foreach (int boxp in tmpstate.boxpositions)
-			{
-				int upperboundud = Grid.Length, lowerboundud = 0;
-				int upperboundlr = columns * (boxp / columns + 1), lowerboundlr = columns * (boxp / columns);
-				int up = boxp - columns, down = boxp + columns,
-					left = boxp - 1, right = boxp + 1;
-				bool canup = false, candown = false, canleft = false, canright = false;
-				bool bup = false, bdown = false, bleft = false, bright = false;
-				bool isgoal = goals.Contains(boxp);
-				if (up >= lowerboundud)
-				{
-					if(tmpstate.boxpositions.Contains(up)) bup = true;
-					else if (Grid[up] != (char)Elements.WALL) canup = true;
-				}
-				if(down < upperboundud)
-				{
-					if (tmpstate.boxpositions.Contains(down)) bdown = true;
-					else if (Grid[down] != (char)Elements.WALL) candown= true;
-				}
-				if(left >= lowerboundlr)
-				{
-					if (tmpstate.boxpositions.Contains(left)) bleft = true;
-					else if (Grid[left] != (char)Elements.WALL) canleft = true;
-				}
-				if(right < upperboundlr)
-				{
-					if (tmpstate.boxpositions.Contains(right)) bright = true;
-					else if (Grid[right] != (char)Elements.WALL) canright = true;
-				}
-				if (!canup && !canleft) // Can't move the box
-				{
-					if (!bup && !bleft && !isgoal) return true; // It's a wall 
-					locked = locked && true;// It's a box, might be moved
-				}
-				else if (!canup && !canright) // Can't move the box
-				{
-					if (!bup && !bright && !isgoal) return true; // It's a wall
-					locked = locked && true;// It's a box, might be moved
-				}
-				else if (!candown && !canleft) // Can't move the box
-				{
-					if (!bdown && !bleft && !isgoal) return true; // It's a wall
-					locked = locked && true; // It's a box, might be moved
-				}
-				else if (!candown && !canright) // Can't move the box
-				{
-					if (!bdown && !bright && !isgoal) return true; // It's a wall
-					locked = locked && true; // It's a box, might be moved
-				}
-				else // Can move the box
-					locked = locked && false;
-			}
-			return locked;
-		}
-
-		State solution = null;
 
 #if DEBUG
 		TimeSpan solvingtime;
 #endif
-		public IEnumerable<int> SolveParallel()
+		public IEnumerable<Direction> SolveParallel()
 		{
-			IEnumerable<int> l;
+
+			IEnumerable<Direction> l;
 
 #if (DEBUG)
 			l = solvingtimemeasurer.AddTimeElapsedIn(() => { return SolveParallelAux(); });
 #else
 			l = SolveParallelAux();
 #endif
+
 			return l;
 		}
 
@@ -1209,205 +1385,259 @@ namespace Sokoban
 				else visited.Add(boxd);
 			}
 		}
+#if DEBUG
 		object locktime = new object();
-		static bool InsideGrid(int i)
+#endif
+		bool InsideGrid(int i)
 		{
 			return i >= 0 && i < Grid.Length;
 		}
 		void SetPlayerReachableArea(State s, int boxidxmoved = -1)
 		{
-			if (boxidxmoved != -1)
-			{
-				bool a, b, c, d, e, f, g, h, i; // A box/wall is there
-				HashSet<int> positions = new HashSet<int>(ValidSquareNegativeDiagonal(s.boxpositions[boxidxmoved]));
-				positions.UnionWith(ValidSquarePositiveDiagonal(s.boxpositions[boxidxmoved]));
-				positions.UnionWith(ValidSquareNegativeDiagonal(s.playerposition));
-				positions.UnionWith(ValidSquarePositiveDiagonal(s.playerposition));
-				positions.UnionWith(ValidSquareSides(s.boxpositions[boxidxmoved]));
-				if (!smartplayearreachableareameasurer.AddTimeElapsedIn(() =>
-				{
-					bool calculate = true;
-					int direction = s.playerposition - s.boxpositions[boxidxmoved];
-					if (direction == 1) // | |P|
-					{
-						// a|b|c|d
-						// e|B|P|
-						// f|g|h|i
-						int
-							n = s.boxpositions[boxidxmoved] - columns - 1;
-						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns;
-						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns + 1;
-						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns + 2;
-						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - 1;
-						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns - 1;
-						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns;
-						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns + 1;
-						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns + 2;
-						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-					}
-					else if (direction == -1) // |P|B|
-					{
-						// d|c|b|a
-						//  |P|B|e
-						// i|h|g|f
-						int
-							n = s.boxpositions[boxidxmoved] - columns + 1;
-						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns;
-						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns - 1;
-						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns - 2;
-						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + 1;
-						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns + 1;
-						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns;
-						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns - 1;
-						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns - 2;
-						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-					}
-					else if (direction == columns)
-					{
-						// f|e|a
-						// g|B|b
-						// h|P|c
-						// i| |d
-						int
-							n = s.boxpositions[boxidxmoved] - columns + 1;
-						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + 1;
-						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns + 1;
-						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + 2 * columns + 1;
-						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns;
-						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns - 1;
-						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - 1;
-						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns - 1;
-						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + 2 * columns - 1;
-						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-					}
-					else if (direction == -columns)
-					{
-						// d| |i
-						// c|P|h
-						// b|B|g
-						// a|e|f
-						int
-							n = s.boxpositions[boxidxmoved] + columns - 1;
-						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - 1;
-						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns - 1;
-						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - 2 * columns - 1;
-						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns;
-						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + columns + 1;
-						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] + 1;
-						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - columns + 1;
-						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-						n = s.boxpositions[boxidxmoved] - 2 * columns + 1;
-						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
-					}
-					else
-					{
-						a = b = c = d = e = f = g = h = i = true;
-					}
-					if (!(
-							(a && !b && c) ||
-							(a && !e && f && (!b || !g)) ||
-							(a && !e && h && !b) ||
-							(a && !g && h && !b) ||
-							(b && !h && i) ||
-							(b && !c && d) ||
-							(!b && c && f && !g) ||
-							(!c && d && i) ||
-							(!c && d && g) ||
-							(c && !h && i) ||
-							(!c && d && h) ||
-							(c && !e && f && !g) ||
-							(d && !h && i) ||
-							(f && !g && h) ||
-							(g && !h && i)))
-					{
-						calculate = false;
-					}
-					if (!calculate)
-					{
-						s.playerreachablearea = s.playerreachablearea.ToArray();
-						s.playerreachablearea[s.playerposition] = true;
-						s.playerreachablearea[s.boxpositions[boxidxmoved]] = false;
+//			if (boxidxmoved != -1)
+//			{
+//				bool a, b, c, d, e, f, g, h, i; // A box/wall is there
+//				HashSet<int> positions = new HashSet<int>(ValidSquareNegativeDiagonal(s.boxpositions[boxidxmoved]));
+//				positions.UnionWith(ValidSquarePositiveDiagonal(s.boxpositions[boxidxmoved]));
+//				positions.UnionWith(ValidSquareNegativeDiagonal(s.playerposition));
+//				positions.UnionWith(ValidSquarePositiveDiagonal(s.playerposition));
+//				positions.UnionWith(ValidSquareSides(s.boxpositions[boxidxmoved]));
+//#if DEBUG
+//				if (!smartplayearreachableareameasurer.AddTimeElapsedIn(() =>
+//				{
+//#endif
+//					bool calculate = true;
+//					int direction = s.playerposition - s.boxpositions[boxidxmoved];
+//					if (direction == 1) // | |P|
+//					{
+//						// a|b|c|d
+//						// e|B|P|
+//						// f|g|h|i
+//						int
+//							n = s.boxpositions[boxidxmoved] - columns - 1;
+//						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns;
+//						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns + 1;
+//						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns + 2;
+//						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - 1;
+//						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns - 1;
+//						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns;
+//						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns + 1;
+//						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns + 2;
+//						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//					}
+//					else if (direction == -1) // |P|B|
+//					{
+//						// d|c|b|a
+//						//  |P|B|e
+//						// i|h|g|f
+//						int
+//							n = s.boxpositions[boxidxmoved] - columns + 1;
+//						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns;
+//						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns - 1;
+//						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns - 2;
+//						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + 1;
+//						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns + 1;
+//						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns;
+//						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns - 1;
+//						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns - 2;
+//						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//					}
+//					else if (direction == columns)
+//					{
+//						// f|e|a
+//						// g|B|b
+//						// h|P|c
+//						// i| |d
+//						int
+//							n = s.boxpositions[boxidxmoved] - columns + 1;
+//						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + 1;
+//						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns + 1;
+//						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + 2 * columns + 1;
+//						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns;
+//						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns - 1;
+//						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - 1;
+//						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns - 1;
+//						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + 2 * columns - 1;
+//						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//					}
+//					else if (direction == -columns)
+//					{
+//						// d| |i
+//						// c|P|h
+//						// b|B|g
+//						// a|e|f
+//						int
+//							n = s.boxpositions[boxidxmoved] + columns - 1;
+//						a = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - 1;
+//						b = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns - 1;
+//						c = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - 2 * columns - 1;
+//						d = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns;
+//						e = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + columns + 1;
+//						f = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] + 1;
+//						g = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - columns + 1;
+//						h = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//						n = s.boxpositions[boxidxmoved] - 2 * columns + 1;
+//						i = (positions.Contains(n) ? ((Grid[n] != (char)Elements.WALL) ? false : true) : true) || s.boxpositions.Contains(n);
+//					}
+//					else
+//					{
+//						a = b = c = d = e = f = g = h = i = true;
+//					}
+//					if (!(
+//							(a && !b && c) ||
+//							(a && !e && f && (!b || !g)) ||
+//							(a && !e && h && !b) ||
+//							(a && !g && h && !b) ||
+//							(b && !h && i) ||
+//							(b && !c && d) ||
+//							(!b && c && f && !g) ||
+//							(!c && d && i) ||
+//							(!c && d && g) ||
+//							(c && !h && i) ||
+//							(!c && d && h) ||
+//							(c && !e && f && !g) ||
+//							(d && !h && i) ||
+//							(f && !g && h) ||
+//							(g && !h && i)))
+//					{
+//						calculate = false;
+//					}
+//					if (!calculate)
+//					{
+//						s.sideboxesreachable = s.sideboxesreachable.Clone(s.playerposition, s.boxpositions[boxidxmoved]);
+//#if DISPLAYSMARTPLAYERREACHABLEAREA
+//						List<int> thearea2 = new List<int>();
+//						for (int ik = 0; ik < Grid.Length; ik++) {
+//							if (s.playerreachablearea[ik]) thearea2.Add(ik);
+//						}
+//						PrintState(s, thearea2.ToArray());
+//#endif
+//					}
+//#if !DEBUG
+//					if (!calculate) return;
+//#else
+//					return calculate;
 
-					}
-					return calculate;
-				}))
-				{
-					//Console.WriteLine("Smart guessed");
-					//PrintState(s, s.boxpositions[boxidxmoved]);
-					return;
-				}
+//				}))
+//				{
+//					//Console.WriteLine("Smart guessed");
+//					//PrintState(s, s.boxpositions[boxidxmoved]);
+//#if DISPLAYPLAYERREACHABLEAREA
+//					List<int> thearea2 = new List<int>();
+//					for (int ik = 0; ik < Grid.Length; ik++)
+//					{
+//						if (s.playerreachablearea.Contains(ik)) thearea2.Add(ik);
+//					}
+//					PrintState(s, thearea2.ToArray());
+//#endif
+//					return;
+//				}
+//#endif
 
-			}
-			State scpy = new State();
+//			}
+
+			State scpy = new State(zh);
 			scpy.playerposition = s.playerposition;
 			scpy.boxpositions = s.boxpositions;
-			bool[] area = new bool[Grid.Length];
-			HashSet<int> visited = new HashSet<int>();
+			List<int> area = new List<int>();
+			bool[] visited = new bool[Grid.Length];
 			Queue<int> pending = new Queue<int>();
 			pending.Enqueue(scpy.playerposition);
-			while(pending.Count != 0)
+			visited[scpy.playerposition] = true;
+			HashSet<int> reachgoals = new HashSet<int>();
+			foreach (int item in scpy.boxpositions)
+			{
+				reachgoals.UnionWith(ValidSquareSides(item));
+			}
+			reachgoals.SymmetricExceptWith(scpy.boxpositions);
+			while (pending.Count != 0)
 			{
 				int tmp = pending.Dequeue();
-				if (visited.Contains(tmp)) continue;
-				area[tmp] = true;
-				visited.Add(tmp);
+				if (reachgoals.Remove(tmp))
+				{
+					area.Add(tmp);
+				}
+				if (reachgoals.Count == 0) break;
 				scpy.playerposition = tmp;
-				int up = tmp - columns, 
-					down = tmp + columns, 
+				int up = tmp - columns,
+					down = tmp + columns,
 					left = tmp - 1,
 					right = tmp + 1;
-				if (InsideGrid(up) && Grid[up] != (char)Elements.WALL && !scpy.boxpositions.Contains(up))
+				if (InsideGrid(up) && !visited[up] && Grid[up] != (char)Elements.WALL && !scpy.boxpositions.Contains(up))
+				{
 					pending.Enqueue(up);
-				if (InsideGrid(down) && Grid[down] != (char)Elements.WALL && !scpy.boxpositions.Contains(down))
+					visited[up] = true;
+				}
+				if (InsideGrid(down) && !visited[down] && Grid[down] != (char)Elements.WALL && !scpy.boxpositions.Contains(down))
+				{
 					pending.Enqueue(down);
-				if (InsideGrid(left) && Grid[left] != (char)Elements.WALL && !scpy.boxpositions.Contains(left))
+					visited[down] = true;
+				}
+				if (InsideGrid(left) && !visited[left] && Grid[left] != (char)Elements.WALL && !scpy.boxpositions.Contains(left))
+				{
 					pending.Enqueue(left);
-				if (InsideGrid(right) && Grid[right] != (char)Elements.WALL && !scpy.boxpositions.Contains(right))
+					visited[left] = true;
+				}
+				if (InsideGrid(right) && !visited[right] && Grid[right] != (char)Elements.WALL && !scpy.boxpositions.Contains(right))
+				{
 					pending.Enqueue(right);
+					visited[right] = true;
+				}
 			}
-			s.playerreachablearea = area;
+			s.sideboxesreachable = area;
+
+#if DISPLAYPLAYERREACHABLEAREA
+			List<int> thearea = new List<int>();
+			for (int ik = 0; ik < Grid.Length; ik++)
+			{
+				if (s.sideboxesreachable.Contains(ik)) thearea.Add(ik);
+			}
+			PrintState(s, thearea.ToArray());
+#endif
+
+
 		}
 
 		IEnumerable<int> ValidSquareSides(int squarepos)
 		{
-			if (squarepos < 0 || squarepos >= Grid.Length) yield break;
+			if (!InsideGrid(squarepos)) yield break;
 			int left = squarepos - 1;
 			int right = squarepos + 1;
 			int up = squarepos - columns;
 			int down = squarepos + columns;
-			if (left >= columns * (squarepos / columns) && left >= 0) yield return left;
-			if (right < columns * (squarepos / columns + 1) && right < Grid.Length) yield return right;
+			if (left >= 0) yield return left;
+			if (right < Grid.Length) yield return right;
 			if (up >= 0) yield return up;
 			if (down < Grid.Length) yield return down;
 		}
@@ -1418,11 +1648,11 @@ namespace Sokoban
 		/// <returns></returns>
 		IEnumerable<int> ValidSquarePositiveDiagonal(int squarepos)
 		{
-			if (squarepos < 0 || squarepos >= Grid.Length) yield break;
+			if (!InsideGrid(squarepos)) yield break;
 			int leftup = squarepos - 1 - columns;
 			int rightdown = squarepos + columns + 1;
-			if (leftup >= columns * (squarepos / columns) - columns && leftup >= 0) yield return leftup;
-			if (rightdown < columns * (squarepos / columns + 1) + columns && rightdown < Grid.Length) yield return rightdown;
+			if (leftup >= 0) yield return leftup;
+			if (rightdown < Grid.Length) yield return rightdown;
 		}
 		/// <summary>
 		/// This diagonal \
@@ -1431,11 +1661,11 @@ namespace Sokoban
 		/// <returns></returns>
 		IEnumerable<int> ValidSquareNegativeDiagonal(int squarepos)
 		{
-			if (squarepos < 0 || squarepos >= Grid.Length) yield break;
+			if (!InsideGrid(squarepos)) yield break;
 			int rightup = squarepos + 1 - columns;
 			int leftdown = squarepos + columns - 1;
-			if (rightup < columns * (squarepos / columns + 1) - columns && rightup >= 0) yield return rightup;
-			if (leftdown >= columns * (squarepos / columns) + columns && leftdown < Grid.Length) yield return leftdown;
+			if (rightup >= 0) yield return rightup;
+			if (leftdown < Grid.Length) yield return leftdown;
 		}
 		/// <summary>
 		/// True if square pos is surrounded by walls
@@ -1446,7 +1676,7 @@ namespace Sokoban
 		/// <returns></returns>
 		bool IsSquareClosed(State s, int squarepos)
 		{
-			if (squarepos < 0 || squarepos >= Grid.Length || s.boxpositions.Contains(squarepos)
+			if (!InsideGrid(squarepos) || s.boxpositions.Contains(squarepos)
 					|| Grid[squarepos] == (char)Elements.WALL) return true;
 			bool sideclosed = true;
 			foreach (int squareside in ValidSquareSides(squarepos)) // |B|Side|Squareside| (surrounding Side)
@@ -1458,7 +1688,7 @@ namespace Sokoban
 		}
 		bool IsEmptySquare(int squarepos)
 		{
-			if (squarepos < 0 || squarepos >= Grid.Length || Grid[squarepos] == (char)Elements.WALL) return false;
+			if (!InsideGrid(squarepos) || Grid[squarepos] == (char)Elements.WALL) return false;
 			else return true;
 		}
 
@@ -1481,9 +1711,9 @@ namespace Sokoban
 				int tmpsquare = pendingsquares.Dequeue();
 				squareschecked.Add(tmpsquare);
 
-				foreach (int diagsq in 
-					(positivediagonal) ?  
-						ValidSquarePositiveDiagonal(tmpsquare) 
+				foreach (int diagsq in
+					(positivediagonal) ?
+						ValidSquarePositiveDiagonal(tmpsquare)
 						: ValidSquareNegativeDiagonal(tmpsquare))
 				{
 					if (squareschecked.Contains(diagsq)) continue;
@@ -1507,13 +1737,25 @@ namespace Sokoban
 		bool DeadLock(State s, int boxmoved)
 		{
 			// These deadlocks ought to be sorted by performance, from less expensive to more expensive
+#if DEBUG
 			bool simpledeadlock = simpledeadlockmeasurer.AddTimeElapsedIn(() => !s.boxpositions.All(x => nodeadlocks.Contains(x) || goals.Contains(x)));
+#else
+			bool simpledeadlock = !s.boxpositions.All(x => nodeadlocks.Contains(x) || goals.Contains(x));
+#endif
 			if (simpledeadlock) return true;
+#if DEBUG
 
 			bool betweenboxesdeadlock = freezedeadlockmeasurer.AddTimeElapsedIn(() => IsDeadLockBetweenBoxes(s));
+#else
+			bool betweenboxesdeadlock = IsDeadLockBetweenBoxes(s);
+#endif
 			if (betweenboxesdeadlock) return true;
 
+#if DEBUG
 			bool diagonaldeadlock = diagonaldeadlockmeasurer.AddTimeElapsedIn(() => IsDiagonalDeadLock(s, boxmoved));
+#else
+			bool diagonaldeadlock = IsDiagonalDeadLock(s, boxmoved);
+#endif
 			if (diagonaldeadlock) return true;
 			return false;
 		}
@@ -1538,188 +1780,16 @@ namespace Sokoban
 			return false;
 		}
 
-		bool IsBlockedIn(State s, HashSet<int> validpositions, int positiontocheck)
+		class ZobrishHash
 		{
-			if (validpositions.Contains(positiontocheck))
+			public int[,] array;
+			int gridlength;
+			Random r = new Random();
+			public ZobrishHash(int gridlength) { this.gridlength = gridlength; }
+			public void Initialize()
 			{
-				if (Grid[positiontocheck] == (char)Elements.WALL ||
-					s.boxpositions.Contains(positiontocheck))
-				{
-					return true;
-				}
-			}
-			else return true;
-			return false;
-		}
-
-		IEnumerable<int> FindPosibleUnreachablePosByPlayer(State s, int boxasideplayer)
-		{
-			HashSet<int> sides = new HashSet<int>(
-			ValidSquareSides(boxasideplayer).Union(
-				ValidSquareSides(s.playerposition).Union(
-					ValidSquarePositiveDiagonal(boxasideplayer).Union(
-						ValidSquareNegativeDiagonal(boxasideplayer)))));
-			bool[] squarehasobstacle = new bool[7];
-			int[] positionstocheck = new int[7];
-			int firstobst = -1, lastobst = -1;
-			bool isdone = false;
-			if (boxasideplayer - 1 == s.playerposition) // Box is right to the player
-			{
-				// Makes a trace like this:
-				//  x x x
-				// |P|B|x
-				//  x x x
-				// Visiting each x, it must find at least two obstacles, if it doesn't, then this returns
-				// If it finds at least two obstacles it returns the first one free between two obstacles
-				positionstocheck[0] = s.playerposition - columns;
-				positionstocheck[1] = boxasideplayer - columns;
-				positionstocheck[2] = boxasideplayer - columns + 1;
-				positionstocheck[3] = boxasideplayer + 1;
-				positionstocheck[4] = boxasideplayer + columns + 1;
-				positionstocheck[5] = boxasideplayer + columns;
-				positionstocheck[6] = s.playerposition + columns;
-			}
-			else if(boxasideplayer + 1 == s.playerposition) // Box is left to the player
-			{
-				// Makes a trace like this:
-				// x x x
-				// x|B|P|
-				// x x x
-				positionstocheck[0] = s.playerposition - columns;
-				positionstocheck[1] = boxasideplayer - columns;
-				positionstocheck[2] = boxasideplayer - columns - 1;
-				positionstocheck[3] = boxasideplayer - 1;
-				positionstocheck[4] = boxasideplayer + columns - 1;
-				positionstocheck[5] = boxasideplayer + columns;
-				positionstocheck[6] = s.playerposition + columns;
-			}
-			else if(boxasideplayer - columns == s.playerposition) // Box is below the player
-			{
-				// Makes a trace like this:
-				// x|P|x 
-				// x|B|x
-				// x x x
-				positionstocheck[0] = s.playerposition - 1;
-				positionstocheck[1] = boxasideplayer - 1;
-				positionstocheck[2] = boxasideplayer + columns - 1;
-				positionstocheck[3] = boxasideplayer + columns;
-				positionstocheck[4] = boxasideplayer + columns + 1;
-				positionstocheck[5] = boxasideplayer + 1;
-				positionstocheck[6] = s.playerposition + 1;
-			}
-			else if(boxasideplayer + columns == s.playerposition) // Box is above the player
-			{
-				// Makes a trace like this:
-				// x x x 
-				// x|B|x
-				// x|P|x
-				positionstocheck[0] = s.playerposition - 1;
-				positionstocheck[1] = boxasideplayer - 1;
-				positionstocheck[2] = boxasideplayer - columns - 1;
-				positionstocheck[3] = boxasideplayer - columns;
-				positionstocheck[4] = boxasideplayer - columns + 1;
-				positionstocheck[5] = boxasideplayer + 1;
-				positionstocheck[6] = s.playerposition + 1;
-			}
-			for (int i = 0; i < 7; i++)
-			{
-				squarehasobstacle[i] = IsBlockedIn(s, sides, positionstocheck[i]);
-				if (squarehasobstacle[i])
-				{
-					lastobst = i;
-					if (firstobst == -1) firstobst = i;
-				}
-			}
-			if (firstobst < 0 || firstobst == lastobst) yield break;
-			for (int i = firstobst + 1; i < lastobst; i++)
-			{
-				if (!squarehasobstacle[i])
-				{
-					if (!isdone)
-					{
-						yield return positionstocheck[i];
-						isdone = true;
-					}
-				}
-				else isdone = false;
-			}
-			yield break;
-		}
-		HashSet<int> UnreachableAreaByPlayer(State s, int boxasideplayer)
-		{
-			
-			foreach (int square in FindPosibleUnreachablePosByPlayer(s, boxasideplayer))
-			{
-				HashSet<int> zone = GetFreeZoneWithBoxesFrom(square, s);
-				if (zone != null) return zone;
-			}
-			return null;
-			
-		}
-
-		private HashSet<int> GetFreeZoneWithBoxesFrom(int square, State s)
-		{
-			State stmp = new State();
-			stmp.boxpositions = s.boxpositions;
-			HashSet<int> zone = new HashSet<int>();
-			Queue<int> pending = new Queue<int>();
-			pending.Enqueue(square);
-			while (pending.Count != 0)
-			{
-				int tmp = pending.Dequeue();
-				if (tmp == s.playerposition) return null;
-				if (zone.Contains(tmp)) continue;
-				zone.Add(tmp);
-				stmp.playerposition = tmp;
-				int up = tmp - columns, down = tmp + columns, left = tmp - 1, right = tmp + 1;
-				if (CanBeMoved(stmp, Direction.UP)) pending.Enqueue(up);
-				else if (stmp.boxpositions.Contains(up)) zone.Add(up);
-
-				if (CanBeMoved(stmp, Direction.DOWN)) pending.Enqueue(down);
-				else if (stmp.boxpositions.Contains(down)) zone.Add(down);
-
-				if (CanBeMoved(stmp, Direction.LEFT)) pending.Enqueue(left);
-				else if (stmp.boxpositions.Contains(left)) zone.Add(left);
-
-				if (CanBeMoved(stmp, Direction.RIGHT)) pending.Enqueue(right);
-				else if (stmp.boxpositions.Contains(right)) zone.Add(right);
-			}
-			return zone;
-		}
-		private StateOneBox PushBoxTo(State s, int i, int target)
-		{
-			if (s.boxpositions.Contains(target) || 
-				target < 0 || target >= Grid.Length || 
-				Grid[target] == (char) Elements.WALL || 
-				i < 0 || i>= Grid.Length || !s.boxpositions.Contains(i)) return null;
-			PriorityQueue<StateOneBox> pendinglocal = new PriorityQueue<StateOneBox>();
-			StateOneBox sob = new StateOneBox(s);
-			sob.currentbox = i;
-			HashSet<StateOneBox> visited = new HashSet<StateOneBox>(new StateOneBoxComparer());
-			pendinglocal.Enqueue(s.f, sob);
-			while (pendinglocal.Count != 0)
-			{
-				StateOneBox tmp = pendinglocal.Dequeue();
-				if (visited.Contains(tmp)) continue;
-				visited.Add(tmp);
-				if (tmp.currentbox == target)
-				{
-					return tmp;
-				}
-				GenerateSuccesorsPushBoxToGoals(tmp, pendinglocal);
-			}
-			return null;
-		}
-
-
-		static class ZobrishHash
-		{
-			public static int[,] array;
-			static Random r = new Random();
-			public static void Initialize()
-			{
-				array = new int[Grid.Length, 2];
-				for (int i = 0; i < Grid.Length; i++)
+				array = new int[gridlength, 2];
+				for (int i = 0; i < gridlength; i++)
 				{
 					for (int j = 0; j < 2; j++)
 					{
@@ -1727,23 +1797,22 @@ namespace Sokoban
 					}
 				}
 			}
-			public static int GetZobrishHash(State s)
+			public int GetZobrishHash(State s)
 			{
 				int zkey = 0;
-				for (int i = 0; i < Grid.Length; i++)
+				for (int i = 0; i < gridlength; i++)
 				{
 					if (s.boxpositions.Contains(i)) zkey ^= array[i, 1];
 					else zkey ^= array[i, 0];
 				}
 				return zkey;
 			}
-			public static int GetZobrishHashAfterMove(State s, int before, int now)
+			public int GetZobrishHashAfterMove(State s, int before, int now)
 			{
 				return s.GetHashCode() ^ array[before, 0] ^ array[before, 1] ^ array[now, 0] ^ array[now, 1];
 			}
 		}
-		int numberofnowalls = 0;
-		int numberofboxes = 0;
+#if DEBUG
 		Test.TimeMeasurer boxtogoalmeasurer = new Test.TimeMeasurer();
 		Test.TimeMeasurer pushboxmeasurer = new Test.TimeMeasurer();
 		Test.TimeMeasurer deadlockmeasurer = new Test.TimeMeasurer(true);
@@ -1754,13 +1823,14 @@ namespace Sokoban
 		Test.TimeMeasurer reachableareameasurer = new Test.TimeMeasurer();
 		Test.TimeMeasurer solvingtimemeasurer = new Test.TimeMeasurer();
 		Test.TimeMeasurer smartplayearreachableareameasurer = new Test.TimeMeasurer();
-		IEnumerable<int> SolveParallelAux()
+#endif
+		IEnumerable<Direction> SolveParallelAux()
 		{
-			if (!canbesolved) return new List<int>();
+			if (!canbesolved) return new List<Direction>();
 			PriorityQueue<State> pending = new PriorityQueue<State>();
 			pending.Mode = PriorityQueue<State>.NodeMode.Queue;
-			ZobrishHash.Initialize();
-			HashSet<State> visited = new HashSet<State>(new StateComparerByPlayerZone());
+			zh.Initialize();
+			HashSet<State> visited = new HashSet<State>(new StateComparerByPlayerZone(Grid.Length));
 			pending.Enqueue(0, initial);
 			initial.heuristic = GetHeuristicBoxesToGoal(initial);
 			initial.SetHashCode();
@@ -1774,68 +1844,83 @@ namespace Sokoban
 			while (pending.Count != 0)
 			{
 				State s = pending.Dequeue();
+#if DEBUG
 				if (visitedmeasurer.AddTimeElapsedIn(() => visited.Contains(s))) continue;
+#else
+				if (visited.Contains(s)) continue;
+#endif
 				visited.Add(s);
 #if DEBUG && SHOWDEQUEUEDSTATE && USEONECORE
-				
-				//Console.Write("DE QUEUING f: "+s.f + "\n");
+
+				//Console.Write("DEQUEUING f: "+s.f + "\n");
 				PrintState(s);
 #endif
 				if (goals.SetEquals(s.boxpositions))
 				{
-					List<int> r = new List<int>();
 					solution = s;
-					while(s != null)
-					{
-						r.Insert(0, s.playerposition);
-						s = s.previousState;
-					}
-					return r;
+					return BringPlayerMoves(solution);
 				}
 				PriorityQueue<int> pq = SortBoxesToGoalByDistance(s);
 				Parallel.For(0, pq.Count, po, (ind1) =>
 				{
 					int boxidx = pq.Dequeue();
 					PriorityQueue<int> sq = SortPlayerToSideBoxDistance(s.playerposition, s.boxpositions[boxidx]);
-					Parallel.For(0, sq.Count, po, (ind2, lo) => {
+					while(sq.Count != 0)
+					{
 						int sidebox = sq.Dequeue();
 						State s1 = JumpPlayerTo(s, sidebox);
-						if (s1 == null) return; // The player doesn't have access
-#if FOCUSONEBOXTOGOAL
-						State s3 = boxtogoalmeasurer.AddTimeElapsedIn(() => PushBoxToClosestGoal(s1, boxidx));
-						if (s3 != null)
-						{
-							s3.f = Int32.MinValue + s3.f;
-							pending.Enqueue(s3.f, s3);
-						}
-#endif
-						
+						if (s1 == null) continue; // The player doesn't have access
+#if DEBUG
 						State s2 = pushboxmeasurer.AddTimeElapsedIn(() => PushBox(s1, boxidx));
+#else
+						State s2 = PushBox(s1, boxidx);
+#endif
 						if (s2 != null)
 						{
+#if DEBUG
 							if (deadlockmeasurer.AddTimeElapsedIn(()=>!DeadLock(s2, s2.boxpositions[boxidx])))
+#else
+							if (!DeadLock(s2, s2.boxpositions[boxidx]))
+#endif
 							{
+#if DEBUG
 								reachableareameasurer.AddTimeElapsedIn(() => SetPlayerReachableArea(s2, boxidx));
-								if (goals.Contains(s1.boxpositions[boxidx]))
-								{
-									s2.cumulatedlength = 0;
-									s2.f = 0;
-								}
+#else
+								SetPlayerReachableArea(s2, boxidx);
+#endif
 								pending.Enqueue(s2.f, s2);
 							}
 						}
-					});
+					}
 				});
 			}
-			return new List<int>();
+			return new List<Direction>();
 		}
 
-		private State PushBoxToClosestGoal(State state, int boxidx)
+		public IEnumerable<Direction> SolveDeep()
 		{
-			PriorityQueue<State> pending = new PriorityQueue<State>();
-			pending.Mode = PriorityQueue<State>.NodeMode.Queue;
-			HashSet<State> visited = new HashSet<State>(new StateComparerByPlayerZone());
-			pending.Enqueue(state.f, state);
+			IEnumerable<Direction> l;
+
+#if (DEBUG)
+			l = solvingtimemeasurer.AddTimeElapsedIn(() => { return SolveDeepAux(); });
+#else
+			l = SolveDeepAux();
+#endif
+			return l;
+		}
+
+		// Goes deep and finds the best solution
+		IEnumerable<Direction> SolveDeepAux()
+		{
+			if (!canbesolved) return new List<Direction>();
+			Stack<State> pending = new Stack<State>();
+			zh.Initialize();
+			HashSet<State> visited = new HashSet<State>(new StateComparerByPlayerZone(Grid.Length));
+
+
+			pending.Push(initial);
+			initial.heuristic = GetHeuristicBoxesToGoal(initial);
+			initial.SetHashCode();
 			ParallelOptions po = new ParallelOptions();
 			po.MaxDegreeOfParallelism =
 #if USEONECORE
@@ -1843,95 +1928,118 @@ namespace Sokoban
 #else
 			Environment.ProcessorCount;
 #endif
+			PriorityQueue<int> pq = SortBoxesToGoalByDistance(initial);
+			int[] arrpq = new int[pq.Count];
+			for (int i = 0, endi = pq.Count; i < endi; i++) arrpq[i] = pq.Dequeue();
 			while (pending.Count != 0)
 			{
-				State s = pending.Dequeue();
-				if (visited.Contains(s)) continue;
-				visited.Add(s);
-				if (goals.Contains(s.boxpositions[boxidx]))
+				State s = pending.Pop();
+
+#if DEBUG && SHOWDEQUEUEDSTATE && USEONECORE
+
+				//Console.Write("DEQUEUING f: "+s.f + "\n");
+				PrintState(s);
+#endif
+				if(solution != null && GetHeuristicBoxesToGoal(s) + s.boxpushes > solution.boxpushes)
 				{
-					return s;
+#if DEBUG
+				//	Console.WriteLine("State with "+ s.boxpushes +" expected pushes, ignored");
+					continue;
+#endif
+				}
+				if (goals.SetEquals(s.boxpositions))
+				{
+					if (solution == null || solution.boxpushes > s.boxpushes)
+					{
+						solution = s;
+						int rmv = visited.RemoveWhere((x) => GetHeuristicBoxesToGoal(x) + x.boxpushes >= solution.boxpushes);
+#if DEBUG
+						Console.WriteLine("Solution found: " + solution.boxpushes + " pushes, " + rmv + " elements were deleted from visited table ");
+
+#endif
+						GC.Collect();
+					}
+					continue;
 				}
 
-				PriorityQueue<int> sq = SortPlayerToSideBoxDistance(s.playerposition, s.boxpositions[boxidx]);
-				Parallel.For(0, sq.Count, po, (ind2, lo) => {
-					int sidebox = sq.Dequeue();
-					State s1 = JumpPlayerTo(s, sidebox);
-					if (s1 == null) return; // The player doesn't have access
-					State s2 = PushBox(s1, boxidx);
-					if (s2 != null)
+				Parallel.For(0, arrpq.Length, po, (ind1) =>
+				{
+					int boxidx = arrpq[ind1];
+					PriorityQueue<int> sq = SortPlayerToSideBoxDistance(s.playerposition, s.boxpositions[boxidx]);
+					while(sq.Count != 0)
 					{
-						if (!DeadLock(s2, s2.boxpositions[boxidx]))
+						int sidebox = sq.Dequeue();
+						State s1 = JumpPlayerTo(s, sidebox);
+						if (s1 == null) continue; // The player doesn't have access
+
+#if DEBUG
+						State s2 = pushboxmeasurer.AddTimeElapsedIn(() => PushBox(s1, boxidx));
+#else
+						State s2 = PushBox(s1, boxidx);
+#endif
+						if (s2 != null)
 						{
-							SetPlayerReachableArea(s2);
-							pending.Enqueue(s2.f, s2);
+#if DEBUG
+							reachableareameasurer.AddTimeElapsedIn(() => SetPlayerReachableArea(s2, boxidx));
+#else
+							SetPlayerReachableArea(s2, boxidx);
+#endif
+#if DEBUG
+							if (!visitedmeasurer.AddTimeElapsedIn(() => visited.Contains(s2)) && deadlockmeasurer.AddTimeElapsedIn(() => !DeadLock(s2, s2.boxpositions[boxidx])))
+#else
+							if (!visited.Contains(s2) && !DeadLock(s2, s2.boxpositions[boxidx]))
+#endif
+							{
+								visited.Add(s2);
+								pending.Push(s2);
+							}
 						}
 					}
 				});
 			}
-			return null;
+			return BringPlayerMoves(solution);
 		}
-		
-		class StateOneBox : State
+
+		public int SolutionPushes { get { if (solution != null) return solution.boxpushes; else return -1; } }
+
+		private IEnumerable<Direction> BringPlayerMoves(State s)
 		{
-			public StateOneBox() { }
-			/// <summary>
-			/// This doesn't copy, only sets references as if it were s wihtout StateOneBox attributes initialized
-			/// </summary>
-			/// <param name="s"></param>
-			public StateOneBox(State s) 
+			if (s == null) yield break;
+			// Stores the movements in a stack
+			Stack<Direction> final = new Stack<Direction>();
+			for (State t = s; t != null; t = t.previousState) // Fills the movements of the player where he jumped a longer distance than posible
 			{
-				if(s != null)
-				{
-					playerreachablearea = s.playerreachablearea;
-					boxpushes = s.boxpushes;
-					previousState = s.previousState;
-					boxpositions = s.boxpositions;
-					playerposition = s.playerposition;
-					heuristic = s.heuristic;
-					f = s.f;
-					cumulatedlength = s.cumulatedlength;
+				newstates:
+				State prev = t.previousState;
+				if (prev == null) break;
+				int direction = t.playerposition - prev.playerposition;
+				if (direction == 1) // Moved right
+					final.Push(Direction.RIGHT);
+				else if (direction == -1)// Moved left
+					final.Push(Direction.LEFT);
+				else if (direction == columns) // Moved down
+					final.Push(Direction.DOWN);
+				else if (direction == -columns) // Moved up
+					final.Push(Direction.UP);
+				else if (direction == 0) { continue; } // If this happens something weird happened
+				else
+				{ // The player has jumped a longer distance, so the states are computed again
+					t.previousState = MovePlayerTo(prev, t.playerposition).previousState;
+					goto newstates;
 				}
 			}
-			public int currentbox;
-		}
-		class StateOneBoxComparer : EqualityComparer<StateOneBox>
-		{
-			public override bool Equals(StateOneBox x, StateOneBox y)
-			{
-				return x.playerreachablearea[y.playerposition] && x.currentbox == y.currentbox;
-			}
-			public override int GetHashCode(StateOneBox obj)
-			{
-				return base.GetHashCode();
-			}
+			while (final.Count != 0) yield return final.Pop();
 		}
 
-
-
-		private void GenerateSuccesorsPushBoxToGoals(StateOneBox tmp, PriorityQueue<StateOneBox> pending)
-		{
-			PriorityQueue<int> sq = SortPlayerToSideBoxDistance(tmp.playerposition, tmp.currentbox);
-			while(sq.Count != 0)
-			{
-				int playerpos = sq.Dequeue();
-				State s = PushBox(JumpPlayerTo(tmp, playerpos), tmp.currentbox);
-				if (s == null) continue;
-				StateOneBox sob = new StateOneBox(s);
-				sob.currentbox = 2*tmp.currentbox - playerpos;
-				pending.Enqueue(sob.f, sob);
-			}
-		}
-		
 		State PushBox(State s, int boxidx)
 		{
 			if (s == null) return null;
 			int boxpos = s.boxpositions[boxidx];
 			int t = s.playerposition - boxpos;
-			State tn = new State();
+			State tn = new State(zh);
 			tn.heuristic = s.heuristic;
 			tn.hashcode = s.hashcode;
-			tn.playerreachablearea = s.playerreachablearea;
+			tn.sideboxesreachable = s.sideboxesreachable;
 			tn.boxpushes = s.boxpushes + 1;
 			tn.playerposition = boxpos;
 			tn.boxpositions = s.boxpositions.ToArray();//Copying it
@@ -1971,7 +2079,7 @@ namespace Sokoban
 			}
 			tn.heuristic = GetHeuristicBoxesToGoal(tn, boxpos, boxidx);
 			tn.f = tn.heuristic + tn.cumulatedlength;
-			
+
 			return tn;
 		}
 
@@ -1989,8 +2097,6 @@ namespace Sokoban
 			}
 			return s.heuristic - distprev + distnow;
 		}
-
-
 		// Sum of the minimal distance of a box to a goal
 		int GetHeuristicBoxesToGoal(State s)
 		{
@@ -2017,16 +2123,17 @@ namespace Sokoban
 		/// <returns></returns>
 		State JumpPlayerTo(State s, int target)
 		{
-			if (InsideGrid(target) && s.playerreachablearea[target])
+			if (s.playerposition == target) return s;
+			if (InsideGrid(target) && s.sideboxesreachable.Contains(target))
 			{
-				State r = new State();
+				State r = new State(zh);
 				r.boxpushes = s.boxpushes;
 				r.boxpositions = s.boxpositions;
 				r.cumulatedlength = s.cumulatedlength;
 				r.f = s.f;
 				r.heuristic = s.heuristic;
 				r.playerposition = target;
-				r.playerreachablearea = s.playerreachablearea;
+				r.sideboxesreachable = s.sideboxesreachable;
 				r.previousState = s;
 				r.hashcode = s.hashcode;
 				return r;
@@ -2035,16 +2142,16 @@ namespace Sokoban
 		}
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="initials"></param>
 		/// <param name="target"></param>
 		/// <param name="returninitialdistance">Helps to find the minimal amount of pushes (outside this function) if true, helps to find the minimal amount of movements if false</param>
 		/// <returns></returns>
-		State MovePlayerTo(State initials, int target, bool returninitialdistance)
+		State MovePlayerTo(State initials, int target)
 		{
 			//if (!initials.playerreachablearea.Contains(target)) return null;
-			if (target < 0 || target >= Grid.Length || Grid[target] == (char)Elements.WALL || initials.boxpositions.Contains(target)) return null;
+			if (!InsideGrid(target) || Grid[target] == (char)Elements.WALL || initials.boxpositions.Contains(target)) return null;
 			PriorityQueue<State> pending = new PriorityQueue<State>();
 			HashSet<int> visited = new HashSet<int>();
 			pending.Enqueue(initials.f, initials);
@@ -2054,12 +2161,9 @@ namespace Sokoban
 				visited.Add(t.playerposition);
 				if(t.playerposition == target)
 				{
-					if (returninitialdistance)
-					{
-						t.f = initials.f;
-						t.cumulatedlength = initials.cumulatedlength;
-						t.heuristic = initials.heuristic;
-					}
+					t.f = initials.f;
+					t.cumulatedlength = initials.cumulatedlength;
+					t.heuristic = initials.heuristic;
 					return t;
 				}
 				GenerateSuccesorsMPTo(t, pending, visited, target);
@@ -2071,13 +2175,12 @@ namespace Sokoban
 		bool CanBeMoved(State t, Direction dir)
 		{
 			int n = 0;
-			int lowerbound = 0, upperbound = Grid.Length;
-			if (t.playerposition < lowerbound || t.playerposition >= upperbound) return false;
+			if (!InsideGrid(t.playerposition)) return false;
 			switch (dir)
 			{
 				case Direction.LEFT:
 					n = t.playerposition - 1;
-					
+
 					break;
 				case Direction.RIGHT:
 					n = t.playerposition + 1;
@@ -2089,12 +2192,7 @@ namespace Sokoban
 					n = t.playerposition + columns;
 					break;
 			}
-			if(dir == Direction.LEFT || dir == Direction.RIGHT)
-			{
-				upperbound = columns * (t.playerposition / columns+1);
-				lowerbound = columns * (t.playerposition / columns);
-			}
-			if (n < lowerbound || n >= upperbound || Grid[n] == (char)Elements.WALL || t.boxpositions.Contains(n)) return false;
+			if (!InsideGrid(n) || Grid[n] == (char)Elements.WALL || t.boxpositions.Contains(n)) return false;
 			else return true;
 		}
 
@@ -2121,8 +2219,8 @@ namespace Sokoban
 				}
 				if (!visited.Contains(t.playerposition + phase) && CanBeMoved(t, d))
 				{
-					State tn = new State();
-					tn.playerreachablearea = t.playerreachablearea;
+					State tn = new State(zh);
+					tn.sideboxesreachable = t.sideboxesreachable;
 					tn.boxpushes = t.boxpushes;
 					tn.playerposition = t.playerposition + phase;
 					tn.boxpositions = t.boxpositions;
@@ -2169,12 +2267,12 @@ namespace Sokoban
 				// Foreach goal reachable from that box
 				// Find the minimal distance
 				int minimald = Int32.MaxValue;
-				foreach (int v in boxtogoals[i])
+				foreach (int v in boxtogoals[i].Intersect(s.boxpositions)) // Boxes in the goal are discarded
 				{
 					int dist = ManhattanDistance(s.boxpositions[i], v);
 					if (minimald > dist) minimald = dist;
 				}
-				r.Enqueue(minimald, i);
+				r.Enqueue(minimald, i); // If there are no goals for a box then it will have the max value, it means will be treated last
 			}
 			return r;
 		}
@@ -2205,12 +2303,7 @@ namespace Sokoban
 				CancellationTokenSource cts = new CancellationTokenSource();
 				Thread th = new Thread(() =>
 				{
-					ss.SolveParallel().ToList<int>().ForEach(x =>
-					{
-
-						Console.WriteLine("({0},{1})", x / columns, x % columns);
-
-					});
+					ss.SolveParallel();
 					ss.PrintSolution();
 				});
 				th.Start();
@@ -2223,6 +2316,33 @@ namespace Sokoban
 				catch(ThreadAbortException) { }
 				Console.Clear(); GC.Collect();
 			}
+#else
+			char[] grid = Console.ReadLine().ToArray();
+			int columns = (int)Math.Sqrt(grid.Length);
+			SokobanSolver ss = new SokobanSolver(grid, columns);
+			List<SokobanSolver.Direction> sol = ss.SolveParallel().ToList();
+			foreach (SokobanSolver.Direction dir in sol)
+			{
+				switch (dir)
+				{
+					case SokobanSolver.Direction.LEFT:
+						Console.Write("o");
+						break;
+					case SokobanSolver.Direction.RIGHT:
+						Console.Write("e");
+						break;
+					case SokobanSolver.Direction.UP:
+						Console.Write("n");
+						break;
+					case SokobanSolver.Direction.DOWN:
+						Console.Write("s");
+						break;
+					default:
+						Console.Write("?");
+						break;
+				}
+			}
+			Console.Write("\n" + ss.SolutionPushes + "\n");
 #endif
 		}
 	}
