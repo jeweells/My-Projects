@@ -4,10 +4,10 @@ C:\Users\Jeweells\Documents\UCV\7\Tecnicas avanzadas de programacion\Sokoban\Sok
 C:\Users\Jeweells\Documents\UCV\7\Tecnicas avanzadas de programacion\Sokoban\Sokoban\obj\Debug\Sokoban.csprojResolveAssemblyReference.cache
 C:\Users\Jeweells\Documents\UCV\7\Tecnicas avanzadas de programacion\Sokoban\Sokoban\obj\Debug\Sokoban.exe
 C:\Users\Jeweells\Documents\UCV\7\Tecnicas avanzadas de programacion\Sokoban\Sokoban\obj\Debug\Sokoban.pdb
-C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\obj\Debug\Sokoban.csprojResolveAssemblyReference.cache
 C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\obj\Debug\Sokoban.exe
 C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\obj\Debug\Sokoban.pdb
 C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\bin\Debug\Sokoban.exe.config
 C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\bin\Debug\Sokoban.exe
 C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\bin\Debug\Sokoban.pdb
 C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\obj\Debug\Sokoban.csproj.CoreCompileInputs.cache
+C:\Users\Jeweells\Documents\GitHub\My-Projects\Sokoban\obj\Debug\Sokoban.csprojAssemblyReference.cache

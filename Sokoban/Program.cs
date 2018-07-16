@@ -213,7 +213,7 @@
 // :: If the queue is empty then we have no more hidden sets.
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-#define HOMEWORK6
+#undef HOMEWORK6
 
 #if !HOMEWORK6
 #define DEBUG
