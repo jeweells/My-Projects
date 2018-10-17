@@ -1,0 +1,173 @@
+
+AP: 4
+Range: 1
+Crit: 15%
+Bonus: +5
+1 / turn
+Catseye Axe
+Level 200
+16 to 20 (Earth damage)
+16 to 20 (Water damage)
+16 to 20 (Fire damage)
+Effects:
+400 Vitality
+50 Strength
+50 Intelligence
+50 Chance
+40 Wisdom
+15 Power
+4 Critical Hits
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+15 Prospecting
+15 Dodge
+15 Critical Damage
+10% Air Resistance
+Conditions
+Strength > 400 and 
+Intelligence > 400 and 
+Chance > 400
+
+AP: 4
+Range: 1
+Crit: 5%
+Bonus: +5
+1 / turn
+Heqaxe
+Level 200
+20 to 25 (Neutral damage)
+10 to 15 (Earth steal)
+10 to 15 (Air steal)
+Effects:
+350 Vitality
+60 Strength
+60 Agility
+40 Wisdom
+4 Critical Hits
+-1 Range
+1 Summons
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+15 Prospecting
+15 Lock
+25 Pushback Damage
+7% Fire Resistance
+7% Water Resistance
+
+AP: 3
+Range: 1
+2 / turn
+Lavaxe
+Level 200
+12 to 16 (Earth damage)
+12 to 16 (Earth damage)
+Effects:
+350 Vitality
+80 Strength
+40 Wisdom
+1 Summons
+15 Neutral Damage
+15 Earth Damage
+15 Prospecting
+12 Lock
+7 AP Reduction
+25 Pushback Damage
+7% Fire Resistance
+10% Water Resistance
+
+AP: 5
+Range: 1
+Crit: 10%
+Bonus: +5
+1 / turn
+Mantax
+Level 200
+30 to 35 (Air damage)
+16 to 20 (Air steal)
+Effects:
+400 Vitality
+80 Agility
+40 Wisdom
+15 Air Damage
+12 Dodge
+10 AP Resistance
+10% Water Resistance
+30 Critical Resistance
+
+AP: 5
+Range: 1
+1 / turn
+Plumobile
+Level 200
+26 to 30 (Fire damage)
+6 to 10 (Fire steal)
+6 to 10 (Fire steal)
+Effects:
+350 Vitality
+80 Intelligence
+50 Wisdom
+4 Critical Hits
+1 Summons
+10 Fire Damage
+15 Heals
+20 Prospecting
+15 Lock
+10% Earth Resistance
+25 Critical Resistance
+
+AP: 5
+Range: 1
+Crit: 5%
+Bonus: +4
+1 / turn
+Riff Hatchet
+Level 200
+15 to 19 (Neutral damage)
+21 to 27 (Air damage)
+8 to 11 (Earth steal)
+Effects:
+250 Vitality
+60 Strength
+60 Agility
+5 Critical Hits
+1 Range
+18 Neutral Damage
+18 Earth Damage
+18 Air Damage
+15 Prospecting
+-301 Initiative
+10 Dodge
+20 Pushback Damage
+10% Neutral Resistance
+10% Air Resistance
+Conditions
+Strength > 350 and 
+Agility > 350
+
+AP: 5
+Range: 1
+1 / turn
+Tomahorse
+Level 200
+24 to 32 (Neutral damage)
+18 to 24 (Water damage)
+6 to 8 (Water steal)
+Effects:
+400 Vitality
+60 Strength
+60 Chance
+30 Wisdom
+-1 Range
+16 Neutral Damage
+16 Earth Damage
+16 Water Damage
+20 Pushback Damage
+10% Fire Resistance
+20 Neutral Resistance
+15 Air Resistance
+Conditions
+Strength > 350 and 
+Chance > 350

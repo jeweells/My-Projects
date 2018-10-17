@@ -1,0 +1,97 @@
+
+AP: 4
+Range: 1
+1 / turn
+Bitrydent
+Level 200
+34 to 40 (Earth damage)
+16 to 20 (Fire steal)
+Effects:
+350 Vitality
+70 Strength
+70 Intelligence
+40 Wisdom
+4 Critical Hits
+1 Summons
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+10 Heals
+15 Prospecting
+10 Lock
+7 MP Reduction
+10% Air Resistance
+Conditions
+Intelligence > 400 and 
+Strength > 400
+
+AP: 3
+Range: 1
+1 / turn
+Corrupted Spear
+Level 200
+11 to 15 (Neutral damage)
+6 to 8 (Air steal)
+6 to 8 (Earth steal)
+Effects:
+400 Vitality
+70 Strength
+70 Agility
+30 Wisdom
+-5 Critical Hits
+20 Neutral Damage
+20 Earth Damage
+20 Air Damage
+15 Prospecting
+10 Lock
+6 AP Resistance
+30 Pushback Damage
+10% Water Resistance
+Conditions
+Agility > 449 and 
+Strength > 449
+
+AP: 3
+Range: 1
+Crit: 25%
+Bonus: +10
+2 / turn
+Ensorcel Lance
+Level 200
+20 to 25 (Air damage)
+Effects:
+350 Vitality
+80 Agility
+40 Wisdom
+5 Critical Hits
+1 Summons
+12 Air Damage
+7 Dodge
+7 AP Reduction
+12 Critical Damage
+7% Neutral Resistance
+10% Fire Resistance
+-30 Pushback Resistance
+
+AP: 3
+Range: 1
+Crit: 15%
+Bonus: +3
+2 / turn
+King Playa's Scepta
+Level 200
+12 to 15 (Water damage)
+4 to 5 (Water steal)
+Effects:
+400 Vitality
+80 Chance
+50 Wisdom
+3 Critical Hits
+1 Summons
+20 Water Damage
+15 Prospecting
+10 Dodge
+7 AP Reduction
+10 Critical Damage
+7% Neutral Resistance
+10% Earth Resistance

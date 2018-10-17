@@ -1,0 +1,733 @@
+
+Atcham Sandals
+Level 200
+Atcham Set
+350 Vitality
+50 Intelligence
+50 Agility
+50 Chance
+40 Wisdom
+3 Critical Hits
+1 MP
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+15 Prospecting
+7 AP Reduction
+10 Critical Damage
+7% Neutral Resistance
+7% Water Resistance
+
+Baleenaboots
+Level 200
+350 Vitality
+60 Strength
+60 Agility
+40 Wisdom
+1 AP
+1 MP
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+15 Prospecting
+7 Dodge
+-5 AP Resistance
+10% Water Resistance
+15 Critical Resistance
+Conditions
+AP < 12
+
+Boot Boots
+Level 200
+350 Vitality
+50 Strength
+50 Intelligence
+50 Chance
+40 Wisdom
+3 Critical Hits
+1 AP
+1 MP
+1 Range
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+-10 Dodge
+10% Air Resistance
+Conditions
+AP < 12
+
+Boots of the Bleeding Heart
+Level 200
+Bleeding Heart Set
+350 Vitality
+90 Strength
+40 Wisdom
+4 Critical Hits
+1 MP
+1 Range
+12 Neutral Damage
+12 Earth Damage
+7 Lock
+-5 Dodge
+7 MP Reduction
+12 Critical Damage
+7% Water Resistance
+7% Air Resistance
+
+Boots of the Salvatory Spirit
+Level 200
+Salvatory Spirit Set
+350 Vitality
+40 Wisdom
+60 Power
+-10 Critical Hits
+1 MP
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+15 Water Damage
+15 Air Damage
+15 Prospecting
+10 Dodge
+10% Air Resistance
+
+Boots of the Unsound Mind
+Level 200
+Unsound Mind Set
+400 Vitality
+50 Intelligence
+50 Chance
+40 Wisdom
+3 Critical Hits
+1 MP
+12 Fire Damage
+12 Water Damage
+15 Heals
+12 Lock
+10 MP Resistance
+10% Fire Resistance
+
+Boots of the Unspeakable
+Level 200
+Unspeakable Set
+350 Vitality
+1 MP
+1 Range
+1 Summons
+20 Neutral Damage
+20 Earth Damage
+20 Fire Damage
+20 Water Damage
+20 Air Damage
+10 Dodge
+7% Fire Resistance
+7% Air Resistance
+
+Boots of the Valiant Heart
+Level 200
+Valiant Heart Set
+350 Vitality
+70 Strength
+70 Agility
+40 Wisdom
+2 Critical Hits
+1 MP
+1 Range
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+25 Pushback Damage
+7% Neutral Resistance
+7% Water Resistance
+
+Burning Shoes
+Level 200
+Burning Set
+350 Vitality
+80 Intelligence
+40 Wisdom
+-10 Critical Hits
+1 MP
+1 Summons
+15 Fire Damage
+12 Heals
+15 Prospecting
+7 Lock
+5 AP Reduction
+10% Earth Resistance
+10% Air Resistance
+
+Catseye Boots
+Level 200
+Catseye Set
+300 Vitality
+40 Strength
+40 Intelligence
+40 Agility
+40 Chance
+40 Wisdom
+10 Power
+4 Critical Hits
+1 MP
+1 Range
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+10% Fire Resistance
+20 Critical Resistance
+
+Count Harebourg's Boots
+Level 200
+Count Harebourg Set
+400 Vitality
+80 Strength
+50 Wisdom
+1 MP
+20 Neutral Damage
+20 Earth Damage
+15 Lock
+-7 MP Resistance
+30 Neutral Resistance
+30 Pushback Resistance
+
+Cycloid Boots
+Level 200
+Cycloid Set
+350 Vitality
+50 Strength
+50 Intelligence
+50 Agility
+50 Wisdom
+5 Critical Hits
+1 MP
+1 Range
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Air Damage
+10 Critical Damage
+-21 Pushback Damage
+10% Air Resistance
+15 Earth Resistance
+
+Dark Court Boots
+Level 200
+Dark Court Set
+400 Vitality
+60 Strength
+50 Wisdom
+4 Critical Hits
+1 MP
+20 Neutral Damage
+20 Earth Damage
+20 Prospecting
+7% Earth Resistance
+7% Fire Resistance
+15 Critical Resistance
+
+Deep Sea Sandals
+Level 200
+Deep Sea Set
+350 Vitality
+70 Chance
+40 Wisdom
+4 Critical Hits
+1 MP
+15 Water Damage
+15 Prospecting
+10 Lock
+7 MP Resistance
+10% Neutral Resistance
+10% Earth Resistance
+
+Dust Kickers
+Level 200
+Soul-Blaze Set
+350 Vitality
+60 Strength
+60 Intelligence
+60 Agility
+30 Wisdom
+2 Critical Hits
+1 MP
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+12 Air Damage
+15 Prospecting
+7% Earth Resistance
+7% Fire Resistance
+20 Critical Resistance
+
+Fugitive Boots
+Level 200
+Fugitive Set
+350 Vitality
+70 Strength
+70 Agility
+50 Wisdom
+6 Critical Hits
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+15 Prospecting
+5 Dodge
+10 MP Resistance
+10% Water Resistance
+
+Goulboots
+Level 200
+Ghoul Set
+400 Vitality
+60 Strength
+60 Intelligence
+60 Chance
+30 Wisdom
+1 MP
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+12 Water Damage
+15 Prospecting
+10% Air Resistance
+25 Critical Resistance
+
+Great Bootinis
+Level 200
+Mesm Set
+400 Vitality
+50 Intelligence
+50 Chance
+40 Wisdom
+1 MP
+1 Range
+20 Fire Damage
+20 Water Damage
+20 Pushback Damage
+7% Neutral Resistance
+7% Earth Resistance
+
+Hairsh Slippers
+Level 200
+Hairsh Set
+350 Vitality
+60 Strength
+60 Chance
+40 Wisdom
+4 Critical Hits
+1 MP
+1 Range
+12 Neutral Damage
+12 Earth Damage
+12 Water Damage
+15 Prospecting
+10 Dodge
+7 AP Resistance
+7% Water Resistance
+
+Hot Docs
+Level 200
+300 Vitality
+50 Strength
+50 Intelligence
+30 Wisdom
+2 MP
+2 Summons
+14 Earth Damage
+14 Fire Damage
+15 Heals
+15 Prospecting
+7 AP Reduction
+Conditions
+AP < 12
+
+Kamasterisk Boots
+Level 200
+Kamasterisk Set
+350 Vitality
+60 Strength
+60 Agility
+40 Wisdom
+1 MP
+1 Range
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+25 Prospecting
+-10 Lock
+5 MP Reduction
+10% Fire Resistance
+12 Water Resistance
+15 Critical Resistance
+-11 Pushback Resistance
+
+King Playa Boots
+Level 200
+King Playa Set
+350 Vitality
+60 Strength
+60 Intelligence
+40 Wisdom
+6 Critical Hits
+1 MP
+1 Range
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+15 Prospecting
+-5 Dodge
+6 MP Reduction
+10% Water Resistance
+
+Kroks
+Level 200
+Harpiset
+400 Vitality
+40 Wisdom
+3 Critical Hits
+15 Heals
+15 Prospecting
+20 Lock
+25 MP Resistance
+7% Neutral Resistance
+7% Earth Resistance
+
+Levitrof Boots
+Level 200
+Levitrof Set
+350 Vitality
+60 Strength
+60 Intelligence
+60 Chance
+40 Wisdom
+1 MP
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+15 Water Damage
+15 Dodge
+8% Earth Resistance
+
+Malitiamen Boots
+Level 200
+Malitiamen Set
+350 Vitality
+50 Intelligence
+50 Agility
+50 Chance
+40 Wisdom
+3 Critical Hits
+1 MP
+12 Fire Damage
+12 Water Damage
+12 Air Damage
+15 Prospecting
+10 Lock
+20 Pushback Damage
+7% Neutral Resistance
+
+Meno Boots
+Level 200
+Meno Set
+300 Vitality
+70 Intelligence
+70 Chance
+40 Wisdom
+4 Critical Hits
+1 MP
+1 Range
+12 Fire Damage
+12 Water Damage
+12 Heals
+6 MP Reduction
+7% Neutral Resistance
+7% Earth Resistance
+
+Micrab Slippers
+Level 200
+Bethel Set
+350 Vitality
+60 Strength
+60 Chance
+40 Wisdom
+5 Critical Hits
+1 MP
+1 Summons
+12 Neutral Damage
+12 Earth Damage
+12 Water Damage
+12 Prospecting
+5 AP Reduction
+7% Fire Resistance
+7% Air Resistance
+
+Mumystiboots
+Level 200
+Setstik
+400 Vitality
+50 Strength
+50 Intelligence
+35 Wisdom
+1 MP
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+12 Heals
+25 Pushback Damage
+10% Air Resistance
+30 Critical Resistance
+
+Nidas's Sandals
+Level 200
+Nidas Set
+400 Vitality
+50 Intelligence
+50 Wisdom
+1 MP
+1 Range
+15 Fire Damage
+20 Prospecting
+10 Dodge
+5 MP Reduction
+10% Water Resistance
+12 Air Resistance
+20 Pushback Resistance
+
+Nocturnowl Boots
+Level 200
+Nocturnowl Set
+350 Vitality
+100 Chance
+50 Wisdom
+1 MP
+1 Range
+15 Water Damage
+20 Prospecting
+300 Initiative
+-11 Critical Damage
+10% Earth Resistance
+20 Air Resistance
+
+Pathogastrics
+Level 200
+350 Vitality
+60 Intelligence
+60 Chance
+40 Wisdom
+1 AP
+1 MP
+12 Fire Damage
+12 Water Damage
+15 Lock
+5 AP Reduction
+15 Critical Damage
+10% Air Resistance
+-20 Pushback Resistance
+Conditions
+AP < 12
+
+Queen of Fate Boots
+Level 200
+Queen of Fate Set
+350 Vitality
+70 Intelligence
+70 Chance
+40 Wisdom
+4 Critical Hits
+1 MP
+15 Fire Damage
+15 Water Damage
+6 Dodge
+6 MP Reduction
+15 Critical Damage
+10% Air Resistance
+
+Queen of Thieves' Boots
+Level 200
+Queen of Thieves Set
+350 Vitality
+60 Agility
+60 Chance
+50 Wisdom
+3 Critical Hits
+1 MP
+15 Water Damage
+15 Air Damage
+10% Water Resistance
+25 Critical Resistance
+
+Rassler Boots
+Level 200
+Rassler Set
+400 Vitality
+50 Strength
+50 Intelligence
+50 Agility
+40 Wisdom
+6 Critical Hits
+1 MP
+1 Summons
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+12 Air Damage
+15 Prospecting
+600 Initiative
+
+Sinistrofu Boots
+Level 200
+Sinistrofu Set
+300 Vitality
+80 Chance
+20 Wisdom
+1 MP
+-16 Earth Damage
+18 Water Damage
+20 Prospecting
+300 Initiative
+10% Earth Resistance
+10% Air Resistance
+15 Neutral Resistance
+15 Water Resistance
+
+Tal Kasha Sandals
+Level 200
+Tal Kasha Set
+350 Vitality
+40 Agility
+40 Chance
+30 Wisdom
+6 Critical Hits
+1 MP
+10 Water Damage
+10 Air Damage
+15 Prospecting
+10 AP Reduction
+10 Critical Damage
+7% Earth Resistance
+7% Fire Resistance
+
+Tentashoes
+Level 200
+Octoset
+350 Vitality
+60 Strength
+60 Agility
+40 Wisdom
+1 MP
+15 Neutral Damage
+15 Earth Damage
+15 Air Damage
+15 Prospecting
+7 Lock
+6 AP Reduction
+7% Neutral Resistance
+7% Earth Resistance
+
+Treadfast Boots
+Level 200
+Treadfast Set
+400 Vitality
+50 Wisdom
+75 Power
+1 MP
+13 Neutral Damage
+13 Earth Damage
+13 Fire Damage
+13 Water Damage
+13 Air Damage
+8 AP Resistance
+8% Fire Resistance
+-16 Critical Resistance
+
+Tritun Boots
+Level 200
+Tritun Set
+500 Vitality
+40 Wisdom
+6 Critical Hits
+1 MP
+1 Range
+15 Prospecting
+10 Lock
+7 AP Resistance
+25 Critical Damage
+30 Pushback Damage
+10% Water Resistance
+
+Tritun Palms
+Level 200
+400 Vitality
+100 Agility
+40 Wisdom
+2 Critical Hits
+1 MP
+20 Air Damage
+15 Prospecting
+12 MP Resistance
+7% Neutral Resistance
+7% Water Resistance
+
+Unnamable Boots
+Level 200
+500 Vitality
+100 Intelligence
+60 Wisdom
+1 MP
+18 Fire Damage
+15 Heals
+15 Prospecting
+7% Neutral Resistance
+7% Air Resistance
+
+Volcanic Clogs
+Level 200
+Volcanic Set
+350 Vitality
+60 Strength
+60 Intelligence
+40 Wisdom
+4 Critical Hits
+1 MP
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+12 Heals
+7 Lock
+5 MP Reduction
+7% Water Resistance
+7% Air Resistance
+
+Voldelor Boots
+Level 200
+Voldelor Set
+350 Vitality
+70 Agility
+70 Chance
+40 Wisdom
+10 Critical Hits
+1 MP
+12 Water Damage
+12 Air Damage
+7 Dodge
+20 Pushback Resistance
+
+Vortex Clogs
+Level 200
+Vortex Set
+350 Vitality
+70 Intelligence
+70 Agility
+40 Wisdom
+4 Critical Hits
+1 MP
+15 Fire Damage
+15 Air Damage
+12 Heals
+5 AP Reduction
+-10 MP Resistance
+10% Water Resistance
+20 Critical Resistance

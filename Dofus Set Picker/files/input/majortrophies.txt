@@ -1,0 +1,419 @@
+
+Major Acrobat
+Level 150
+60 Agility
+
+Major Adamantin
+Level 150
+48 Pushback Resistance
+
+Major Air Bulwark
+Level 150
+-8% Fire Resistance
+40 Air Resistance
+
+Major Air Carapace
+Level 150
+12% Air Resistance
+Conditions
+Set Bonus < 2
+
+Major Air Defender
+Level 150
+24 Air Resistance
+
+Major Air Destroyer
+Level 150
+20 Air Damage
+Conditions
+Set Bonus < 2
+
+Major Air Destroyer
+Level 150
+12 Air Damage
+
+Major Air Wrecker
+Level 150
+20 Air Damage
+-8% Fire Resistance
+
+Major Barbarian
+Level 150
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+12 Water Damage
+12 Air Damage
+-24 Critical Damage
+
+Major Barrier
+Level 150
+12 Critical Resistance
+
+Major Bastion
+Level 150
+-32 Critical Damage
+32 Critical Resistance
+
+Major Bloodthirst
+Level 150
+12 Damage
+Conditions
+Set Bonus < 2
+
+Major Brainbox
+Level 150
+-200 Vitality
+100 Intelligence
+
+Major Curer
+Level 150
+32 Heals
+Conditions
+Set Bonus < 2
+
+Major Delayer
+Level 150
+24 MP Reduction
+Conditions
+Set Bonus < 2
+
+Major Deserter
+Level 150
+32 Dodge
+Conditions
+Set Bonus < 2
+
+Major Doctor
+Level 150
+-200 Vitality
+32 Heals
+
+Major Dynamo
+Level 150
+40 Power
+
+Major Earth Bulwark
+Level 150
+-8% Air Resistance
+40 Earth Resistance
+
+Major Earth Carapace
+Level 150
+12% Earth Resistance
+Conditions
+Set Bonus < 2
+
+Major Earth Defender
+Level 150
+24 Earth Resistance
+
+Major Earth Destroyer
+Level 150
+12 Earth Damage
+
+Major Earth Destroyer
+Level 150
+20 Earth Damage
+Conditions
+Set Bonus < 2
+
+Major Earth Wrecker
+Level 150
+20 Earth Damage
+-8% Air Resistance
+
+Major Escapee
+Level 150
+32 MP Resistance
+Conditions
+Set Bonus < 2
+
+Major Escapist
+Level 150
+16 Dodge
+
+Major Evader
+Level 150
+16 AP Resistance
+
+Major Evader
+Level 150
+32 AP Resistance
+Conditions
+Set Bonus < 2
+
+Major Feller
+Level 150
+64 Pushback Damage
+Conditions
+Set Bonus < 2
+
+Major Fire Bulwark
+Level 150
+-8% Earth Resistance
+40 Fire Resistance
+
+Major Fire Carapace
+Level 150
+12% Fire Resistance
+Conditions
+Set Bonus < 2
+
+Major Fire Defender
+Level 150
+24 Fire Resistance
+
+Major Fire Destroyer
+Level 150
+12 Fire Damage
+
+Major Fire Destroyer
+Level 150
+20 Fire Damage
+Conditions
+Set Bonus < 2
+
+Major Fire Wrecker
+Level 150
+20 Fire Damage
+-8% Earth Resistance
+
+Major Forerunner
+Level 150
+-100 Vitality
+800 Initiative
+
+Major Fortification
+Level 150
+32 Critical Resistance
+Conditions
+Set Bonus < 2
+
+Major Friction
+Level 150
+12 MP Reduction
+
+Major Fugitive
+Level 150
+16 MP Resistance
+
+Major Goliath
+Level 150
+-200 Vitality
+100 Strength
+
+Major Gymnast
+Level 150
+-200 Vitality
+100 Agility
+
+Major Healer
+Level 150
+16 Heals
+
+Major Instigator
+Level 150
+400 Initiative
+
+Major Intellectual
+Level 150
+100 Intelligence
+Conditions
+Set Bonus < 2
+
+Major Jostler
+Level 150
+-32 Lock
+64 Pushback Damage
+
+Major Locker
+Level 150
+16 Lock
+
+Major Luckster
+Level 150
+100 Chance
+Conditions
+Set Bonus < 2
+
+Major Maniac
+Level 150
+60 Strength
+
+Major Miracle Man
+Level 150
+320 Vitality
+Conditions
+Set Bonus < 2
+
+Major Motivator
+Level 150
+800 Initiative
+Conditions
+Set Bonus < 2
+
+Major Neutral Bulwark
+Level 150
+-8% Water Resistance
+40 Neutral Resistance
+
+Major Neutral Carapace
+Level 150
+12% Neutral Resistance
+Conditions
+Set Bonus < 2
+
+Major Neutral Defender
+Level 150
+24 Neutral Resistance
+
+Major Neutral Destroyer
+Level 150
+20 Neutral Damage
+Conditions
+Set Bonus < 2
+
+Major Neutral Destroyer
+Level 150
+12 Neutral Damage
+
+Major Neutral Wrecker
+Level 150
+20 Neutral Damage
+-8% Water Resistance
+
+Major Obstructor
+Level 150
+32 Lock
+Conditions
+Set Bonus < 2
+
+Major Oppressor
+Level 150
+12 AP Reduction
+
+Major Paralyser
+Level 150
+24 AP Reduction
+-24 MP Resistance
+
+Major Player
+Level 150
+60 Chance
+
+Major Powerhouse
+Level 150
+80 Power
+-12 Critical Hits
+
+Major Rabid
+Level 150
+100 Strength
+Conditions
+Set Bonus < 2
+
+Major Repellant
+Level 150
+32 Pushback Damage
+
+Major Scholar
+Level 150
+60 Intelligence
+
+Major Shackler
+Level 150
+24 MP Reduction
+-24 AP Resistance
+
+Major Slimeball
+Level 150
+-32 AP Resistance
+32 MP Resistance
+
+Major Solid
+Level 150
+96 Pushback Resistance
+Conditions
+Set Bonus < 2
+
+Major Stalwart
+Level 150
+-32 Dodge
+96 Pushback Resistance
+
+Major Stickler
+Level 150
+32 Lock
+-32 Dodge
+
+Major Stunner
+Level 150
+24 AP Reduction
+Conditions
+Set Bonus < 2
+
+Major Stunter
+Level 150
+100 Agility
+Conditions
+Set Bonus < 2
+
+Major Survivor
+Level 150
+160 Vitality
+
+Major Tease
+Level 150
+-200 Vitality
+100 Chance
+
+Major Transporter
+Level 150
+1000 Pods
+
+Major Untouchable
+Level 150
+32 AP Resistance
+-32 MP Resistance
+
+Major Vagabond
+Level 150
+-32 Lock
+32 Dodge
+
+Major Vigour
+Level 150
+80 Power
+Conditions
+Set Bonus < 2
+
+Major Water Bulwark
+Level 150
+-8% Neutral Resistance
+40 Water Resistance
+
+Major Water Carapace
+Level 150
+12% Water Resistance
+Conditions
+Set Bonus < 2
+
+Major Water Defender
+Level 150
+24 Water Resistance
+
+Major Water Destroyer
+Level 150
+20 Water Damage
+Conditions
+Set Bonus < 2
+
+Major Water Destroyer
+Level 150
+12 Water Damage
+
+Major Water Wrecker
+Level 150
+20 Water Damage
+-8% Neutral Resistance

@@ -1,0 +1,40 @@
+Earth Destroyer
+Level 100
+10 Earth Damage
+Conditions
+Set Bonus < 2
+
+Earth Destroyer
+Level 100
+6 Earth Damage
+
+Earth Wrecker
+Level 100
+10 Earth Damage
+-4% Air Resistance
+
+Escapee
+Level 100
+16 MP Resistance
+Conditions
+Set Bonus < 2
+
+Escapist
+Level 100
+8 Dodge
+
+Evader
+Level 100
+8 AP Resistance
+
+Evader
+Level 100
+16 AP Resistance
+Conditions
+Set Bonus < 2
+
+Feller
+Level 100
+32 Pushback Damage
+Conditions
+Set Bonus < 2

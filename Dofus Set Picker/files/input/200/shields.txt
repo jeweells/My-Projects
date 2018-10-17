@@ -1,0 +1,99 @@
+
+Ambuckler
+Level 200
+1 Range
+15 Dodge
+7 MP Reduction
+15% Ranged Resistance
+-15% Melee Resistance
+
+Anerice Shield
+Level 200
+Anerice Set
+6 Critical Hits
+20 Lock
+12 MP Resistance
+-15% Melee Damage
+15% Melee Resistance
+
+Bontarian Shield
+Level 200
+150 Vitality
+15 Dodge
+30 Critical Resistance
+-15% Ranged Damage
+15% Ranged Resistance
+
+Brakmarian Shield
+Level 200
+5 Critical Hits
+500 Initiative
+20 MP Resistance
+15% Melee Resistance
+-15% Ranged Resistance
+
+Captain Amakna Shield
+Level 200
+30 Power
+6 Critical Hits
+12 Critical Damage
+15% Melee Damage
+-15% Ranged Resistance
+
+Cycloid Shield
+Level 200
+25 Heals
+15 Dodge
+15 MP Resistance
+15% Ranged Damage
+-15% Melee Resistance
+
+Goulshield
+Level 200
+Ghoul Set
+30 Power
+12 AP Resistance
+30 Critical Resistance
+-15% Melee Resistance
+15% Ranged Resistance
+
+Ilyzaelle Shield
+Level 200
+Ilyzaelle Set
+150 Vitality
+10 MP Resistance
+10% Water Resistance
+15% Melee Damage
+-15% Weapon Damage
+
+Precious Shield
+Level 200
+150 Vitality
+15 Lock
+40 Pushback Damage
+-15% Ranged Damage
+15% Melee Resistance
+
+Solar's Shield
+Level 200
+120 Vitality
+12 MP Resistance
+70 Pushback Resistance
+-15% Weapon Damage
+15% Melee Resistance
+
+Stalak Shield
+Level 200
+30 Power
+20 Dodge
+35 Critical Resistance
+15% Ranged Damage
+-15% Melee Damage
+
+Wunspoon
+Level 200
+20 Lock
+50 Critical Resistance
+50 Pushback Resistance
+15% Melee Resistance
+-15% Ranged Resistance

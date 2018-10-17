@@ -1,0 +1,96 @@
+
+AP: 6
+Range: 1
+Crit: 5%
+Bonus: +10
+1 / turn
+Dark Court Shovel
+Level 200
+61 to 70 (Air damage)
+Effects:
+300 Vitality
+80 Agility
+50 Wisdom
+3 Critical Hits
+1 Range
+12 Air Damage
+20 Prospecting
+-11 Dodge
+10 AP Resistance
+10% Earth Resistance
+10% Water Resistance
+30 Pushback Resistance
+
+AP: 5
+Range: 1
+1 / turn
+Forfut Shovel
+Level 200
+36 to 40 (Water damage)
+36 to 40 (Fire damage)
+Effects:
+350 Vitality
+60 Intelligence
+60 Chance
+40 Wisdom
+4 Critical Hits
+1 Summons
+15 Fire Damage
+15 Water Damage
+12 Heals
+15 Prospecting
+15 AP Resistance
+10% Air Resistance
+Conditions
+Intelligence > 499 and 
+Chance > 499
+
+AP: 5
+Range: 1
+Crit: 15%
+Bonus: +4
+1 / turn
+Nidas Shovel
+Level 200
+33 to 40 (Neutral damage)
+4 to 6 (Air steal)
+4 to 6 (Water steal)
+Effects:
+350 Vitality
+50 Strength
+50 Agility
+50 Chance
+40 Wisdom
+20 Power
+6 Critical Hits
+12 Neutral Damage
+12 Earth Damage
+12 Water Damage
+12 Air Damage
+6 MP Reduction
+10% Fire Resistance
+12 Critical Resistance
+Conditions
+Agility > 300 and 
+Chance > 300
+
+AP: 4
+Range: 1
+Crit: 20%
+Bonus: +5
+1 / turn
+Shorpoon
+Level 200
+21 to 25 (Fire damage)
+21 to 25 (Fire damage)
+Effects:
+400 Vitality
+80 Intelligence
+50 Wisdom
+2 Critical Hits
+7 Fire Damage
+15 Heals
+15 Lock
+20 Critical Damage
+7% Neutral Resistance
+7% Air Resistance

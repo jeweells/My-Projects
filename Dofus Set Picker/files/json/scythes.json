@@ -1,0 +1,15 @@
+{
+	"Blord Warrior's Cursed Scythe": {
+		"vitality": 40,
+		"strength": 40,
+		"intelligence": 40,
+		"agility": 40,
+		"chance": 40,
+		"wisdom": 40,
+		"per_neutral_resistance": 5,
+		"per_earth_resistance": 5,
+		"per_fire_resistance": 5,
+		"per_water_resistance": 5,
+		"per_air_resistance": 5
+	}
+}

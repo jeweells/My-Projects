@@ -1,0 +1,561 @@
+
+Absoluti Cape
+Level 200
+350 Vitality
+80 Chance
+40 Wisdom
+4 Critical Hits
+1 AP
+1 Summons
+15 Water Damage
+15 Prospecting
+15 Pushback Damage
+10% Neutral Resistance
+10% Earth Resistance
+Conditions
+AP < 12
+
+Anerice Cloak
+Level 200
+Anerice Set
+500 Vitality
+10 Critical Hits
+1 Summons
+20 Prospecting
+7% Neutral Resistance
+7% Earth Resistance
+7% Fire Resistance
+7% Water Resistance
+7% Air Resistance
+
+Ankhape
+Level 200
+500 Vitality
+80 Strength
+30 Wisdom
+4 Critical Hits
+1 Range
+20 Neutral Damage
+20 Earth Damage
+15 Prospecting
+12 MP Resistance
+-30 Critical Damage
+10% Fire Resistance
+10% Air Resistance
+
+Atcham Cape
+Level 200
+Atcham Set
+350 Vitality
+60 Intelligence
+60 Agility
+60 Chance
+40 Wisdom
+4 Critical Hits
+12 Fire Damage
+12 Water Damage
+12 Air Damage
+15 Prospecting
+7 Dodge
+7 AP Reduction
+15 Critical Damage
+10% Earth Resistance
+
+Burning Cape
+Level 200
+Burning Set
+400 Vitality
+70 Intelligence
+50 Wisdom
+-10 Critical Hits
+15 Fire Damage
+10 Heals
+15 Prospecting
+7 Lock
+7 AP Reduction
+7 MP Resistance
+10% Neutral Resistance
+10% Earth Resistance
+
+Cape Martegel
+Level 200
+Panoplie Martegel
+350 Vitality
+80 Intelligence
+80 Agility
+40 Wisdom
+-10 Critical Hits
+2 Range
+15 Fire Damage
+15 Air Damage
+12 Heals
+15 Prospecting
+7 Dodge
+10% Earth Resistance
+10% Air Resistance
+
+Cape of the Bleeding Heart
+Level 200
+Bleeding Heart Set
+400 Vitality
+80 Strength
+40 Wisdom
+3 Critical Hits
+1 Summons
+15 Neutral Damage
+15 Earth Damage
+7 Lock
+-5 Dodge
+5 MP Reduction
+10 Critical Damage
+10% Earth Resistance
+10% Air Resistance
+
+Cape of the Putrid Eye
+Level 200
+Putrid Eye Set
+300 Vitality
+60 Intelligence
+60 Agility
+60 Chance
+40 Wisdom
+1 Summons
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+15 Prospecting
+7 MP Reduction
+10% Fire Resistance
+10% Water Resistance
+
+Cape of the Sharp Eye
+Level 200
+Sharp Eye Set
+400 Vitality
+90 Chance
+50 Wisdom
+4 Critical Hits
+20 Water Damage
+15 Prospecting
+500 Initiative
+7 Dodge
+7 AP Resistance
+10% Fire Resistance
+10% Air Resistance
+
+Cape of the Valiant Heart
+Level 200
+Valiant Heart Set
+350 Vitality
+50 Strength
+50 Agility
+30 Wisdom
+4 Critical Hits
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+7 AP Reduction
+25 Pushback Damage
+7% Neutral Resistance
+7% Fire Resistance
+7% Water Resistance
+
+Catseye Cape
+Level 200
+Catseye Set
+400 Vitality
+40 Strength
+40 Intelligence
+40 Agility
+40 Chance
+10 Power
+4 Critical Hits
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+10% Earth Resistance
+10% Air Resistance
+20 Critical Resistance
+
+Crushed Velvet Cape
+Level 200
+300 Vitality
+60 Intelligence
+60 Agility
+20 Wisdom
+4 Critical Hits
+12 Fire Damage
+12 Air Damage
+10 Heals
+500 Initiative
+8 AP Reduction
+12 Critical Damage
+-11% Neutral Resistance
+10% Fire Resistance
+20 Neutral Resistance
+15 Air Resistance
+
+Dark Court Cape
+Level 200
+Dark Court Set
+350 Vitality
+70 Strength
+50 Wisdom
+4 Critical Hits
+2 Range
+20 Neutral Damage
+20 Earth Damage
+15 Prospecting
+10 Lock
+6 AP Reduction
+12% Air Resistance
+
+Dofusteuse
+Level 200
+350 Vitality
+40 Wisdom
+5 Critical Hits
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+5% Neutral Resistance
+5% Earth Resistance
+5% Fire Resistance
+5% Water Resistance
+5% Air Resistance
+Increases one of the elemental characteristics of the caster per game turn: 300 to Chance, then 300 to Strength, then 300 to Agility, and then 300 to Intelligence
+
+Indescribable Cape
+Level 200
+500 Vitality
+90 Agility
+60 Wisdom
+2 Range
+20 Air Damage
+15 Critical Damage
+10% Fire Resistance
+
+Jammy Jack Cape
+Level 200
+Jammy Jack Set
+400 Vitality
+80 Agility
+50 Wisdom
+-5 Critical Hits
+1 Summons
+20 Air Damage
+15 Prospecting
+7 Lock
+10 MP Resistance
+10% Neutral Resistance
+10% Water Resistance
+20 Pushback Resistance
+
+Kamasterisk Cloak
+Level 200
+Kamasterisk Set
+350 Vitality
+60 Strength
+60 Agility
+50 Wisdom
+1 Range
+1 Summons
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+15 Prospecting
+7 AP Resistance
+7% Earth Resistance
+10% Air Resistance
+
+Kapmeba
+Level 200
+400 Vitality
+50 Wisdom
+70 Power
+1 MP
+1 Range
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+15 Water Damage
+15 Air Damage
+-20 Critical Damage
+7% Water Resistance
+Conditions
+AP < 12
+
+Kongoku Cloak
+Level 200
+Kongoku Set
+350 Vitality
+40 Wisdom
+30 Power
+7 Critical Hits
+1 Range
+20 Prospecting
+10 Lock
+7 MP Reduction
+7% Earth Resistance
+7% Fire Resistance
+7% Water Resistance
+25 Critical Resistance
+
+Krosscape
+Level 200
+Harpiset
+400 Vitality
+40 Wisdom
+60 Power
+3 Critical Hits
+2 Summons
+15 Heals
+10% Fire Resistance
+10% Water Resistance
+
+Luminescent Cloak
+Level 200
+Luminescent Set
+350 Vitality
+70 Strength
+70 Chance
+50 Wisdom
+2 Critical Hits
+1 Range
+12 Neutral Damage
+12 Earth Damage
+12 Water Damage
+15 Prospecting
+7 Lock
+20 Pushback Damage
+7% Neutral Resistance
+7% Water Resistance
+
+Malitiamen Cape
+Level 200
+Malitiamen Set
+400 Vitality
+50 Intelligence
+50 Agility
+50 Chance
+30 Wisdom
+3 Critical Hits
+2 Range
+12 Fire Damage
+12 Water Damage
+12 Air Damage
+10 Lock
+30 Pushback Damage
+10% Air Resistance
+
+Mantaze Cloak
+Level 200
+500 Vitality
+80 Chance
+50 Wisdom
+2 Critical Hits
+1 Range
+20 Water Damage
+15 Prospecting
+20 Lock
+10% Air Resistance
+
+Meno Cape
+Level 200
+Meno Set
+400 Vitality
+50 Intelligence
+50 Chance
+40 Wisdom
+5 Critical Hits
+1 Summons
+12 Fire Damage
+12 Water Damage
+12 Heals
+10 Dodge
+6 MP Reduction
+15 Critical Damage
+10% Water Resistance
+
+Merdiodon Cloak
+Level 200
+350 Vitality
+80 Intelligence
+40 Wisdom
+1 AP
+2 Range
+15 Fire Damage
+15 Heals
+15 Lock
+7 MP Resistance
+10% Air Resistance
+Conditions
+AP < 12
+
+Pauper's Robe
+Level 200
+400 Vitality
+60 Strength
+60 Chance
+50 Wisdom
+5 Critical Hits
+16 Neutral Damage
+16 Earth Damage
+16 Water Damage
+400 Initiative
+-11 Lock
+10% Neutral Resistance
+20 Fire Resistance
+
+Queen of Fate Cape
+Level 200
+Queen of Fate Set
+350 Vitality
+70 Intelligence
+70 Chance
+40 Wisdom
+6 Critical Hits
+1 Range
+10 Fire Damage
+10 Water Damage
+15 Prospecting
+5 Dodge
+6 MP Reduction
+15 Critical Damage
+7% Earth Resistance
+7% Water Resistance
+
+Showl
+Level 200
+Lwo Set
+400 Vitality
+60 Agility
+40 Wisdom
+5 Critical Hits
+1 Summons
+15 Air Damage
+15 Prospecting
+-10 Lock
+5 MP Reduction
+10 Critical Damage
+20 Pushback Damage
+12% Fire Resistance
+20 Fire Resistance
+
+Sinistrofu Cloak
+Level 200
+Sinistrofu Set
+300 Vitality
+100 Chance
+25 Wisdom
+5 Critical Hits
+-11 Earth Damage
+18 Water Damage
+10 Heals
+20 Prospecting
+12 Dodge
+12% Neutral Resistance
+8% Water Resistance
+15 Earth Resistance
+
+Staruman Cloak
+Level 200
+Staruman Set
+350 Vitality
+60 Agility
+60 Chance
+40 Wisdom
+4 Critical Hits
+12 Water Damage
+12 Air Damage
+25 Prospecting
+-7 Dodge
+7 AP Reduction
+10 MP Resistance
+15 Pushback Damage
+10% Air Resistance
+
+Sucgunner Cape
+Level 200
+Submerged Set
+400 Vitality
+60 Agility
+40 Wisdom
+4 Critical Hits
+20 Air Damage
+15 AP Resistance
+10% Earth Resistance
+10% Water Resistance
+35 Pushback Resistance
+
+Tal Kasha Head of Hair
+Level 200
+Tal Kasha Set
+400 Vitality
+40 Agility
+40 Chance
+30 Wisdom
+3 Critical Hits
+1 Range
+7 Water Damage
+7 Air Damage
+6 AP Reduction
+30 Critical Damage
+7% Neutral Resistance
+7% Water Resistance
+7% Air Resistance
+
+Vigilante Cape
+Level 200
+250 Vitality
+40 Strength
+40 Intelligence
+40 Agility
+40 Chance
+40 Wisdom
+2 Critical Hits
+1 AP
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+10% Air Resistance
+Conditions
+AP < 12
+
+Volcanic Bag
+Level 200
+Volcanic Set
+400 Vitality
+80 Strength
+80 Intelligence
+40 Wisdom
+3 Critical Hits
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+12 Heals
+15 Prospecting
+15 Lock
+10% Earth Resistance
+
+Whailtail
+Level 200
+350 Vitality
+50 Wisdom
+1 AP
+15 Prospecting
+10 Dodge
+7 AP Resistance
+7 MP Resistance
+10% Fire Resistance
+10% Water Resistance
+15 Critical Resistance
+15 Pushback Resistance
+Conditions
+AP < 12

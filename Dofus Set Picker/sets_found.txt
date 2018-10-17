@@ -1,0 +1,2 @@
+Constraints:
+{'ap>=': 11, 'mp>=': 6, 'intelligence>=': 500}

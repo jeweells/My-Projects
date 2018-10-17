@@ -1,0 +1,1489 @@
+
+Almond and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+1000 Initiative
+
+Almond and Ebony Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+1000 Initiative
+
+Almond and Emerald Dragoturkey
+Level 60
+300 Vitality
+8 Critical Hits
+1000 Initiative
+
+Almond and Emerald Seemyool
+Level 60
+1 MP
+30 Dodge
+20 Critical Damage
+
+Almond and Ginger Dragoturkey
+Level 60
+300 Vitality
+35 Heals
+1000 Initiative
+
+Almond and Golden Dragoturkey
+Level 60
+300 Vitality
+1 Summons
+1000 Initiative
+
+Almond and Indigo Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+1000 Initiative
+
+Almond and Ivory Dragoturkey
+Level 60
+300 Vitality
+50 Power
+1000 Initiative
+
+Almond and Ivory Seemyool
+Level 60
+1 MP
+30 Dodge
+30 AP Resistance
+
+Almond and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+1000 Initiative
+
+Almond and Turquoise Dragoturkey
+Level 60
+300 Vitality
+60 Prospecting
+1000 Initiative
+
+Almond Dragoturkey
+Level 60
+300 Vitality
+1500 Initiative
+
+Almond Seemyool
+Level 60
+1 MP
+40 Dodge
+
+Armoured Dragoturkey
+Level 60
+50 Power
+5% Neutral Resistance
+5% Earth Resistance
+5% Fire Resistance
+5% Water Resistance
+5% Air Resistance
+
+Crimson and Almond Seemyool
+Level 60
+1 MP
+30 Dodge
+8% Earth Resistance
+
+Crimson and Emerald Seemyool
+Level 60
+1 MP
+20 Critical Damage
+8% Earth Resistance
+
+Crimson and Ginger Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+35 Heals
+
+Crimson and Ivory Seemyool
+Level 60
+1 MP
+30 AP Resistance
+8% Earth Resistance
+
+Crimson Dragoturkey
+Level 60
+300 Vitality
+100 Strength
+
+Crimson Seemyool
+Level 60
+1 MP
+16% Earth Resistance
+
+Ebony and Almond Seemyool
+Level 60
+1 MP
+30 Dodge
+8% Air Resistance
+
+Ebony and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+70 Agility
+
+Ebony and Crimson Seemyool
+Level 60
+1 MP
+8% Earth Resistance
+8% Air Resistance
+
+Ebony and Emerald Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+8 Critical Hits
+
+Ebony and Emerald Seemyool
+Level 60
+1 MP
+20 Critical Damage
+8% Air Resistance
+
+Ebony and Ginger Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+35 Heals
+
+Ebony and Indigo Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+70 Chance
+
+Ebony and Indigo Seemyool
+Level 60
+1 MP
+8% Water Resistance
+8% Air Resistance
+
+Ebony and Ivory Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+50 Power
+
+Ebony and Ivory Seemyool
+Level 60
+1 MP
+30 AP Resistance
+8% Air Resistance
+
+Ebony and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+70 Agility
+
+Ebony and Orchid Seemyool
+Level 60
+1 MP
+8% Fire Resistance
+8% Air Resistance
+
+Ebony and Turquoise Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+60 Prospecting
+
+Ebony Dragoturkey
+Level 60
+300 Vitality
+100 Agility
+
+Ebony Seemyool
+Level 60
+1 MP
+16% Air Resistance
+
+Emerald and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+8 Critical Hits
+
+Emerald and Ginger Dragoturkey
+Level 60
+300 Vitality
+8 Critical Hits
+35 Heals
+
+Emerald and Indigo Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+8 Critical Hits
+
+Emerald and Ivory Dragoturkey
+Level 60
+300 Vitality
+50 Power
+8 Critical Hits
+
+Emerald and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+8 Critical Hits
+
+Emerald and Turquoise Dragoturkey
+Level 60
+300 Vitality
+8 Critical Hits
+60 Prospecting
+
+Emerald Dragoturkey
+Level 60
+300 Vitality
+12 Critical Hits
+
+Emerald Seemyool
+Level 60
+1 MP
+30 Critical Damage
+
+Feathery Dragoturkey
+Level 60
+100 Vitality
+10 Reflect
+
+Ginger and Almond Seemyool
+Level 60
+1 MP
+30 Lock
+30 Dodge
+
+Ginger and Crimson Seemyool
+Level 60
+1 MP
+30 Lock
+8% Earth Resistance
+
+Ginger and Ebony Seemyool
+Level 60
+1 MP
+30 Lock
+8% Air Resistance
+
+Ginger and Emerald Seemyool
+Level 60
+1 MP
+30 Lock
+20 Critical Damage
+
+Ginger and Golden Seemyool
+Level 60
+40 Power
+1 MP
+30 Lock
+
+Ginger and Indigo Seemyool
+Level 60
+1 MP
+30 Lock
+8% Water Resistance
+
+Ginger and Ivory Seemyool
+Level 60
+1 MP
+30 Lock
+30 AP Resistance
+
+Ginger and Orchid Seemyool
+Level 60
+1 MP
+30 Lock
+8% Fire Resistance
+
+Ginger Dragoturkey
+Level 60
+300 Vitality
+50 Heals
+
+Ginger Seemyool
+Level 60
+1 MP
+40 Lock
+
+Golden and Almond Seemyool
+Level 60
+40 Power
+1 MP
+30 Dodge
+
+Golden and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+1 Summons
+
+Golden and Crimson Seemyool
+Level 60
+40 Power
+1 MP
+8% Earth Resistance
+
+Golden and Ebony Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+1 Summons
+
+Golden and Ebony Seemyool
+Level 60
+40 Power
+1 MP
+8% Air Resistance
+
+Golden and Emerald Dragoturkey
+Level 60
+300 Vitality
+8 Critical Hits
+1 Summons
+
+Golden and Emerald Seemyool
+Level 60
+40 Power
+1 MP
+20 Critical Damage
+
+Golden and Ginger Dragoturkey
+Level 60
+300 Vitality
+1 Summons
+35 Heals
+
+Golden and Indigo Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+1 Summons
+
+Golden and Indigo Seemyool
+Level 60
+40 Power
+1 MP
+8% Water Resistance
+
+Golden and Ivory Dragoturkey
+Level 60
+300 Vitality
+50 Power
+1 Summons
+
+Golden and Ivory Seemyool
+Level 60
+40 Power
+1 MP
+30 AP Resistance
+
+Golden and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+1 Summons
+
+Golden and Orchid Seemyool
+Level 60
+40 Power
+1 MP
+8% Fire Resistance
+
+Golden and Turquoise Dragoturkey
+Level 60
+300 Vitality
+1 Summons
+60 Prospecting
+
+Golden Dragoturkey
+Level 60
+300 Vitality
+2 Summons
+
+Golden Seemyool
+Level 60
+50 Power
+1 MP
+
+Indigo and Almond Seemyool
+Level 60
+1 MP
+30 Dodge
+8% Water Resistance
+
+Indigo and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+70 Chance
+
+Indigo and Crimson Seemyool
+Level 60
+1 MP
+8% Earth Resistance
+8% Water Resistance
+
+Indigo and Emerald Seemyool
+Level 60
+1 MP
+20 Critical Damage
+8% Water Resistance
+
+Indigo and Ginger Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+35 Heals
+
+Indigo and Ivory Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+50 Power
+
+Indigo and Ivory Seemyool
+Level 60
+1 MP
+30 AP Resistance
+8% Water Resistance
+
+Indigo and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+70 Chance
+
+Indigo and Orchid Seemyool
+Level 60
+1 MP
+8% Fire Resistance
+8% Water Resistance
+
+Indigo and Turquoise Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+60 Prospecting
+
+Indigo Dragoturkey
+Level 60
+300 Vitality
+100 Chance
+
+Indigo Seemyool
+Level 60
+1 MP
+16% Water Resistance
+
+Ivory and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+50 Power
+
+Ivory and Emerald Seemyool
+Level 60
+1 MP
+30 AP Resistance
+20 Critical Damage
+
+Ivory and Ginger Dragoturkey
+Level 60
+300 Vitality
+50 Power
+35 Heals
+
+Ivory and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+50 Power
+
+Ivory and Turquoise Dragoturkey
+Level 60
+300 Vitality
+50 Power
+60 Prospecting
+
+Ivory Dragoturkey
+Level 60
+300 Vitality
+70 Power
+
+Ivory Seemyool
+Level 60
+1 MP
+40 AP Resistance
+
+Orchid and Almond Seemyool
+Level 60
+1 MP
+30 Dodge
+8% Fire Resistance
+
+Orchid and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+70 Intelligence
+
+Orchid and Crimson Seemyool
+Level 60
+1 MP
+8% Earth Resistance
+8% Fire Resistance
+
+Orchid and Emerald Seemyool
+Level 60
+1 MP
+20 Critical Damage
+8% Fire Resistance
+
+Orchid and Ginger Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+35 Heals
+
+Orchid and Ivory Seemyool
+Level 60
+1 MP
+30 AP Resistance
+8% Fire Resistance
+
+Orchid Dragoturkey
+Level 60
+300 Vitality
+100 Intelligence
+
+Orchid Seemyool
+Level 60
+1 MP
+16% Fire Resistance
+
+Plum and Almond Dragoturkey
+Level 60
+300 Vitality
+1 Range
+1000 Initiative
+
+Plum and Almond Seemyool
+Level 60
+6 Critical Hits
+1 MP
+30 Dodge
+
+Plum and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+1 Range
+
+Plum and Crimson Seemyool
+Level 60
+6 Critical Hits
+1 MP
+8% Earth Resistance
+
+Plum and Ebony Dragoturkey
+Level 60
+300 Vitality
+70 Agility
+1 Range
+
+Plum and Ebony Seemyool
+Level 60
+6 Critical Hits
+1 MP
+8% Air Resistance
+
+Plum and Emerald Dragoturkey
+Level 60
+300 Vitality
+8 Critical Hits
+1 Range
+
+Plum and Emerald Seemyool
+Level 60
+6 Critical Hits
+1 MP
+20 Critical Damage
+
+Plum and Ginger Dragoturkey
+Level 60
+300 Vitality
+1 Range
+35 Heals
+
+Plum and Ginger Seemyool
+Level 60
+6 Critical Hits
+1 MP
+30 Lock
+
+Plum and Golden Dragoturkey
+Level 60
+300 Vitality
+1 Range
+1 Summons
+
+Plum and Golden Seemyool
+Level 60
+40 Power
+6 Critical Hits
+1 MP
+
+Plum and Indigo Dragoturkey
+Level 60
+300 Vitality
+70 Chance
+1 Range
+
+Plum and Indigo Seemyool
+Level 60
+6 Critical Hits
+1 MP
+8% Water Resistance
+
+Plum and Ivory Dragoturkey
+Level 60
+300 Vitality
+50 Power
+1 Range
+
+Plum and Ivory Seemyool
+Level 60
+6 Critical Hits
+1 MP
+30 AP Resistance
+
+Plum and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+1 Range
+
+Plum and Orchid Seemyool
+Level 60
+6 Critical Hits
+1 MP
+8% Fire Resistance
+
+Plum and Turquoise Dragoturkey
+Level 60
+300 Vitality
+1 Range
+60 Prospecting
+
+Plum and Turquoise Seemyool
+Level 60
+6 Critical Hits
+1 MP
+30 MP Resistance
+
+Plum Dragoturkey
+Level 60
+300 Vitality
+2 Range
+
+Plum Seemyool
+Level 60
+10 Critical Hits
+1 MP
+
+Turquoise and Almond Seemyool
+Level 60
+1 MP
+30 Dodge
+30 MP Resistance
+
+Turquoise and Crimson Dragoturkey
+Level 60
+300 Vitality
+70 Strength
+60 Prospecting
+
+Turquoise and Crimson Seemyool
+Level 60
+1 MP
+30 MP Resistance
+8% Earth Resistance
+
+Turquoise and Ebony Seemyool
+Level 60
+1 MP
+30 MP Resistance
+8% Air Resistance
+
+Turquoise and Emerald Seemyool
+Level 60
+1 MP
+30 MP Resistance
+20 Critical Damage
+
+Turquoise and Ginger Dragoturkey
+Level 60
+300 Vitality
+35 Heals
+60 Prospecting
+
+Turquoise and Ginger Seemyool
+Level 60
+1 MP
+30 Lock
+30 MP Resistance
+
+Turquoise and Golden Seemyool
+Level 60
+40 Power
+1 MP
+30 MP Resistance
+
+Turquoise and Indigo Seemyool
+Level 60
+1 MP
+30 MP Resistance
+8% Water Resistance
+
+Turquoise and Ivory Seemyool
+Level 60
+1 MP
+30 AP Resistance
+30 MP Resistance
+
+Turquoise and Orchid Dragoturkey
+Level 60
+300 Vitality
+70 Intelligence
+60 Prospecting
+
+Turquoise and Orchid Seemyool
+Level 60
+1 MP
+30 MP Resistance
+8% Fire Resistance
+
+Turquoise Dragoturkey
+Level 60
+300 Vitality
+80 Prospecting
+
+Turquoise Seemyool
+Level 60
+1 MP
+40 MP Resistance
+
+Volkorne Amande
+Level 60
+1 AP
+80 Pushback Resistance
+
+Volkorne Amande et Ebène
+Level 60
+50 Agility
+1 AP
+60 Pushback Resistance
+
+Volkorne Amande et Indigo
+Level 60
+50 Chance
+1 AP
+60 Pushback Resistance
+
+Volkorne Amande et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+60 Pushback Resistance
+
+Volkorne Amande et Orchidée
+Level 60
+50 Intelligence
+1 AP
+60 Pushback Resistance
+
+Volkorne Amande et Pourpre
+Level 60
+50 Strength
+1 AP
+60 Pushback Resistance
+
+Volkorne Amande et Roux
+Level 60
+1 AP
+40 Pushback Damage
+60 Pushback Resistance
+
+Volkorne Amande et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+60 Pushback Resistance
+
+Volkorne Améthyste
+Level 60
+1 AP
+12% Air Resistance
+
+Volkorne Améthyste et Amande
+Level 60
+1 AP
+6% Air Resistance
+60 Pushback Resistance
+
+Volkorne Améthyste et Doré
+Level 60
+100 Vitality
+1 AP
+6% Air Resistance
+
+Volkorne Améthyste et Ebène
+Level 60
+50 Agility
+1 AP
+6% Air Resistance
+
+Volkorne Améthyste et Emeraude
+Level 60
+5 Critical Hits
+1 AP
+6% Air Resistance
+
+Volkorne Améthyste et Indigo
+Level 60
+50 Chance
+1 AP
+6% Air Resistance
+
+Volkorne Améthyste et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+6% Air Resistance
+
+Volkorne Améthyste et Orchidée
+Level 60
+50 Intelligence
+1 AP
+6% Air Resistance
+
+Volkorne Améthyste et Pourpre
+Level 60
+50 Strength
+1 AP
+6% Air Resistance
+
+Volkorne Améthyste et Prune
+Level 60
+1 AP
+6% Air Resistance
+35 Critical Resistance
+
+Volkorne Améthyste et Roux
+Level 60
+1 AP
+40 Pushback Damage
+6% Air Resistance
+
+Volkorne Améthyste et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+6% Air Resistance
+
+Volkorne Doré
+Level 60
+150 Vitality
+1 AP
+
+Volkorne Doré et Amande
+Level 60
+100 Vitality
+1 AP
+60 Pushback Resistance
+
+Volkorne Doré et Ebène
+Level 60
+100 Vitality
+50 Agility
+1 AP
+
+Volkorne Doré et Emeraude
+Level 60
+100 Vitality
+5 Critical Hits
+1 AP
+
+Volkorne Doré et Indigo
+Level 60
+100 Vitality
+50 Chance
+1 AP
+
+Volkorne Doré et Ivoire
+Level 60
+100 Vitality
+1 AP
+20 AP Reduction
+
+Volkorne Doré et Orchidée
+Level 60
+100 Vitality
+50 Intelligence
+1 AP
+
+Volkorne Doré et Pourpre
+Level 60
+100 Vitality
+50 Strength
+1 AP
+
+Volkorne Doré et Prune
+Level 60
+100 Vitality
+1 AP
+35 Critical Resistance
+
+Volkorne Doré et Roux
+Level 60
+100 Vitality
+1 AP
+40 Pushback Damage
+
+Volkorne Doré et Turquoise
+Level 60
+100 Vitality
+1 AP
+20 MP Reduction
+
+Volkorne Ebène
+Level 60
+70 Agility
+1 AP
+
+Volkorne Emeraude
+Level 60
+7 Critical Hits
+1 AP
+
+Volkorne Emeraude et Amande
+Level 60
+5 Critical Hits
+1 AP
+60 Pushback Resistance
+
+Volkorne Emeraude et Ebène
+Level 60
+50 Agility
+5 Critical Hits
+1 AP
+
+Volkorne Emeraude et Indigo
+Level 60
+50 Chance
+5 Critical Hits
+1 AP
+
+Volkorne Emeraude et Ivoire
+Level 60
+5 Critical Hits
+1 AP
+20 AP Reduction
+
+Volkorne Emeraude et Orchidée
+Level 60
+50 Intelligence
+5 Critical Hits
+1 AP
+
+Volkorne Emeraude et Pourpre
+Level 60
+50 Strength
+5 Critical Hits
+1 AP
+
+Volkorne Emeraude et Roux
+Level 60
+5 Critical Hits
+1 AP
+40 Pushback Damage
+
+Volkorne Emeraude et Turquoise
+Level 60
+5 Critical Hits
+1 AP
+20 MP Reduction
+
+Volkorne Indigo
+Level 60
+70 Chance
+1 AP
+
+Volkorne Indigo et Ebène
+Level 60
+50 Agility
+50 Chance
+1 AP
+
+Volkorne Ivoire
+Level 60
+1 AP
+30 AP Reduction
+
+Volkorne Ivoire et Ebène
+Level 60
+50 Agility
+1 AP
+20 AP Reduction
+
+Volkorne Ivoire et Indigo
+Level 60
+50 Chance
+1 AP
+20 AP Reduction
+
+Volkorne Ivoire et Orchidée
+Level 60
+50 Intelligence
+1 AP
+20 AP Reduction
+
+Volkorne Ivoire et Pourpre
+Level 60
+50 Strength
+1 AP
+20 AP Reduction
+
+Volkorne Ivoire et Turquoise
+Level 60
+1 AP
+20 AP Reduction
+20 MP Reduction
+
+Volkorne Jade
+Level 60
+1 AP
+12% Earth Resistance
+
+Volkorne Jade et Amande
+Level 60
+1 AP
+6% Earth Resistance
+60 Pushback Resistance
+
+Volkorne Jade et Améthyste
+Level 60
+1 AP
+6% Earth Resistance
+6% Air Resistance
+
+Volkorne Jade et Doré
+Level 60
+100 Vitality
+1 AP
+6% Earth Resistance
+
+Volkorne Jade et Ebène
+Level 60
+50 Agility
+1 AP
+6% Earth Resistance
+
+Volkorne Jade et Emeraude
+Level 60
+5 Critical Hits
+1 AP
+6% Earth Resistance
+
+Volkorne Jade et Indigo
+Level 60
+50 Chance
+1 AP
+6% Earth Resistance
+
+Volkorne Jade et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+6% Earth Resistance
+
+Volkorne Jade et Orchidée
+Level 60
+50 Intelligence
+1 AP
+6% Earth Resistance
+
+Volkorne Jade et Pourpre
+Level 60
+50 Strength
+1 AP
+6% Earth Resistance
+
+Volkorne Jade et Prune
+Level 60
+1 AP
+6% Earth Resistance
+35 Critical Resistance
+
+Volkorne Jade et Roux
+Level 60
+1 AP
+40 Pushback Damage
+6% Earth Resistance
+
+Volkorne Jade et Rubis
+Level 60
+1 AP
+6% Earth Resistance
+6% Fire Resistance
+
+Volkorne Jade et Saphir
+Level 60
+1 AP
+6% Earth Resistance
+6% Water Resistance
+
+Volkorne Jade et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+6% Earth Resistance
+
+Volkorne Orchidée
+Level 60
+70 Intelligence
+1 AP
+
+Volkorne Orchidée et Ebène
+Level 60
+50 Intelligence
+50 Agility
+1 AP
+
+Volkorne Orchidée et Indigo
+Level 60
+50 Intelligence
+50 Chance
+1 AP
+
+Volkorne Pourpre
+Level 60
+70 Strength
+1 AP
+
+Volkorne Pourpre et Ebène
+Level 60
+50 Strength
+50 Agility
+1 AP
+
+Volkorne Pourpre et Indigo
+Level 60
+50 Strength
+50 Chance
+1 AP
+
+Volkorne Pourpre et Orchidée
+Level 60
+50 Strength
+50 Intelligence
+1 AP
+
+Volkorne Prune
+Level 60
+1 AP
+50 Critical Resistance
+
+Volkorne Prune et Amande
+Level 60
+1 AP
+35 Critical Resistance
+60 Pushback Resistance
+
+Volkorne Prune et Ebène
+Level 60
+50 Agility
+1 AP
+35 Critical Resistance
+
+Volkorne Prune et Emeraude
+Level 60
+5 Critical Hits
+1 AP
+35 Critical Resistance
+
+Volkorne Prune et Indigo
+Level 60
+50 Chance
+1 AP
+35 Critical Resistance
+
+Volkorne Prune et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+35 Critical Resistance
+
+Volkorne Prune et Orchidée
+Level 60
+50 Intelligence
+1 AP
+35 Critical Resistance
+
+Volkorne Prune et Pourpre
+Level 60
+50 Strength
+1 AP
+35 Critical Resistance
+
+Volkorne Prune et Roux
+Level 60
+1 AP
+40 Pushback Damage
+35 Critical Resistance
+
+Volkorne Prune et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+35 Critical Resistance
+
+Volkorne Roux
+Level 60
+1 AP
+60 Pushback Damage
+
+Volkorne Roux et Ebène
+Level 60
+50 Agility
+1 AP
+40 Pushback Damage
+
+Volkorne Roux et Indigo
+Level 60
+50 Chance
+1 AP
+40 Pushback Damage
+
+Volkorne Roux et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+40 Pushback Damage
+
+Volkorne Roux et Orchidée
+Level 60
+50 Intelligence
+1 AP
+40 Pushback Damage
+
+Volkorne Roux et Pourpre
+Level 60
+50 Strength
+1 AP
+40 Pushback Damage
+
+Volkorne Roux et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+40 Pushback Damage
+
+Volkorne Rubis
+Level 60
+1 AP
+12% Fire Resistance
+
+Volkorne Rubis et Amande
+Level 60
+1 AP
+6% Fire Resistance
+60 Pushback Resistance
+
+Volkorne Rubis et Améthyste
+Level 60
+1 AP
+6% Fire Resistance
+6% Air Resistance
+
+Volkorne Rubis et Doré
+Level 60
+100 Vitality
+1 AP
+6% Fire Resistance
+
+Volkorne Rubis et Ebène
+Level 60
+50 Agility
+1 AP
+6% Fire Resistance
+
+Volkorne Rubis et Emeraude
+Level 60
+5 Critical Hits
+1 AP
+6% Fire Resistance
+
+Volkorne Rubis et Indigo
+Level 60
+50 Chance
+1 AP
+6% Fire Resistance
+
+Volkorne Rubis et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+6% Fire Resistance
+
+Volkorne Rubis et Orchidée
+Level 60
+50 Intelligence
+1 AP
+6% Fire Resistance
+
+Volkorne Rubis et Pourpre
+Level 60
+50 Strength
+1 AP
+6% Fire Resistance
+
+Volkorne Rubis et Prune
+Level 60
+1 AP
+6% Fire Resistance
+35 Critical Resistance
+
+Volkorne Rubis et Roux
+Level 60
+1 AP
+40 Pushback Damage
+6% Fire Resistance
+
+Volkorne Rubis et Saphir
+Level 60
+1 AP
+6% Fire Resistance
+6% Water Resistance
+
+Volkorne Rubis et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+6% Fire Resistance
+
+Volkorne Saphir
+Level 60
+1 AP
+12% Water Resistance
+
+Volkorne Saphir et Amande
+Level 60
+1 AP
+6% Water Resistance
+60 Pushback Resistance
+
+Volkorne Saphir et Améthyste
+Level 60
+1 AP
+6% Water Resistance
+6% Air Resistance
+
+Volkorne Saphir et Doré
+Level 60
+100 Vitality
+1 AP
+6% Water Resistance
+
+Volkorne Saphir et Ebène
+Level 60
+50 Agility
+1 AP
+6% Water Resistance
+
+Volkorne Saphir et Emeraude
+Level 60
+5 Critical Hits
+1 AP
+6% Water Resistance
+
+Volkorne Saphir et Indigo
+Level 60
+50 Chance
+1 AP
+6% Water Resistance
+
+Volkorne Saphir et Ivoire
+Level 60
+1 AP
+20 AP Reduction
+6% Water Resistance
+
+Volkorne Saphir et Orchidée
+Level 60
+50 Intelligence
+1 AP
+6% Water Resistance
+
+Volkorne Saphir et Pourpre
+Level 60
+50 Strength
+1 AP
+6% Water Resistance
+
+Volkorne Saphir et Prune
+Level 60
+1 AP
+6% Water Resistance
+35 Critical Resistance
+
+Volkorne Saphir et Roux
+Level 60
+1 AP
+40 Pushback Damage
+6% Water Resistance
+
+Volkorne Saphir et Turquoise
+Level 60
+1 AP
+20 MP Reduction
+6% Water Resistance
+
+Volkorne Turquoise
+Level 60
+1 AP
+30 MP Reduction
+
+Volkorne Turquoise et Ebène
+Level 60
+50 Agility
+1 AP
+20 MP Reduction
+
+Volkorne Turquoise et Indigo
+Level 60
+50 Chance
+1 AP
+20 MP Reduction
+
+Volkorne Turquoise et Orchidée
+Level 60
+50 Intelligence
+1 AP
+20 MP Reduction
+
+Volkorne Turquoise et Pourpre
+Level 60
+50 Strength
+1 AP
+20 MP Reduction

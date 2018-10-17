@@ -1,0 +1,366 @@
+{
+	"Major Acrobat": {
+		"agility": 60
+	},
+	"Major Adamantin": {
+		"pushback_resistance": 48
+	},
+	"Major Air Bulwark": {
+		"per_fire_resistance": -8,
+		"air_resistance": 40
+	},
+	"Major Air Carapace": {
+		"per_air_resistance": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Air Defender": {
+		"air_resistance": 24
+	},
+	"Major Air Destroyer": {
+		"air_damage": 20,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Air Destroyer 1": {
+		"air_damage": 12
+	},
+	"Major Air Wrecker": {
+		"air_damage": 20,
+		"per_fire_resistance": -8
+	},
+	"Major Barbarian": {
+		"neutral_damage": 12,
+		"earth_damage": 12,
+		"fire_damage": 12,
+		"water_damage": 12,
+		"air_damage": 12,
+		"critical_damage": -24
+	},
+	"Major Barrier": {
+		"critical_resistance": 12
+	},
+	"Major Bastion": {
+		"critical_damage": -32,
+		"critical_resistance": 32
+	},
+	"Major Bloodthirst": {
+		"damage": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Brainbox": {
+		"vitality": -200,
+		"intelligence": 100
+	},
+	"Major Curer": {
+		"heals": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Delayer": {
+		"mp_reduction": 24,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Deserter": {
+		"dodge": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Doctor": {
+		"vitality": -200,
+		"heals": 32
+	},
+	"Major Dynamo": {
+		"power": 40
+	},
+	"Major Earth Bulwark": {
+		"per_air_resistance": -8,
+		"earth_resistance": 40
+	},
+	"Major Earth Carapace": {
+		"per_earth_resistance": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Earth Defender": {
+		"earth_resistance": 24
+	},
+	"Major Earth Destroyer": {
+		"earth_damage": 12
+	},
+	"Major Earth Destroyer 1": {
+		"earth_damage": 20,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Earth Wrecker": {
+		"earth_damage": 20,
+		"per_air_resistance": -8
+	},
+	"Major Escapee": {
+		"mp_resistance": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Escapist": {
+		"dodge": 16
+	},
+	"Major Evader": {
+		"ap_resistance": 16
+	},
+	"Major Evader 1": {
+		"ap_resistance": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Feller": {
+		"pushback_damage": 64,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Fire Bulwark": {
+		"per_earth_resistance": -8,
+		"fire_resistance": 40
+	},
+	"Major Fire Carapace": {
+		"per_fire_resistance": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Fire Defender": {
+		"fire_resistance": 24
+	},
+	"Major Fire Destroyer": {
+		"fire_damage": 12
+	},
+	"Major Fire Destroyer 1": {
+		"fire_damage": 20,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Fire Wrecker": {
+		"fire_damage": 20,
+		"per_earth_resistance": -8
+	},
+	"Major Forerunner": {
+		"vitality": -100,
+		"initiative": 800
+	},
+	"Major Fortification": {
+		"critical_resistance": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Friction": {
+		"mp_reduction": 12
+	},
+	"Major Fugitive": {
+		"mp_resistance": 16
+	},
+	"Major Goliath": {
+		"vitality": -200,
+		"strength": 100
+	},
+	"Major Gymnast": {
+		"vitality": -200,
+		"agility": 100
+	},
+	"Major Healer": {
+		"heals": 16
+	},
+	"Major Instigator": {
+		"initiative": 400
+	},
+	"Major Intellectual": {
+		"intelligence": 100,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Jostler": {
+		"lock": -32,
+		"pushback_damage": 64
+	},
+	"Major Locker": {
+		"lock": 16
+	},
+	"Major Luckster": {
+		"chance": 100,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Maniac": {
+		"strength": 60
+	},
+	"Major Miracle Man": {
+		"vitality": 320,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Motivator": {
+		"initiative": 800,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Neutral Bulwark": {
+		"per_water_resistance": -8,
+		"neutral_resistance": 40
+	},
+	"Major Neutral Carapace": {
+		"per_neutral_resistance": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Neutral Defender": {
+		"neutral_resistance": 24
+	},
+	"Major Neutral Destroyer": {
+		"neutral_damage": 20,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Neutral Destroyer 1": {
+		"neutral_damage": 12
+	},
+	"Major Neutral Wrecker": {
+		"neutral_damage": 20,
+		"per_water_resistance": -8
+	},
+	"Major Obstructor": {
+		"lock": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Oppressor": {
+		"ap_reduction": 12
+	},
+	"Major Paralyser": {
+		"ap_reduction": 24,
+		"mp_resistance": -24
+	},
+	"Major Player": {
+		"chance": 60
+	},
+	"Major Powerhouse": {
+		"power": 80,
+		"critical_hits": -12
+	},
+	"Major Rabid": {
+		"strength": 100,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Repellant": {
+		"pushback_damage": 32
+	},
+	"Major Scholar": {
+		"intelligence": 60
+	},
+	"Major Shackler": {
+		"mp_reduction": 24,
+		"ap_resistance": -24
+	},
+	"Major Slimeball": {
+		"ap_resistance": -32,
+		"mp_resistance": 32
+	},
+	"Major Solid": {
+		"pushback_resistance": 96,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Stalwart": {
+		"dodge": -32,
+		"pushback_resistance": 96
+	},
+	"Major Stickler": {
+		"lock": 32,
+		"dodge": -32
+	},
+	"Major Stunner": {
+		"ap_reduction": 24,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Stunter": {
+		"agility": 100,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Survivor": {
+		"vitality": 160
+	},
+	"Major Tease": {
+		"vitality": -200,
+		"chance": 100
+	},
+	"Major Transporter": {
+		"pods": 1000
+	},
+	"Major Untouchable": {
+		"ap_resistance": 32,
+		"mp_resistance": -32
+	},
+	"Major Vagabond": {
+		"lock": -32,
+		"dodge": 32
+	},
+	"Major Vigour": {
+		"power": 80,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Water Bulwark": {
+		"per_neutral_resistance": -8,
+		"water_resistance": 40
+	},
+	"Major Water Carapace": {
+		"per_water_resistance": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Water Defender": {
+		"water_resistance": 24
+	},
+	"Major Water Destroyer": {
+		"water_damage": 20,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Major Water Destroyer 1": {
+		"water_damage": 12
+	},
+	"Major Water Wrecker": {
+		"water_damage": 20,
+		"per_neutral_resistance": -8
+	}
+}

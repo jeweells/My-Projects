@@ -1,0 +1,392 @@
+{
+	"Acrobat": {
+		"agility": 30
+	},
+	"Adamantin": {
+		"pushback_resistance": 24
+	},
+	"Air Bulwark": {
+		"per_fire_resistance": -4,
+		"air_resistance": 20
+	},
+	"Air Carapace": {
+		"per_air_resistance": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Air Defender": {
+		"air_resistance": 12
+	},
+	"Air Destroyer": {
+		"air_damage": 10,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Air Destroyer 1": {
+		"air_damage": 6
+	},
+	"Air Wrecker": {
+		"air_damage": 10,
+		"per_fire_resistance": -4
+	},
+	"Barbarian": {
+		"neutral_damage": 6,
+		"earth_damage": 6,
+		"fire_damage": 6,
+		"water_damage": 6,
+		"air_damage": 6,
+		"critical_damage": -12
+	},
+	"Barrier": {
+		"critical_resistance": 6
+	},
+	"Bastion": {
+		"critical_damage": -16,
+		"critical_resistance": 16
+	},
+	"Bloodthirst": {
+		"damage": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Brainbox": {
+		"vitality": -100,
+		"intelligence": 50
+	},
+	"Curer": {
+		"heals": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Delayer": {
+		"mp_reduction": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Deserter": {
+		"dodge": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Doctor": {
+		"vitality": -100,
+		"heals": 16
+	},
+	"Dynamo": {
+		"power": 20
+	},
+	"Earth Bulwark": {
+		"per_air_resistance": -4,
+		"earth_resistance": 20
+	},
+	"Earth Carapace": {
+		"per_earth_resistance": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Earth Defender": {
+		"earth_resistance": 12
+	},
+	"Earth Destroyer": {
+		"earth_damage": 10,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Earth Destroyer 1": {
+		"earth_damage": 6
+	},
+	"Earth Wrecker": {
+		"earth_damage": 10,
+		"per_air_resistance": -4
+	},
+	"Escapee": {
+		"mp_resistance": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Escapist": {
+		"dodge": 8
+	},
+	"Evader": {
+		"ap_resistance": 8
+	},
+	"Evader 1": {
+		"ap_resistance": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Feller": {
+		"pushback_damage": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Fire Bulwark": {
+		"per_earth_resistance": -4,
+		"fire_resistance": 20
+	},
+	"Fire Carapace": {
+		"per_fire_resistance": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Fire Defender": {
+		"fire_resistance": 12
+	},
+	"Fire Destroyer": {
+		"fire_damage": 10,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Fire Destroyer 1": {
+		"fire_damage": 6
+	},
+	"Fire Wrecker": {
+		"fire_damage": 10,
+		"per_earth_resistance": -4
+	},
+	"Forerunner": {
+		"vitality": -50,
+		"initiative": 400
+	},
+	"Fortification": {
+		"critical_resistance": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Friction": {
+		"mp_reduction": 6
+	},
+	"Fugitive": {
+		"mp_resistance": 8
+	},
+	"Goliath": {
+		"vitality": -100,
+		"strength": 50
+	},
+	"Gymnast": {
+		"vitality": -100,
+		"agility": 50
+	},
+	"Healer": {
+		"heals": 8
+	},
+	"Instigator": {
+		"initiative": 200
+	},
+	"Intellectual": {
+		"intelligence": 50,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Jackanapes": {
+		"ap": 1,
+		"mp": -1,
+		"constraints":{
+			"mp<": 6
+		}
+	},
+	"Jostler": {
+		"lock": -16,
+		"pushback_damage": 32
+	},
+	"Locker": {
+		"lock": 8
+	},
+	"Luckster": {
+		"chance": 50,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Maniac": {
+		"strength": 30
+	},
+	"Miracle Man": {
+		"vitality": 160,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Motivator": {
+		"initiative": 400,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Neutral Bulwark": {
+		"per_water_resistance": -4,
+		"neutral_resistance": 20
+	},
+	"Neutral Carapace": {
+		"per_neutral_resistance": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Neutral Defender": {
+		"neutral_resistance": 12
+	},
+	"Neutral Destroyer": {
+		"neutral_damage": 10,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Neutral Destroyer 1": {
+		"neutral_damage": 6
+	},
+	"Neutral Wrecker": {
+		"neutral_damage": 10,
+		"per_water_resistance": -4
+	},
+	"Nomad": {
+		"power": 20,
+		"mp": 1,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Obstructor": {
+		"lock": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Oppressor": {
+		"ap_reduction": 6
+	},
+	"Paralyser": {
+		"ap_reduction": 12,
+		"mp_resistance": -12
+	},
+	"Player": {
+		"chance": 30
+	},
+	"Powerhouse": {
+		"power": 40,
+		"critical_hits": -6
+	},
+	"Rabid": {
+		"strength": 50,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Repellant": {
+		"pushback_damage": 16
+	},
+	"Scholar": {
+		"intelligence": 30
+	},
+	"Shackler": {
+		"mp_reduction": 12,
+		"ap_resistance": -12
+	},
+	"Shaker": {
+		"vitality": 50,
+		"ap": 1,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Slimeball": {
+		"ap_resistance": -16,
+		"mp_resistance": 16
+	},
+	"Solid": {
+		"pushback_resistance": 48,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Stalwart": {
+		"dodge": -16,
+		"pushback_resistance": 48
+	},
+	"Stickler": {
+		"lock": 16,
+		"dodge": -16
+	},
+	"Stunner": {
+		"ap_reduction": 12,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Stunter": {
+		"agility": 50,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Survivor": {
+		"vitality": 80
+	},
+	"Tease": {
+		"vitality": -100,
+		"chance": 50
+	},
+	"Transporter": {
+		"pods": 500
+	},
+	"Untouchable": {
+		"ap_resistance": 16,
+		"mp_resistance": -16
+	},
+	"Vagabond": {
+		"lock": -16,
+		"dodge": 16
+	},
+	"Vigour": {
+		"power": 40,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Voyager": {
+		"mp": 1,
+		"lock": -30,
+		"dodge": -30
+	},
+	"Water Bulwark": {
+		"per_neutral_resistance": -4,
+		"water_resistance": 20
+	},
+	"Water Carapace": {
+		"per_water_resistance": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Water Defender": {
+		"water_resistance": 12
+	},
+	"Water Destroyer": {
+		"water_damage": 6
+	},
+	"Water Destroyer 1": {
+		"water_damage": 10,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Water Wrecker": {
+		"water_damage": 10,
+		"per_neutral_resistance": -4
+	}
+}

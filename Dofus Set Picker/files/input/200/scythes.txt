@@ -1,0 +1,25 @@
+
+AP: 6
+Range: 1
+Crit: 5%
+Bonus: +5
+1 / turn
+Blord Warrior's Cursed Scythe
+Level 200
+9 to 18 (Neutral damage)
+9 to 18 (Earth damage)
+9 to 18 (Fire damage)
+9 to 18 (Water damage)
+9 to 18 (Air damage)
+Effects:
+40 Vitality
+40 Strength
+40 Intelligence
+40 Agility
+40 Chance
+40 Wisdom
+5% Neutral Resistance
+5% Earth Resistance
+5% Fire Resistance
+5% Water Resistance
+5% Air Resistance

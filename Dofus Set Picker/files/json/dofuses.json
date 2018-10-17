@@ -1,0 +1,70 @@
+{
+	"Abyssal Dofus": {
+
+	},
+	"Cloudy Dofus": {
+		"per_final_damage": 20
+	},
+	"Ice Dofus": {
+		"neutral_damage": 25,
+		"earth_damage": 25,
+		"fire_damage": 25,
+		"water_damage": 25,
+		"air_damage": 25
+	},
+	"Ivory Dofus": {
+		"neutral_resistance": 40,
+		"earth_resistance": 40,
+		"fire_resistance": 40,
+		"water_resistance": 40,
+		"air_resistance": 40
+	},
+	"Lavasmith Dofus": {
+		"pushback_resistance": 60
+	},
+	"Ochre Dofus": {
+		"ap": 1
+	},
+	"Turquoise Dofus": {
+		"critical_hits": 10
+	},
+	"Crimson Dofus": {
+		"power": 80
+	},
+	"Dotrich": {
+		"power": 20
+	},
+	"Dolmanax": {
+		"strength": 50,
+		"intelligence": 50,
+		"agility": 50,
+		"chance": 50
+	},
+	"Emerald Dofus": {
+		"vitality": 200
+	},
+	"Kaliptus Dofus": {
+		"prospecting": 30
+	},
+	"Vulbis Dofus": {
+		"mp": 1
+	},
+	"Watchers Dofus": {
+
+	},
+	"Dokoko": {
+
+	},
+	"Grofus": {
+		"prospecting": 10
+	},
+	"Cawwot Dofus": {
+		"wisdom": 60
+	},
+	"Silver Dofus": {
+
+	},
+	"Dofawa": {
+		"vitality": 1
+	}
+}

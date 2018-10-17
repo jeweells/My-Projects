@@ -1,0 +1,39 @@
+{
+	"Earth Destroyer": {
+		"earth_damage": 10,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Earth Destroyer 1": {
+		"earth_damage": 6
+	},
+	"Earth Wrecker": {
+		"earth_damage": 10,
+		"per_air_resistance": -4
+	},
+	"Escapee": {
+		"mp_resistance": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Escapist": {
+		"dodge": 8
+	},
+	"Evader": {
+		"ap_resistance": 8
+	},
+	"Evader 1": {
+		"ap_resistance": 16,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Feller": {
+		"pushback_damage": 32,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	}
+}

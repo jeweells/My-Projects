@@ -1,0 +1,458 @@
+
+Age-Old Belt
+Level 200
+Age-Old Set
+350 Vitality
+80 Intelligence
+40 Agility
+50 Wisdom
+7 Critical Hits
+1 Range
+10 Fire Damage
+10 Heals
+300 Initiative
+15 Dodge
+15 Critical Damage
+10% Air Resistance
+
+Belteen
+Level 200
+350 Vitality
+40 Wisdom
+50 Power
+4 Critical Hits
+1 AP
+15 Prospecting
+-10 Dodge
+7 MP Resistance
+20 Critical Damage
+10% Neutral Resistance
+10% Water Resistance
+20 Pushback Resistance
+Conditions
+AP < 12
+
+Belt of the Salvatory Spirit
+Level 200
+Salvatory Spirit Set
+400 Vitality
+50 Wisdom
+70 Power
+-10 Critical Hits
+1 Range
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+15 Water Damage
+15 Air Damage
+15 Prospecting
+10 Dodge
+7% Fire Resistance
+7% Water Resistance
+
+Belt of the Unsound Mind
+Level 200
+Unsound Mind Set
+400 Vitality
+50 Intelligence
+50 Chance
+40 Wisdom
+2 Critical Hits
+15 Fire Damage
+15 Water Damage
+15 Prospecting
+7 MP Resistance
+12 Critical Damage
+10% Neutral Resistance
+10% Earth Resistance
+
+Belt of the Unspeakable
+Level 200
+Unspeakable Set
+300 Vitality
+40 Strength
+40 Intelligence
+40 Agility
+40 Chance
+40 Wisdom
+4 Critical Hits
+1 Range
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+12 Water Damage
+12 Air Damage
+15 Prospecting
+10 Dodge
+10% Earth Resistance
+
+Belt of Wonders
+Level 200
+Mesm Set
+350 Vitality
+60 Intelligence
+60 Chance
+40 Wisdom
+4 Critical Hits
+1 Range
+20 Fire Damage
+20 Water Damage
+15 Heals
+20 Pushback Damage
+10% Air Resistance
+
+Bethel's Panties
+Level 200
+Bethel Set
+350 Vitality
+70 Strength
+70 Chance
+40 Wisdom
+1 Range
+15 Neutral Damage
+15 Earth Damage
+15 Water Damage
+-10 Lock
+10 Dodge
+7 AP Reduction
+7% Neutral Resistance
+7% Water Resistance
+25 Pushback Resistance
+
+Bluster Belt
+Level 200
+Submerged Set
+350 Vitality
+80 Agility
+40 Wisdom
+4 Critical Hits
+1 Range
+15 Air Damage
+15 Prospecting
+10 AP Resistance
+12 Critical Damage
+10% Earth Resistance
+10% Water Resistance
+
+Ceinture en Grithril
+Level 200
+Grithriloplie
+400 Vitality
+60 Strength
+60 Chance
+40 Wisdom
+4 Critical Hits
+12 Neutral Damage
+12 Earth Damage
+12 Water Damage
+7 Lock
+15% Air Resistance
+25 Critical Resistance
+
+Ceinture Volkorne
+Level 200
+Panoplie Volkorne
+400 Vitality
+100 Strength
+40 Wisdom
+5 Critical Hits
+1 Range
+20 Neutral Damage
+20 Earth Damage
+10% Neutral Resistance
+10% Earth Resistance
+
+Dark Court Belt
+Level 200
+Dark Court Set
+350 Vitality
+60 Strength
+40 Wisdom
+4 Critical Hits
+1 Summons
+15 Neutral Damage
+15 Earth Damage
+15 Prospecting
+600 Initiative
+15 Lock
+6 AP Reduction
+10% Fire Resistance
+20 Pushback Resistance
+
+Epeni's Belt
+Level 200
+300 Vitality
+40 Chance
+30 Wisdom
+40 Power
+1 MP
+2 Summons
+15 Prospecting
+-301 Initiative
+15 Lock
+-6 MP Resistance
+25 Critical Damage
+25 Pushback Damage
+10% Water Resistance
+10% Air Resistance
+Conditions
+AP < 12
+
+Gein's Belt
+Level 200
+Gein Set
+350 Vitality
+60 Strength
+60 Intelligence
+40 Wisdom
+1 Range
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+15 Prospecting
+10 Dodge
+25 Critical Damage
+15% Fire Resistance
+
+Jolly Good Belt
+Level 200
+350 Vitality
+60 Intelligence
+40 Wisdom
+5 Critical Hits
+1 AP
+15 Fire Damage
+15 Water Damage
+15 Air Damage
+20 Prospecting
+-16 Dodge
+8 MP Resistance
+20 Critical Resistance
+Conditions
+AP < 12
+
+Kongoku Belt
+Level 200
+Kongoku Set
+350 Vitality
+40 Wisdom
+30 Power
+5 Critical Hits
+1 Range
+15 Prospecting
+600 Initiative
+12 Lock
+7 MP Reduction
+7% Neutral Resistance
+7% Fire Resistance
+7% Water Resistance
+15 Critical Resistance
+
+Luminescent Belt
+Level 200
+Luminescent Set
+400 Vitality
+70 Strength
+70 Chance
+40 Wisdom
+4 Critical Hits
+1 Summons
+12 Neutral Damage
+12 Earth Damage
+12 Water Damage
+10 Lock
+5 MP Reduction
+20 Pushback Damage
+7% Fire Resistance
+7% Air Resistance
+
+Menobelt
+Level 200
+350 Vitality
+80 Agility
+40 Wisdom
+6 Critical Hits
+1 AP
+20 Air Damage
+15 Prospecting
+12 AP Reduction
+10% Earth Resistance
+Conditions
+AP < 12
+
+Nocturnowl Belt
+Level 200
+Nocturnowl Set
+350 Vitality
+100 Agility
+60 Wisdom
+7 Critical Hits
+-1 Range
+15 Air Damage
+20 Prospecting
+25 Pushback Damage
+10% Water Resistance
+20 Earth Resistance
+
+Ockloth
+Level 200
+350 Vitality
+70 Chance
+40 Wisdom
+2 Critical Hits
+1 AP
+15 Water Damage
+15 Prospecting
+15 AP Resistance
+7% Neutral Resistance
+7% Fire Resistance
+Conditions
+AP < 12
+
+Protozash
+Level 200
+400 Vitality
+50 Wisdom
+1 MP
+1 Summons
+-15 Lock
+10 AP Resistance
+10 MP Resistance
+10% Earth Resistance
+10% Fire Resistance
+25 Critical Resistance
+Conditions
+AP < 12
+
+Queen of Thieves' Belt
+Level 200
+Queen of Thieves Set
+350 Vitality
+70 Strength
+70 Chance
+40 Wisdom
+4 Critical Hits
+1 Range
+15 Neutral Damage
+15 Earth Damage
+15 Water Damage
+15 Prospecting
+7% Earth Resistance
+30 Critical Resistance
+
+Sashucker
+Level 200
+Octoset
+350 Vitality
+60 Strength
+60 Agility
+40 Wisdom
+4 Critical Hits
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+10 Lock
+6 AP Reduction
+10% Fire Resistance
+10% Air Resistance
+
+Sneerena Loincloth
+Level 200
+500 Vitality
+80 Chance
+30 Wisdom
+6 Critical Hits
+1 Range
+10 Water Damage
+15 Prospecting
+15 Dodge
+12 AP Resistance
+-15 MP Resistance
+20 Critical Damage
+7% Neutral Resistance
+7% Earth Resistance
+
+Staruman Belt
+Level 200
+Staruman Set
+350 Vitality
+70 Agility
+70 Chance
+40 Wisdom
+6 Critical Hits
+1 Summons
+12 Water Damage
+12 Air Damage
+15 Prospecting
+7% Neutral Resistance
+7% Earth Resistance
+7% Fire Resistance
+
+Suspender Belt
+Level 200
+400 Vitality
+80 Strength
+40 Wisdom
+3 Critical Hits
+1 AP
+18 Neutral Damage
+18 Earth Damage
+15 Prospecting
+-20 Lock
+15 MP Resistance
+25 Pushback Damage
+10% Air Resistance
+Conditions
+AP < 12
+
+Treadfast Belt
+Level 200
+Treadfast Set
+350 Vitality
+50 Wisdom
+60 Power
+7 Critical Hits
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+10 Air Damage
+7 Heals
+400 Initiative
+10 Lock
+15 Critical Damage
+8% Neutral Resistance
+-16 Critical Resistance
+
+Voldelor Belt
+Level 200
+Voldelor Set
+300 Vitality
+70 Agility
+70 Chance
+50 Wisdom
+1 Range
+15 Water Damage
+15 Air Damage
+15 Prospecting
+7 Dodge
+-5 MP Resistance
+15 Critical Damage
+10% Fire Resistance
+10% Water Resistance
+
+Vortex Belt
+Level 200
+Vortex Set
+350 Vitality
+60 Intelligence
+60 Agility
+40 Wisdom
+4 Critical Hits
+12 Fire Damage
+12 Air Damage
+12 Heals
+15 Prospecting
+5 AP Reduction
+10% Fire Resistance
+10% Water Resistance

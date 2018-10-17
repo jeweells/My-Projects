@@ -1,0 +1,118 @@
+
+Abyssal Dofus
+Level 180
+Linked to account 124 days since creation
+At the start of each turn, if no enemies are next to them, gives 1 MP. Otherwise gives 1 AP.
+
+Cloudy Dofus
+Level 180
+20% Final Damage
+Linked to account 124 days since creation
+On odd turns, increases damage by 20%. On even turns, reduces damage by 10%.
+
+Ice Dofus
+Level 180
+25 Neutral Damage
+25 Earth Damage
+25 Fire Damage
+25 Water Damage
+25 Air Damage
+Linked to account 124 days since creation
+
+Ivory Dofus
+Level 180
+40 Neutral Resistance
+40 Earth Resistance
+40 Fire Resistance
+40 Water Resistance
+40 Air Resistance
+Linked to account 124 days since creation
+At the end of the turn, damage from the next attack suffered is reduced by 50%.
+Ivory Dofus emote
+
+Lavasmith Dofus
+Level 180
+60 Pushback Resistance
+Linked to account 124 days since creation
+Adds 150 shield points if the caster is moved by pushing, attraction, place switching or being carried by a Pandawa. Only enemies can trigger this effect.
+
+Ochre Dofus
+Level 160
+1 AP
+Linked to account 124 days since creation
+Gives 1 AP if no damage-inflicting attack has been suffered since the last game turn.
+Ochre Dofus emote
+
+Turquoise Dofus
+Level 160
+10 Critical Hits
+Linked to account 124 days since creation
+For each Critical Hit inflicted, the final damage is increased by 1% for 3 turns. Can be stacked 10 times.
+Turquoise Dofus emote
+
+Crimson Dofus
+Level 110
+80 Power
+Linked to account 124 days since creation
+For each distance attack suffered, the final damage inflicted is increased by 1% for 1 turns. The effects are stackable 10 times.
+Crimson Dofus emote
+
+Dotrich
+Level 110
+20 Power
+Linked to account 124 days since creation
+
+Dolmanax
+Level 100
+50 Strength
+50 Intelligence
+50 Agility
+50 Chance
+Linked to account 124 days since creation
+
+Emerald Dofus
+Level 100
+200 Vitality
+Linked to account 124 days since creation
+At the end of the turn, gives shield points for each enemy next to the caster. Summons are not counted.
+Emerald Dofus emote
+
+Kaliptus Dofus
+Level 100
+30 Prospecting
+
+Vulbis Dofus
+Level 100
+1 MP
+Damage inflicted is increased by 10% for 1 turn if no damage-inflicting attack has been suffered since the last game turn.
+
+Watchers Dofus
+Level 100
+Linked to account 124 days since creation
+At the start of the turn, heals 7% of health points of aligned allies.
+
+Dokoko
+Level 80
+Linked to account 124 days since creation
+Every 3 turns starting on turn 4, returns 10% of maximum health points.
+
+Grofus
+Level 80
+10 Prospecting
+Linked to account 124 days since creation
+
+Cawwot Dofus
+Level 60
+60 Wisdom
+Linked to account 124 days since creation
+Gives 25 AP Dodge if an MP penalty is suffered, or 25 MP Dodge if an AP penalty is suffered. The two effects do not stack, and last 1 turn.
+
+Silver Dofus
+Level 20
+Linked to account 124 days since creation
+At the start of the caster's turn, if they have less than 20% of their HP, they are healed by 20% of their HP. This effect can only be played once per fight.
+
+Dofawa
+Level 6
+1 Vitality
+Linked to account 124 days since creation

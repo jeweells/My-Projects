@@ -1,0 +1,89 @@
+{
+	"Ambuckler": {
+		"range": 1,
+		"dodge": 15,
+		"mp_reduction": 7,
+		"per_ranged_resistance": 15,
+		"per_melee_resistance": -15
+	},
+	"Anerice Shield": {
+		"set": "Anerice Set",
+		"critical_hits": 6,
+		"lock": 20,
+		"mp_resistance": 12,
+		"per_melee_damage": -15,
+		"per_melee_resistance": 15
+	},
+	"Bontarian Shield": {
+		"vitality": 150,
+		"dodge": 15,
+		"critical_resistance": 30,
+		"per_ranged_damage": -15,
+		"per_ranged_resistance": 15
+	},
+	"Brakmarian Shield": {
+		"critical_hits": 5,
+		"initiative": 500,
+		"mp_resistance": 20,
+		"per_melee_resistance": 15,
+		"per_ranged_resistance": -15
+	},
+	"Captain Amakna Shield": {
+		"power": 30,
+		"critical_hits": 6,
+		"critical_damage": 12,
+		"per_melee_damage": 15,
+		"per_ranged_resistance": -15
+	},
+	"Cycloid Shield": {
+		"heals": 25,
+		"dodge": 15,
+		"mp_resistance": 15,
+		"per_ranged_damage": 15,
+		"per_melee_resistance": -15
+	},
+	"Goulshield": {
+		"set": "Ghoul Set",
+		"power": 30,
+		"ap_resistance": 12,
+		"critical_resistance": 30,
+		"per_melee_resistance": -15,
+		"per_ranged_resistance": 15
+	},
+	"Ilyzaelle Shield": {
+		"set": "Ilyzaelle Set",
+		"vitality": 150,
+		"mp_resistance": 10,
+		"per_water_resistance": 10,
+		"per_melee_damage": 15,
+		"per_weapon_damage": -15
+	},
+	"Precious Shield": {
+		"vitality": 150,
+		"lock": 15,
+		"pushback_damage": 40,
+		"per_ranged_damage": -15,
+		"per_melee_resistance": 15
+	},
+	"Solar's Shield": {
+		"vitality": 120,
+		"mp_resistance": 12,
+		"pushback_resistance": 70,
+		"per_weapon_damage": -15,
+		"per_melee_resistance": 15
+	},
+	"Stalak Shield": {
+		"power": 30,
+		"dodge": 20,
+		"critical_resistance": 35,
+		"per_ranged_damage": 15,
+		"per_melee_damage": -15
+	},
+	"Wunspoon": {
+		"lock": 20,
+		"critical_resistance": 50,
+		"pushback_resistance": 50,
+		"per_melee_resistance": 15,
+		"per_ranged_resistance": -15
+	}
+}

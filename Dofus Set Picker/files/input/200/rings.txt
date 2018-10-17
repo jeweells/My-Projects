@@ -1,0 +1,331 @@
+
+Anneau en Grithril
+Level 200
+Grithriloplie
+250 Vitality
+50 Strength
+50 Chance
+40 Wisdom
+3 Critical Hits
+8 Neutral Damage
+8 Earth Damage
+8 Water Damage
+7 Lock
+10% Water Resistance
+15 Critical Resistance
+
+Anneau Volkorne
+Level 200
+Panoplie Volkorne
+250 Vitality
+100 Chance
+5 Critical Hits
+20 Water Damage
+10% Water Resistance
+
+Celebring
+Level 200
+250 Vitality
+40 Wisdom
+40 Power
+1 MP
+7% Fire Resistance
+7% Water Resistance
+Conditions
+AP < 12
+
+Count Harebourg's Ring
+Level 200
+Count Harebourg Set
+350 Vitality
+50 Strength
+50 Wisdom
+7 Critical Hits
+15 Neutral Damage
+15 Earth Damage
+-401 Initiative
+25 Critical Resistance
+
+Crustic Ring
+Level 200
+350 Vitality
+80 Strength
+40 Wisdom
+2 Critical Hits
+12 Neutral Damage
+12 Earth Damage
+10 Lock
+10 AP Reduction
+7% Water Resistance
+
+Cryochrone Ring
+Level 200
+Cryochrone Set
+300 Vitality
+40 Intelligence
+40 Chance
+30 Wisdom
+1 Range
+12 Fire Damage
+12 Water Damage
+10 Heals
+10 Critical Damage
+
+Cycloid Ring
+Level 200
+Cycloid Set
+300 Vitality
+40 Strength
+40 Intelligence
+40 Agility
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Air Damage
+300 Initiative
+6 Lock
+8% Water Resistance
+
+Deep Sea Bracelet
+Level 200
+Deep Sea Set
+250 Vitality
+60 Chance
+50 Wisdom
+3 Critical Hits
+1 Range
+12 Water Damage
+10 Lock
+5 MP Resistance
+10% Fire Resistance
+
+Fugitive Ring
+Level 200
+Fugitive Set
+250 Vitality
+40 Strength
+40 Agility
+40 Wisdom
+15 Power
+12 Neutral Damage
+12 Earth Damage
+12 Air Damage
+7 MP Resistance
+10% Fire Resistance
+
+Goulring
+Level 200
+Ghoul Set
+250 Vitality
+40 Strength
+40 Intelligence
+40 Chance
+30 Wisdom
+7 Neutral Damage
+7 Earth Damage
+7 Fire Damage
+7 Water Damage
+10% Earth Resistance
+25 Critical Resistance
+
+Hairsh Bracelet
+Level 200
+Hairsh Set
+300 Vitality
+50 Power
+4 Critical Hits
+2 Range
+10 Neutral Damage
+10 Earth Damage
+10 Water Damage
+10% Neutral Resistance
+
+Horrifing
+Level 200
+Rygurgal Set
+300 Vitality
+80 Intelligence
+80 Agility
+40 Wisdom
+7 Fire Damage
+7 Air Damage
+15 Heals
+10% Neutral Resistance
+15 Critical Resistance
+
+Jammy Jack Glove
+Level 200
+Jammy Jack Set
+300 Vitality
+60 Agility
+40 Wisdom
+1 Range
+15 Air Damage
+15 Prospecting
+6 MP Resistance
+10% Earth Resistance
+15 Pushback Resistance
+
+King Playa Signet Ring
+Level 200
+King Playa Set
+250 Vitality
+50 Strength
+50 Intelligence
+40 Wisdom
+3 Critical Hits
+1 Range
+12 Neutral Damage
+12 Earth Damage
+12 Fire Damage
+10 Prospecting
+-5 Dodge
+6 MP Reduction
+10% Fire Resistance
+
+Lavaring
+Level 200
+250 Vitality
+60 Intelligence
+60 Chance
+40 Wisdom
+1 Range
+12 Fire Damage
+12 Water Damage
+12 Heals
+10% Air Resistance
+
+Levitrof Wedding Ring
+Level 200
+Levitrof Set
+250 Vitality
+40 Strength
+40 Intelligence
+40 Chance
+40 Wisdom
+1 Summons
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Water Damage
+300 Initiative
+6% Fire Resistance
+
+Mumysring
+Level 200
+Setstik
+300 Vitality
+40 Strength
+40 Intelligence
+40 Wisdom
+4 Critical Hits
+1 Range
+7 Neutral Damage
+7 Earth Damage
+7 Fire Damage
+10 Heals
+7% Water Resistance
+30 Critical Resistance
+
+Nidas's Ring
+Level 200
+Nidas Set
+250 Vitality
+40 Intelligence
+50 Wisdom
+1 Summons
+12 Fire Damage
+10 Heals
+10 Dodge
+5 MP Reduction
+10% Earth Resistance
+
+Pawl Ouatnos' Ring
+Level 200
+300 Vitality
+40 Wisdom
+4 Critical Hits
+1 MP
+1 Range
+10 Lock
+7% Earth Resistance
+7% Air Resistance
+Conditions
+AP < 12
+
+Rassler Ring
+Level 200
+Rassler Set
+350 Vitality
+50 Strength
+50 Intelligence
+50 Agility
+40 Wisdom
+3 Critical Hits
+10 Neutral Damage
+10 Earth Damage
+10 Fire Damage
+10 Air Damage
+15 Prospecting
+400 Initiative
+-21 Critical Damage
+
+Ringaeus
+Level 200
+400 Vitality
+70 Intelligence
+40 Wisdom
+2 Critical Hits
+12 Fire Damage
+12 Heals
+15 Prospecting
+10 AP Resistance
+7% Earth Resistance
+7% Water Resistance
+-30 Critical Resistance
+
+Ringaling
+Level 200
+Abyss Set
+300 Vitality
+50 Intelligence
+30 Wisdom
+3 Critical Hits
+1 Range
+10 Fire Damage
+6 Water Damage
+6 Air Damage
+25 Prospecting
+5 Lock
+10% Water Resistance
+10% Air Resistance
+-21 Critical Resistance
+30 Pushback Resistance
+
+Soul-Blaze Wedding Ring
+Level 200
+Soul-Blaze Set
+300 Vitality
+60 Strength
+60 Intelligence
+60 Agility
+30 Wisdom
+7 Neutral Damage
+7 Earth Damage
+7 Fire Damage
+7 Air Damage
+7% Water Resistance
+7% Air Resistance
+
+Tritun Ring
+Level 200
+Tritun Set
+400 Vitality
+40 Wisdom
+15 Prospecting
+10 Lock
+10 AP Resistance
+20 Critical Damage
+15 Pushback Damage
+7% Earth Resistance
+7% Water Resistance

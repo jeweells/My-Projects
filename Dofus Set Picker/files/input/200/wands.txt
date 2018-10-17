@@ -1,0 +1,118 @@
+
+AP: 4
+Range: 3-6
+Crit: 25%
+Bonus: +2
+2 / turn
+Brutatax Wand
+Level 200
+11 to 15 (Fire steal)
+26 to 30 (Heal)
+26 to 30 (Heal)
+Effects:
+350 Vitality
+40 Wisdom
+60 Power
+4 Critical Hits
+-1 Range
+20 Heals
+15 Prospecting
+600 Initiative
+10 MP Resistance
+7% Water Resistance
+10% Air Resistance
+20 Pushback Resistance
+
+AP: 5
+Range: 2-5
+Crit: 15%
+Bonus: +8
+1 / turn
+Fugitive Wand
+Level 200
+24 to 30 (Earth damage)
+24 to 30 (Water damage)
+Effects:
+350 Vitality
+60 Strength
+60 Chance
+40 Wisdom
+-5 Critical Hits
+1 Range
+20 Neutral Damage
+20 Earth Damage
+20 Water Damage
+15 Prospecting
+10 MP Resistance
+10% Fire Resistance
+20 Pushback Resistance
+Conditions
+Strength > 450 and 
+Chance > 450
+
+AP: 5
+Range: 2-5
+1 / turn
+Mishmash Wand
+Level 200
+55 to 60 (Water damage)
+Effects:
+350 Vitality
+60 Chance
+40 Wisdom
+15 Water Damage
+15 Heals
+12 Lock
+12 MP Resistance
+10% Air Resistance
+25 Pushback Resistance
+
+AP: 4
+Range: 3-6
+1 / turn
+Pyraring
+Level 200
+25 to 30 (Fire damage)
+10 to 12 (Water damage)
+10 to 12 (Water damage)
+Effects:
+350 Vitality
+70 Intelligence
+70 Chance
+40 Wisdom
+-10 Critical Hits
+1 Range
+20 Fire Damage
+20 Water Damage
+15 Heals
+15 Prospecting
+15 Dodge
+10% Air Resistance
+15 Critical Resistance
+
+AP: 3
+Range: 2-5
+Crit: 5%
+Bonus: +3
+1 / turn
+Strange Wand
+Level 200
+2 to 3 (Fire damage)
+6 to 9 (Air damage)
+2 to 3 (Fire steal)
+Effects:
+350 Vitality
+60 Intelligence
+60 Agility
+40 Wisdom
+4 Critical Hits
+12 Fire Damage
+12 Air Damage
+7 Dodge
+5 MP Reduction
+7% Earth Resistance
+10% Water Resistance
+25 Critical Resistance
+Conditions
+Intelligence > 400 and 
+Agility > 400

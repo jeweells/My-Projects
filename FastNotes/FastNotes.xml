@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<iasettings>
+  <projectproperties>
+    <manufacturer>Jeweells</manufacturer>
+    <productname>FastNotes</productname>
+    <productversion>1.0.0.0</productversion>
+    <productcode>{25af1d92-3e9f-4a35-9f2e-303a2ec15268}</productcode>
+    <upgradecode>{4a9e5563-be8e-40f6-8f63-ba8f34de0129}</upgradecode>
+    <language>0</language>
+    <languagename>English</languagename>
+  </projectproperties>
+  <summary>
+    <title>FastNotes</title>
+    <subject>FastNotes</subject>
+    <author>Jeweells</author>
+    <summarycomments>FastNotes</summarycomments>
+    <revisioncode>{f1a2c1ba-eb1f-479d-801a-d00eeb7c9956}</revisioncode>
+    <uacelevation>highestAvailable</uacelevation>
+  </summary>
+  <addremove>
+    <publishername>Jeweells</publishername>
+    <contactname>Jeweells</contactname>
+    <helplink>http://www.mywebsite.com</helplink>
+    <productupdatelink>http://www.mywebsite.com</productupdatelink>
+    <addremovecomments>All Rights Reserved</addremovecomments>
+    <iconfile />
+  </addremove>
+  <codegen>
+    <generateincludefiles>1</generateincludefiles>
+    <generatefeatures>0</generatefeatures>
+    <refreshscript>0</refreshscript>
+  </codegen>
+  <compilervariables>
+    <variables />
+  </compilervariables>
+  <build>
+    <buildtype>0</buildtype>
+    <buildasmsi>False</buildasmsi>
+    <cachesources>1</cachesources>
+  </build>
+  <targetfolders />
+  <files>
+    <filedetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\FastNotes\bin\Release\FastNotes.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="1" installfilecommand="0" />
+  </files>
+  <dependencies>
+    <dependencydetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\packages\Accord.3.8.0\lib\net46\Accord.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\packages\Accord.Imaging.3.8.0\lib\net46\Accord.Imaging.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\packages\Accord.Imaging.Noncommercial.3.8.0\lib\net46\Accord.Imaging.Noncommercial.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\packages\Accord.Math.3.8.0\lib\net46\Accord.Math.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\packages\Accord.Math.3.8.0\lib\net46\Accord.Math.Core.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\Jeweells\Documents\GitHub\My-Projects\FastNotes\packages\Accord.Statistics.3.8.0\lib\net46\Accord.Statistics.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+  </dependencies>
+  <registry />
+  <dialogtheme>
+    <themename>Official</themename>
+  </dialogtheme>
+  <authenticode>
+    <sign>0</sign>
+    <mode>0</mode>
+    <certificatefile />
+    <keyfile />
+    <pfxfile />
+    <productinfourl />
+    <authpassword />
+    <timestampurl />
+    <signall>0</signall>
+  </authenticode>
+  <compression>
+    <compressiontype>8</compressiontype>
+    <encrypt>0</encrypt>
+    <compressionpassword />
+  </compression>
+  <output>
+    <outputtype>0</outputtype>
+    <location />
+    <filename />
+    <calculatefilehash>0</calculatefilehash>
+    <refreshrevisioncode>1</refreshrevisioncode>
+  </output>
+</iasettings>

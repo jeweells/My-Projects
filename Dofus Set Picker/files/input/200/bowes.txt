@@ -1,0 +1,155 @@
+
+AP: 4
+Range: 3-8
+1 / turn
+Archon's Bow
+Level 200
+24 to 32 (Neutral damage)
+4 to 7 (Water steal)
+4 to 7 (Air steal)
+Effects:
+250 Vitality
+50 Intelligence
+50 Wisdom
+50 Power
+-6 Critical Hits
+1 Range
+12 Fire Damage
+12 Water Damage
+12 Air Damage
+300 Initiative
+10 Dodge
+7 MP Reduction
+8% Neutral Resistance
+8% Water Resistance
+8% Air Resistance
+Conditions
+Intelligence > 559
+
+AP: 5
+Range: 5-10
+Crit: 10%
+Bonus: +3
+1 / turn
+Arc Volkorne
+Level 200
+11 to 15 (Earth damage)
+11 to 15 (Fire damage)
+11 to 15 (Water damage)
+11 to 15 (Air damage)
+Effects:
+350 Vitality
+40 Wisdom
+70 Power
+5 Critical Hits
+15 Neutral Damage
+15 Earth Damage
+15 Fire Damage
+15 Water Damage
+15 Air Damage
+10 Dodge
+5% Neutral Resistance
+Conditions
+Strength > 350 and 
+Intelligence > 350 and 
+Chance > 350 and 
+Agility > 350
+
+AP: 5
+Range: 3-7
+Crit: 15%
+Bonus: +6
+1 / turn
+Catseye Bow
+Level 200
+20 to 25 (Earth damage)
+16 to 20 (Neutral steal)
+Effects:
+400 Vitality
+80 Strength
+40 Wisdom
+6 Critical Hits
+1 Range
+15 Neutral Damage
+15 Earth Damage
+-30 Lock
+10 MP Resistance
+25 Pushback Damage
+10% Fire Resistance
+7% Air Resistance
+
+AP: 5
+Range: 4-8
+Crit: 15%
+Bonus: +15
+1 / turn
+Corrupted Bow
+Level 200
+41 to 55 (Fire damage)
+Effects:
+350 Vitality
+70 Intelligence
+40 Wisdom
+4 Critical Hits
+1 Range
+15 Fire Damage
+15 Prospecting
+10 Dodge
+7 AP Reduction
+7% Water Resistance
+7% Air Resistance
+25 Critical Resistance
+
+AP: 5
+Range: 4-7
+Crit: 5%
+Bonus: +5
+1 / turn
+Koutoulou Bow
+Level 200
+20 to 25 (Water steal)
+20 to 25 (Air steal)
+Effects:
+350 Vitality
+60 Agility
+60 Chance
+50 Wisdom
+2 Critical Hits
+1 Range
+15 Water Damage
+15 Air Damage
+15 Prospecting
+15 AP Resistance
+7% Earth Resistance
+7% Fire Resistance
+Conditions
+Chance > 400 and 
+Agility > 400
+
+AP: 5
+Range: 4-7
+Crit: 15%
+Bonus: +4
+1 / turn
+Necrotick Bow
+Level 200
+21 to 25 (Fire damage)
+6 to 10 (Water steal)
+6 to 10 (Water steal)
+Effects:
+350 Vitality
+60 Intelligence
+60 Chance
+40 Wisdom
+3 Critical Hits
+-1 Range
+1 Summons
+15 Fire Damage
+15 Water Damage
+5 AP Reduction
+7% Neutral Resistance
+7% Earth Resistance
+10% Air Resistance
+Conditions
+Intelligence > 550 and 
+Chance > 550

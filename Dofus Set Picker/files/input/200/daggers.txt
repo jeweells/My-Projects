@@ -1,0 +1,92 @@
+
+AP: 3
+Range: 1
+Crit: 20%
+Bonus: +10
+2 / turn
+Daguanos
+Level 200
+26 to 32 (Water damage)
+Effects:
+400 Vitality
+80 Chance
+50 Wisdom
+6 Critical Hits
+1 Range
+20 Water Damage
+10 AP Reduction
+7% Neutral Resistance
+7% Fire Resistance
+
+AP: 3
+Range: 1
+Crit: 5%
+Bonus: +6
+2 / turn
+Flinty Daggers
+Level 200
+16 to 22 (Neutral damage)
+10 to 14 (Fire damage)
+Effects:
+400 Vitality
+50 Strength
+50 Intelligence
+50 Agility
+40 Wisdom
+1 Range
+2 Summons
+15 Earth Damage
+15 Fire Damage
+15 Air Damage
+10 Dodge
+10% Water Resistance
+15 Critical Resistance
+Conditions
+Strength > 450 or 
+Agility > 450
+
+AP: 3
+Range: 1
+Crit: 15%
+Bonus: +6
+2 / turn
+Ilyzaelle Daggers
+Level 200
+9 to 12 (Neutral damage)
+9 to 12 (Earth damage)
+Effects:
+400 Vitality
+70 Strength
+50 Wisdom
+4 Critical Hits
+15 Neutral Damage
+15 Earth Damage
+15 Prospecting
+-20 Dodge
+7 MP Reduction
+15 Critical Damage
+10% Fire Resistance
+40 Pushback Resistance
+
+AP: 3
+Range: 1
+1 / turn
+Srambad Daggers
+Level 200
+13 to 18 (Neutral damage)
+6 to 8 (Water steal)
+4 to 5 (Earth steal)
+Effects:
+400 Vitality
+70 Strength
+70 Chance
+40 Wisdom
+1 Range
+20 Neutral Damage
+20 Earth Damage
+20 Water Damage
+10% Fire Resistance
+25 Critical Resistance
+Conditions
+Strength > 449 and 
+Chance > 449

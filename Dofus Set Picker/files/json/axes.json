@@ -1,0 +1,116 @@
+{
+	"Catseye Axe": {
+		"vitality": 400,
+		"strength": 50,
+		"intelligence": 50,
+		"chance": 50,
+		"wisdom": 40,
+		"power": 15,
+		"critical_hits": 4,
+		"neutral_damage": 10,
+		"earth_damage": 10,
+		"fire_damage": 10,
+		"water_damage": 10,
+		"prospecting": 15,
+		"dodge": 15,
+		"critical_damage": 15,
+		"per_air_resistance": 10,
+		"constraints":{
+			"strength>": 400,
+			"intelligence>": 400,
+			"chance>": 400
+		}
+	},
+	"Heqaxe": {
+		"vitality": 350,
+		"strength": 60,
+		"agility": 60,
+		"wisdom": 40,
+		"critical_hits": 4,
+		"range": -1,
+		"summons": 1,
+		"neutral_damage": 12,
+		"earth_damage": 12,
+		"air_damage": 12,
+		"prospecting": 15,
+		"lock": 15,
+		"pushback_damage": 25,
+		"per_fire_resistance": 7,
+		"per_water_resistance": 7
+	},
+	"Lavaxe": {
+		"vitality": 350,
+		"strength": 80,
+		"wisdom": 40,
+		"summons": 1,
+		"neutral_damage": 15,
+		"earth_damage": 15,
+		"prospecting": 15,
+		"lock": 12,
+		"ap_reduction": 7,
+		"pushback_damage": 25,
+		"per_fire_resistance": 7,
+		"per_water_resistance": 10
+	},
+	"Mantax": {
+		"vitality": 400,
+		"agility": 80,
+		"wisdom": 40,
+		"air_damage": 15,
+		"dodge": 12,
+		"ap_resistance": 10,
+		"per_water_resistance": 10,
+		"critical_resistance": 30
+	},
+	"Plumobile": {
+		"vitality": 350,
+		"intelligence": 80,
+		"wisdom": 50,
+		"critical_hits": 4,
+		"summons": 1,
+		"fire_damage": 10,
+		"heals": 15,
+		"prospecting": 20,
+		"lock": 15,
+		"per_earth_resistance": 10,
+		"critical_resistance": 25
+	},
+	"Riff Hatchet": {
+		"vitality": 250,
+		"strength": 60,
+		"agility": 60,
+		"critical_hits": 5,
+		"range": 1,
+		"neutral_damage": 18,
+		"earth_damage": 18,
+		"air_damage": 18,
+		"prospecting": 15,
+		"initiative": -301,
+		"dodge": 10,
+		"pushback_damage": 20,
+		"per_neutral_resistance": 10,
+		"per_air_resistance": 10,
+		"constraints":{
+			"strength>": 350,
+			"agility>": 350
+		}
+	},
+	"Tomahorse": {
+		"vitality": 400,
+		"strength": 60,
+		"chance": 60,
+		"wisdom": 30,
+		"range": -1,
+		"neutral_damage": 16,
+		"earth_damage": 16,
+		"water_damage": 16,
+		"pushback_damage": 20,
+		"per_fire_resistance": 10,
+		"neutral_resistance": 20,
+		"air_resistance": 15,
+		"constraints":{
+			"strength>": 350,
+			"chance>": 350
+		}
+	}
+}

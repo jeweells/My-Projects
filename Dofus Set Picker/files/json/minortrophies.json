@@ -1,0 +1,230 @@
+{
+	"Minor Fire Destroyer": {
+		"fire_damage": 3
+	},
+	"Minor Fire Destroyer 1": {
+		"fire_damage": 5,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Fire Wrecker": {
+		"fire_damage": 5,
+		"per_earth_resistance": -2
+	},
+	"Minor Forerunner": {
+		"vitality": -25,
+		"initiative": 200
+	},
+	"Minor Fortification": {
+		"critical_resistance": 8,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Friction": {
+		"mp_reduction": 3
+	},
+	"Minor Fugitive": {
+		"mp_resistance": 4
+	},
+	"Minor Goliath": {
+		"vitality": -50,
+		"strength": 25
+	},
+	"Minor Gymnast": {
+		"vitality": -50,
+		"agility": 25
+	},
+	"Minor Healer": {
+		"heals": 4
+	},
+	"Minor Instigator": {
+		"initiative": 100
+	},
+	"Minor Intellectual": {
+		"intelligence": 25,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Jostler": {
+		"lock": -8,
+		"pushback_damage": 16
+	},
+	"Minor Locker": {
+		"lock": 4
+	},
+	"Minor Luckster": {
+		"chance": 25,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Maniac": {
+		"strength": 15
+	},
+	"Minor Miracle Man": {
+		"vitality": 80,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Motivator": {
+		"initiative": 200,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Neutral Bulwark": {
+		"per_water_resistance": -2,
+		"neutral_resistance": 10
+	},
+	"Minor Neutral Carapace": {
+		"per_neutral_resistance": 3,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Neutral Defender": {
+		"neutral_resistance": 6
+	},
+	"Minor Neutral Destroyer": {
+		"neutral_damage": 5,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Neutral Destroyer 1": {
+		"neutral_damage": 3
+	},
+	"Minor Neutral Wrecker": {
+		"neutral_damage": 5,
+		"per_water_resistance": -2
+	},
+	"Minor Obstructor": {
+		"lock": 8,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Oppressor": {
+		"ap_reduction": 3
+	},
+	"Minor Paralyser": {
+		"ap_reduction": 6,
+		"mp_resistance": -6
+	},
+	"Minor Player": {
+		"chance": 15
+	},
+	"Minor Powerhouse": {
+		"power": 20,
+		"critical_hits": -3
+	},
+	"Minor Rabid": {
+		"strength": 25,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Repellant": {
+		"pushback_damage": 8
+	},
+	"Minor Scholar": {
+		"intelligence": 15
+	},
+	"Minor Shackler": {
+		"mp_reduction": 6,
+		"ap_resistance": -6
+	},
+	"Minor Slimeball": {
+		"ap_resistance": -8,
+		"mp_resistance": 8
+	},
+	"Minor Solid": {
+		"pushback_resistance": 24,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Stalwart": {
+		"dodge": -8,
+		"pushback_resistance": 24
+	},
+	"Minor Stickler": {
+		"lock": 8,
+		"dodge": -8
+	},
+	"Minor Stunner": {
+		"ap_reduction": 6,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Stunter": {
+		"agility": 25,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Survivor": {
+		"vitality": 40
+	},
+	"Minor Tease": {
+		"vitality": -50,
+		"chance": 25
+	},
+	"Minor Transporter": {
+		"pods": 250
+	},
+	"Minor Untouchable": {
+		"ap_resistance": 8,
+		"mp_resistance": -8
+	},
+	"Minor Vagabond": {
+		"lock": -8,
+		"dodge": 8
+	},
+	"Minor Vigour": {
+		"power": 20,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Water Bulwark": {
+		"per_neutral_resistance": -2,
+		"water_resistance": 10
+	},
+	"Minor Water Carapace": {
+		"per_water_resistance": 3,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Water Defender": {
+		"water_resistance": 6
+	},
+	"Minor Water Destroyer": {
+		"water_damage": 5,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Minor Water Destroyer 1": {
+		"water_damage": 3
+	},
+	"Minor Water Wrecker": {
+		"water_damage": 5,
+		"per_neutral_resistance": -2
+	},
+	"Observer": {
+		"range": 2,
+		"constraints":{
+			"set_bonus<": 2
+		}
+	},
+	"Twitcher": {
+		"range": 1
+	}
+}

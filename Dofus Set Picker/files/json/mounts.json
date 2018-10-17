@@ -1,0 +1,1237 @@
+{
+	"Almond and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"initiative": 1000
+	},
+	"Almond and Ebony Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"initiative": 1000
+	},
+	"Almond and Emerald Dragoturkey": {
+		"vitality": 300,
+		"critical_hits": 8,
+		"initiative": 1000
+	},
+	"Almond and Emerald Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"critical_damage": 20
+	},
+	"Almond and Ginger Dragoturkey": {
+		"vitality": 300,
+		"heals": 35,
+		"initiative": 1000
+	},
+	"Almond and Golden Dragoturkey": {
+		"vitality": 300,
+		"summons": 1,
+		"initiative": 1000
+	},
+	"Almond and Indigo Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"initiative": 1000
+	},
+	"Almond and Ivory Dragoturkey": {
+		"vitality": 300,
+		"power": 50,
+		"initiative": 1000
+	},
+	"Almond and Ivory Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"ap_resistance": 30
+	},
+	"Almond and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"initiative": 1000
+	},
+	"Almond and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"prospecting": 60,
+		"initiative": 1000
+	},
+	"Almond Dragoturkey": {
+		"vitality": 300,
+		"initiative": 1500
+	},
+	"Almond Seemyool": {
+		"mp": 1,
+		"dodge": 40
+	},
+	"Armoured Dragoturkey": {
+		"power": 50,
+		"per_neutral_resistance": 5,
+		"per_earth_resistance": 5,
+		"per_fire_resistance": 5,
+		"per_water_resistance": 5,
+		"per_air_resistance": 5
+	},
+	"Crimson and Almond Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"per_earth_resistance": 8
+	},
+	"Crimson and Emerald Seemyool": {
+		"mp": 1,
+		"critical_damage": 20,
+		"per_earth_resistance": 8
+	},
+	"Crimson and Ginger Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"heals": 35
+	},
+	"Crimson and Ivory Seemyool": {
+		"mp": 1,
+		"ap_resistance": 30,
+		"per_earth_resistance": 8
+	},
+	"Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 100
+	},
+	"Crimson Seemyool": {
+		"mp": 1,
+		"per_earth_resistance": 16
+	},
+	"Ebony and Almond Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"per_air_resistance": 8
+	},
+	"Ebony and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"agility": 70
+	},
+	"Ebony and Crimson Seemyool": {
+		"mp": 1,
+		"per_earth_resistance": 8,
+		"per_air_resistance": 8
+	},
+	"Ebony and Emerald Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"critical_hits": 8
+	},
+	"Ebony and Emerald Seemyool": {
+		"mp": 1,
+		"critical_damage": 20,
+		"per_air_resistance": 8
+	},
+	"Ebony and Ginger Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"heals": 35
+	},
+	"Ebony and Indigo Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"chance": 70
+	},
+	"Ebony and Indigo Seemyool": {
+		"mp": 1,
+		"per_water_resistance": 8,
+		"per_air_resistance": 8
+	},
+	"Ebony and Ivory Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"power": 50
+	},
+	"Ebony and Ivory Seemyool": {
+		"mp": 1,
+		"ap_resistance": 30,
+		"per_air_resistance": 8
+	},
+	"Ebony and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"agility": 70
+	},
+	"Ebony and Orchid Seemyool": {
+		"mp": 1,
+		"per_fire_resistance": 8,
+		"per_air_resistance": 8
+	},
+	"Ebony and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"prospecting": 60
+	},
+	"Ebony Dragoturkey": {
+		"vitality": 300,
+		"agility": 100
+	},
+	"Ebony Seemyool": {
+		"mp": 1,
+		"per_air_resistance": 16
+	},
+	"Emerald and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"critical_hits": 8
+	},
+	"Emerald and Ginger Dragoturkey": {
+		"vitality": 300,
+		"critical_hits": 8,
+		"heals": 35
+	},
+	"Emerald and Indigo Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"critical_hits": 8
+	},
+	"Emerald and Ivory Dragoturkey": {
+		"vitality": 300,
+		"power": 50,
+		"critical_hits": 8
+	},
+	"Emerald and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"critical_hits": 8
+	},
+	"Emerald and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"critical_hits": 8,
+		"prospecting": 60
+	},
+	"Emerald Dragoturkey": {
+		"vitality": 300,
+		"critical_hits": 12
+	},
+	"Emerald Seemyool": {
+		"mp": 1,
+		"critical_damage": 30
+	},
+	"Feathery Dragoturkey": {
+		"vitality": 100,
+		"reflect": 10
+	},
+	"Ginger and Almond Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"dodge": 30
+	},
+	"Ginger and Crimson Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"per_earth_resistance": 8
+	},
+	"Ginger and Ebony Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"per_air_resistance": 8
+	},
+	"Ginger and Emerald Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"critical_damage": 20
+	},
+	"Ginger and Golden Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"lock": 30
+	},
+	"Ginger and Indigo Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"per_water_resistance": 8
+	},
+	"Ginger and Ivory Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"ap_resistance": 30
+	},
+	"Ginger and Orchid Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"per_fire_resistance": 8
+	},
+	"Ginger Dragoturkey": {
+		"vitality": 300,
+		"heals": 50
+	},
+	"Ginger Seemyool": {
+		"mp": 1,
+		"lock": 40
+	},
+	"Golden and Almond Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"dodge": 30
+	},
+	"Golden and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"summons": 1
+	},
+	"Golden and Crimson Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"per_earth_resistance": 8
+	},
+	"Golden and Ebony Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"summons": 1
+	},
+	"Golden and Ebony Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"per_air_resistance": 8
+	},
+	"Golden and Emerald Dragoturkey": {
+		"vitality": 300,
+		"critical_hits": 8,
+		"summons": 1
+	},
+	"Golden and Emerald Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"critical_damage": 20
+	},
+	"Golden and Ginger Dragoturkey": {
+		"vitality": 300,
+		"summons": 1,
+		"heals": 35
+	},
+	"Golden and Indigo Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"summons": 1
+	},
+	"Golden and Indigo Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"per_water_resistance": 8
+	},
+	"Golden and Ivory Dragoturkey": {
+		"vitality": 300,
+		"power": 50,
+		"summons": 1
+	},
+	"Golden and Ivory Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"ap_resistance": 30
+	},
+	"Golden and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"summons": 1
+	},
+	"Golden and Orchid Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"per_fire_resistance": 8
+	},
+	"Golden and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"summons": 1,
+		"prospecting": 60
+	},
+	"Golden Dragoturkey": {
+		"vitality": 300,
+		"summons": 2
+	},
+	"Golden Seemyool": {
+		"power": 50,
+		"mp": 1
+	},
+	"Indigo and Almond Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"per_water_resistance": 8
+	},
+	"Indigo and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"chance": 70
+	},
+	"Indigo and Crimson Seemyool": {
+		"mp": 1,
+		"per_earth_resistance": 8,
+		"per_water_resistance": 8
+	},
+	"Indigo and Emerald Seemyool": {
+		"mp": 1,
+		"critical_damage": 20,
+		"per_water_resistance": 8
+	},
+	"Indigo and Ginger Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"heals": 35
+	},
+	"Indigo and Ivory Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"power": 50
+	},
+	"Indigo and Ivory Seemyool": {
+		"mp": 1,
+		"ap_resistance": 30,
+		"per_water_resistance": 8
+	},
+	"Indigo and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"chance": 70
+	},
+	"Indigo and Orchid Seemyool": {
+		"mp": 1,
+		"per_fire_resistance": 8,
+		"per_water_resistance": 8
+	},
+	"Indigo and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"prospecting": 60
+	},
+	"Indigo Dragoturkey": {
+		"vitality": 300,
+		"chance": 100
+	},
+	"Indigo Seemyool": {
+		"mp": 1,
+		"per_water_resistance": 16
+	},
+	"Ivory and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"power": 50
+	},
+	"Ivory and Emerald Seemyool": {
+		"mp": 1,
+		"ap_resistance": 30,
+		"critical_damage": 20
+	},
+	"Ivory and Ginger Dragoturkey": {
+		"vitality": 300,
+		"power": 50,
+		"heals": 35
+	},
+	"Ivory and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"power": 50
+	},
+	"Ivory and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"power": 50,
+		"prospecting": 60
+	},
+	"Ivory Dragoturkey": {
+		"vitality": 300,
+		"power": 70
+	},
+	"Ivory Seemyool": {
+		"mp": 1,
+		"ap_resistance": 40
+	},
+	"Orchid and Almond Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"per_fire_resistance": 8
+	},
+	"Orchid and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"intelligence": 70
+	},
+	"Orchid and Crimson Seemyool": {
+		"mp": 1,
+		"per_earth_resistance": 8,
+		"per_fire_resistance": 8
+	},
+	"Orchid and Emerald Seemyool": {
+		"mp": 1,
+		"critical_damage": 20,
+		"per_fire_resistance": 8
+	},
+	"Orchid and Ginger Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"heals": 35
+	},
+	"Orchid and Ivory Seemyool": {
+		"mp": 1,
+		"ap_resistance": 30,
+		"per_fire_resistance": 8
+	},
+	"Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 100
+	},
+	"Orchid Seemyool": {
+		"mp": 1,
+		"per_fire_resistance": 16
+	},
+	"Plum and Almond Dragoturkey": {
+		"vitality": 300,
+		"range": 1,
+		"initiative": 1000
+	},
+	"Plum and Almond Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"dodge": 30
+	},
+	"Plum and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"range": 1
+	},
+	"Plum and Crimson Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"per_earth_resistance": 8
+	},
+	"Plum and Ebony Dragoturkey": {
+		"vitality": 300,
+		"agility": 70,
+		"range": 1
+	},
+	"Plum and Ebony Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"per_air_resistance": 8
+	},
+	"Plum and Emerald Dragoturkey": {
+		"vitality": 300,
+		"critical_hits": 8,
+		"range": 1
+	},
+	"Plum and Emerald Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"critical_damage": 20
+	},
+	"Plum and Ginger Dragoturkey": {
+		"vitality": 300,
+		"range": 1,
+		"heals": 35
+	},
+	"Plum and Ginger Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"lock": 30
+	},
+	"Plum and Golden Dragoturkey": {
+		"vitality": 300,
+		"range": 1,
+		"summons": 1
+	},
+	"Plum and Golden Seemyool": {
+		"power": 40,
+		"critical_hits": 6,
+		"mp": 1
+	},
+	"Plum and Indigo Dragoturkey": {
+		"vitality": 300,
+		"chance": 70,
+		"range": 1
+	},
+	"Plum and Indigo Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"per_water_resistance": 8
+	},
+	"Plum and Ivory Dragoturkey": {
+		"vitality": 300,
+		"power": 50,
+		"range": 1
+	},
+	"Plum and Ivory Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"ap_resistance": 30
+	},
+	"Plum and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"range": 1
+	},
+	"Plum and Orchid Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"per_fire_resistance": 8
+	},
+	"Plum and Turquoise Dragoturkey": {
+		"vitality": 300,
+		"range": 1,
+		"prospecting": 60
+	},
+	"Plum and Turquoise Seemyool": {
+		"critical_hits": 6,
+		"mp": 1,
+		"mp_resistance": 30
+	},
+	"Plum Dragoturkey": {
+		"vitality": 300,
+		"range": 2
+	},
+	"Plum Seemyool": {
+		"critical_hits": 10,
+		"mp": 1
+	},
+	"Turquoise and Almond Seemyool": {
+		"mp": 1,
+		"dodge": 30,
+		"mp_resistance": 30
+	},
+	"Turquoise and Crimson Dragoturkey": {
+		"vitality": 300,
+		"strength": 70,
+		"prospecting": 60
+	},
+	"Turquoise and Crimson Seemyool": {
+		"mp": 1,
+		"mp_resistance": 30,
+		"per_earth_resistance": 8
+	},
+	"Turquoise and Ebony Seemyool": {
+		"mp": 1,
+		"mp_resistance": 30,
+		"per_air_resistance": 8
+	},
+	"Turquoise and Emerald Seemyool": {
+		"mp": 1,
+		"mp_resistance": 30,
+		"critical_damage": 20
+	},
+	"Turquoise and Ginger Dragoturkey": {
+		"vitality": 300,
+		"heals": 35,
+		"prospecting": 60
+	},
+	"Turquoise and Ginger Seemyool": {
+		"mp": 1,
+		"lock": 30,
+		"mp_resistance": 30
+	},
+	"Turquoise and Golden Seemyool": {
+		"power": 40,
+		"mp": 1,
+		"mp_resistance": 30
+	},
+	"Turquoise and Indigo Seemyool": {
+		"mp": 1,
+		"mp_resistance": 30,
+		"per_water_resistance": 8
+	},
+	"Turquoise and Ivory Seemyool": {
+		"mp": 1,
+		"ap_resistance": 30,
+		"mp_resistance": 30
+	},
+	"Turquoise and Orchid Dragoturkey": {
+		"vitality": 300,
+		"intelligence": 70,
+		"prospecting": 60
+	},
+	"Turquoise and Orchid Seemyool": {
+		"mp": 1,
+		"mp_resistance": 30,
+		"per_fire_resistance": 8
+	},
+	"Turquoise Dragoturkey": {
+		"vitality": 300,
+		"prospecting": 80
+	},
+	"Turquoise Seemyool": {
+		"mp": 1,
+		"mp_resistance": 40
+	},
+	"Volkorne Amande": {
+		"ap": 1,
+		"pushback_resistance": 80
+	},
+	"Volkorne Amande et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"pushback_resistance": 60
+	},
+	"Volkorne Amande et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"pushback_resistance": 60
+	},
+	"Volkorne Amande et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"pushback_resistance": 60
+	},
+	"Volkorne Amande et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"pushback_resistance": 60
+	},
+	"Volkorne Amande et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"pushback_resistance": 60
+	},
+	"Volkorne Amande et Roux": {
+		"ap": 1,
+		"pushback_damage": 40,
+		"pushback_resistance": 60
+	},
+	"Volkorne Amande et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"pushback_resistance": 60
+	},
+	"Volkorne Améthyste": {
+		"ap": 1,
+		"per_air_resistance": 12
+	},
+	"Volkorne Améthyste et Amande": {
+		"ap": 1,
+		"per_air_resistance": 6,
+		"pushback_resistance": 60
+	},
+	"Volkorne Améthyste et Doré": {
+		"vitality": 100,
+		"ap": 1,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Emeraude": {
+		"critical_hits": 5,
+		"ap": 1,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Prune": {
+		"ap": 1,
+		"per_air_resistance": 6,
+		"critical_resistance": 35
+	},
+	"Volkorne Améthyste et Roux": {
+		"ap": 1,
+		"pushback_damage": 40,
+		"per_air_resistance": 6
+	},
+	"Volkorne Améthyste et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"per_air_resistance": 6
+	},
+	"Volkorne Doré": {
+		"vitality": 150,
+		"ap": 1
+	},
+	"Volkorne Doré et Amande": {
+		"vitality": 100,
+		"ap": 1,
+		"pushback_resistance": 60
+	},
+	"Volkorne Doré et Ebène": {
+		"vitality": 100,
+		"agility": 50,
+		"ap": 1
+	},
+	"Volkorne Doré et Emeraude": {
+		"vitality": 100,
+		"critical_hits": 5,
+		"ap": 1
+	},
+	"Volkorne Doré et Indigo": {
+		"vitality": 100,
+		"chance": 50,
+		"ap": 1
+	},
+	"Volkorne Doré et Ivoire": {
+		"vitality": 100,
+		"ap": 1,
+		"ap_reduction": 20
+	},
+	"Volkorne Doré et Orchidée": {
+		"vitality": 100,
+		"intelligence": 50,
+		"ap": 1
+	},
+	"Volkorne Doré et Pourpre": {
+		"vitality": 100,
+		"strength": 50,
+		"ap": 1
+	},
+	"Volkorne Doré et Prune": {
+		"vitality": 100,
+		"ap": 1,
+		"critical_resistance": 35
+	},
+	"Volkorne Doré et Roux": {
+		"vitality": 100,
+		"ap": 1,
+		"pushback_damage": 40
+	},
+	"Volkorne Doré et Turquoise": {
+		"vitality": 100,
+		"ap": 1,
+		"mp_reduction": 20
+	},
+	"Volkorne Ebène": {
+		"agility": 70,
+		"ap": 1
+	},
+	"Volkorne Emeraude": {
+		"critical_hits": 7,
+		"ap": 1
+	},
+	"Volkorne Emeraude et Amande": {
+		"critical_hits": 5,
+		"ap": 1,
+		"pushback_resistance": 60
+	},
+	"Volkorne Emeraude et Ebène": {
+		"agility": 50,
+		"critical_hits": 5,
+		"ap": 1
+	},
+	"Volkorne Emeraude et Indigo": {
+		"chance": 50,
+		"critical_hits": 5,
+		"ap": 1
+	},
+	"Volkorne Emeraude et Ivoire": {
+		"critical_hits": 5,
+		"ap": 1,
+		"ap_reduction": 20
+	},
+	"Volkorne Emeraude et Orchidée": {
+		"intelligence": 50,
+		"critical_hits": 5,
+		"ap": 1
+	},
+	"Volkorne Emeraude et Pourpre": {
+		"strength": 50,
+		"critical_hits": 5,
+		"ap": 1
+	},
+	"Volkorne Emeraude et Roux": {
+		"critical_hits": 5,
+		"ap": 1,
+		"pushback_damage": 40
+	},
+	"Volkorne Emeraude et Turquoise": {
+		"critical_hits": 5,
+		"ap": 1,
+		"mp_reduction": 20
+	},
+	"Volkorne Indigo": {
+		"chance": 70,
+		"ap": 1
+	},
+	"Volkorne Indigo et Ebène": {
+		"agility": 50,
+		"chance": 50,
+		"ap": 1
+	},
+	"Volkorne Ivoire": {
+		"ap": 1,
+		"ap_reduction": 30
+	},
+	"Volkorne Ivoire et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"ap_reduction": 20
+	},
+	"Volkorne Ivoire et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"ap_reduction": 20
+	},
+	"Volkorne Ivoire et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"ap_reduction": 20
+	},
+	"Volkorne Ivoire et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"ap_reduction": 20
+	},
+	"Volkorne Ivoire et Turquoise": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"mp_reduction": 20
+	},
+	"Volkorne Jade": {
+		"ap": 1,
+		"per_earth_resistance": 12
+	},
+	"Volkorne Jade et Amande": {
+		"ap": 1,
+		"per_earth_resistance": 6,
+		"pushback_resistance": 60
+	},
+	"Volkorne Jade et Améthyste": {
+		"ap": 1,
+		"per_earth_resistance": 6,
+		"per_air_resistance": 6
+	},
+	"Volkorne Jade et Doré": {
+		"vitality": 100,
+		"ap": 1,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Emeraude": {
+		"critical_hits": 5,
+		"ap": 1,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Prune": {
+		"ap": 1,
+		"per_earth_resistance": 6,
+		"critical_resistance": 35
+	},
+	"Volkorne Jade et Roux": {
+		"ap": 1,
+		"pushback_damage": 40,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Jade et Rubis": {
+		"ap": 1,
+		"per_earth_resistance": 6,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Jade et Saphir": {
+		"ap": 1,
+		"per_earth_resistance": 6,
+		"per_water_resistance": 6
+	},
+	"Volkorne Jade et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"per_earth_resistance": 6
+	},
+	"Volkorne Orchidée": {
+		"intelligence": 70,
+		"ap": 1
+	},
+	"Volkorne Orchidée et Ebène": {
+		"intelligence": 50,
+		"agility": 50,
+		"ap": 1
+	},
+	"Volkorne Orchidée et Indigo": {
+		"intelligence": 50,
+		"chance": 50,
+		"ap": 1
+	},
+	"Volkorne Pourpre": {
+		"strength": 70,
+		"ap": 1
+	},
+	"Volkorne Pourpre et Ebène": {
+		"strength": 50,
+		"agility": 50,
+		"ap": 1
+	},
+	"Volkorne Pourpre et Indigo": {
+		"strength": 50,
+		"chance": 50,
+		"ap": 1
+	},
+	"Volkorne Pourpre et Orchidée": {
+		"strength": 50,
+		"intelligence": 50,
+		"ap": 1
+	},
+	"Volkorne Prune": {
+		"ap": 1,
+		"critical_resistance": 50
+	},
+	"Volkorne Prune et Amande": {
+		"ap": 1,
+		"critical_resistance": 35,
+		"pushback_resistance": 60
+	},
+	"Volkorne Prune et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Emeraude": {
+		"critical_hits": 5,
+		"ap": 1,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Roux": {
+		"ap": 1,
+		"pushback_damage": 40,
+		"critical_resistance": 35
+	},
+	"Volkorne Prune et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"critical_resistance": 35
+	},
+	"Volkorne Roux": {
+		"ap": 1,
+		"pushback_damage": 60
+	},
+	"Volkorne Roux et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"pushback_damage": 40
+	},
+	"Volkorne Roux et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"pushback_damage": 40
+	},
+	"Volkorne Roux et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"pushback_damage": 40
+	},
+	"Volkorne Roux et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"pushback_damage": 40
+	},
+	"Volkorne Roux et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"pushback_damage": 40
+	},
+	"Volkorne Roux et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"pushback_damage": 40
+	},
+	"Volkorne Rubis": {
+		"ap": 1,
+		"per_fire_resistance": 12
+	},
+	"Volkorne Rubis et Amande": {
+		"ap": 1,
+		"per_fire_resistance": 6,
+		"pushback_resistance": 60
+	},
+	"Volkorne Rubis et Améthyste": {
+		"ap": 1,
+		"per_fire_resistance": 6,
+		"per_air_resistance": 6
+	},
+	"Volkorne Rubis et Doré": {
+		"vitality": 100,
+		"ap": 1,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Emeraude": {
+		"critical_hits": 5,
+		"ap": 1,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Prune": {
+		"ap": 1,
+		"per_fire_resistance": 6,
+		"critical_resistance": 35
+	},
+	"Volkorne Rubis et Roux": {
+		"ap": 1,
+		"pushback_damage": 40,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Rubis et Saphir": {
+		"ap": 1,
+		"per_fire_resistance": 6,
+		"per_water_resistance": 6
+	},
+	"Volkorne Rubis et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"per_fire_resistance": 6
+	},
+	"Volkorne Saphir": {
+		"ap": 1,
+		"per_water_resistance": 12
+	},
+	"Volkorne Saphir et Amande": {
+		"ap": 1,
+		"per_water_resistance": 6,
+		"pushback_resistance": 60
+	},
+	"Volkorne Saphir et Améthyste": {
+		"ap": 1,
+		"per_water_resistance": 6,
+		"per_air_resistance": 6
+	},
+	"Volkorne Saphir et Doré": {
+		"vitality": 100,
+		"ap": 1,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Emeraude": {
+		"critical_hits": 5,
+		"ap": 1,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Ivoire": {
+		"ap": 1,
+		"ap_reduction": 20,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Prune": {
+		"ap": 1,
+		"per_water_resistance": 6,
+		"critical_resistance": 35
+	},
+	"Volkorne Saphir et Roux": {
+		"ap": 1,
+		"pushback_damage": 40,
+		"per_water_resistance": 6
+	},
+	"Volkorne Saphir et Turquoise": {
+		"ap": 1,
+		"mp_reduction": 20,
+		"per_water_resistance": 6
+	},
+	"Volkorne Turquoise": {
+		"ap": 1,
+		"mp_reduction": 30
+	},
+	"Volkorne Turquoise et Ebène": {
+		"agility": 50,
+		"ap": 1,
+		"mp_reduction": 20
+	},
+	"Volkorne Turquoise et Indigo": {
+		"chance": 50,
+		"ap": 1,
+		"mp_reduction": 20
+	},
+	"Volkorne Turquoise et Orchidée": {
+		"intelligence": 50,
+		"ap": 1,
+		"mp_reduction": 20
+	},
+	"Volkorne Turquoise et Pourpre": {
+		"strength": 50,
+		"ap": 1,
+		"mp_reduction": 20
+	}
+}

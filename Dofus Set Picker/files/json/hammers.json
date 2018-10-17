@@ -1,0 +1,86 @@
+{
+	"Drhossil Hammer": {
+		"vitality": 350,
+		"intelligence": 60,
+		"agility": 60,
+		"wisdom": 40,
+		"critical_hits": 4,
+		"summons": 1,
+		"fire_damage": 15,
+		"air_damage": 15,
+		"prospecting": 15,
+		"ap_resistance": 10,
+		"per_earth_resistance": 10,
+		"air_resistance": 15,
+		"constraints":{
+			"agility>": 450,
+			"intelligence>": 450
+		}
+	},
+	"Forfut Hammer": {
+		"vitality": 350,
+		"strength": 50,
+		"intelligence": 50,
+		"agility": 50,
+		"wisdom": 40,
+		"critical_hits": 4,
+		"range": 1,
+		"neutral_damage": 15,
+		"earth_damage": 15,
+		"fire_damage": 15,
+		"air_damage": 15,
+		"lock": 12,
+		"per_water_resistance": 10,
+		"constraints":{
+			"intelligence>": 349,
+			"strength>": 349,
+			"agility>": 349
+		}
+	},
+	"Fugitive Hammer": {
+		"vitality": 400,
+		"strength": 50,
+		"intelligence": 50,
+		"agility": 50,
+		"chance": 50,
+		"wisdom": 50,
+		"power": 15,
+		"critical_hits": 6,
+		"range": 1,
+		"neutral_damage": 12,
+		"earth_damage": 12,
+		"fire_damage": 12,
+		"water_damage": 12,
+		"air_damage": 12,
+		"ap_resistance": 7,
+		"constraints":{
+			"intelligence>": 400,
+			"strength>": 400,
+			"chance>": 400,
+			"agility>": 400
+		}
+	},
+	"Hammerture": {
+		"vitality": 400,
+		"strength": 80,
+		"wisdom": 40,
+		"critical_hits": 4,
+		"neutral_damage": 20,
+		"earth_damage": 20,
+		"dodge": 12,
+		"mp_reduction": 10,
+		"per_air_resistance": 10,
+		"pushback_resistance": 25
+	},
+	"Steelymace": {
+		"vitality": 350,
+		"intelligence": 80,
+		"wisdom": 40,
+		"critical_hits": 6,
+		"fire_damage": 20,
+		"heals": 12,
+		"ap_resistance": 15,
+		"per_neutral_resistance": 7,
+		"per_earth_resistance": 7
+	}
+}

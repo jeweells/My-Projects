@@ -1,0 +1,888 @@
+
+Brockheart
+Level 80
+Murderous Set
+22 Air Damage
+
+Bulbisou
+Level 80
+Contrabanned Set
+22 Earth Damage
+
+Kanigloopy
+Level 80
+Fluvial Set
+22 Water Damage
+
+Teddybearbarian
+Level 80
+Infernal Set
+22 Fire Damage
+
+Blokus
+Level 60
+55 Lock
+
+Bowzai
+Level 60
+1 MP
+22 Dodge
+
+Cube
+Level 60
+440 Vitality
+Linked to account 62 days since creation
+
+Dauge
+Level 60
+440 Vitality
+Linked to account 62 days since creation
+Wow emote
+Mark your territory emote
+
+Drhellbert
+Level 60
+33 Power
+1 MP
+
+Eliom
+Level 60
+440 Vitality
+Linked to account 62 days since creation
+Haunt emote
+Waddle emote
+
+Groogler
+Level 60
+440 Vitality
+Linked to account 62 days since creation
+
+Homlett
+Level 60
+440 Vitality
+
+Molekound
+Level 60
+220 Vitality
+11 Critical Hits
+
+Peki Peki
+Level 60
+440 Vitality
+
+Air Bwak
+Level 1
+Wind Kwak Set
+90 Agility
+
+Angora Bow Meow
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Atooin
+Level 1
+Turtle Set
+11 Damage
+
+Baby Crowdzilla
+Level 1
+Crow Set
+45 Prospecting
+
+Bilby
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Black Bow Wow
+Level 1
+15 Vitality
+
+Black Dragoone
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Black Quaquack
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Black Tiwabbit
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Bloalak
+Level 1
+90 Prospecting
+Linked to account 62 days since creation
+
+Bloody Koalak
+Level 1
+55 Wisdom
+
+Blue Piwin
+Level 1
+90 Chance
+Linked to account 62 days since creation
+
+Bontarian Boon
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Bontarian Bow Meow
+Level 1
+55 Dodge
+Linked to account 62 days since creation
+
+Bontarian Godron
+Level 1
+44 Critical Damage
+Linked to account 62 days since creation
+
+Bontarian Tofu
+Level 1
+1100 Initiative
+Linked to account 62 days since creation
+
+Bontick
+Level 1
+100 Vitality
+5% Neutral Resistance
+5% Earth Resistance
+5% Fire Resistance
+5% Water Resistance
+5% Air Resistance
+
+Borbat
+Level 1
+1100 Pods
+Linked to account 62 days since creation
+
+Bow Meow (Agility)
+Level 1
+90 Agility
+
+Bow Meow (Chance)
+Level 1
+90 Chance
+
+Bow Meow (Intelligence)
+Level 1
+90 Intelligence
+
+Bow Meow (Neutral)
+Level 1
+23% Neutral Resistance
+
+Bow Meow (Strength)
+Level 1
+90 Strength
+
+Bow Meow (Vitality)
+Level 1
+90 Vitality
+
+Bow Wow
+Level 1
+20 Wisdom
+
+Bracarina
+Level 1
+100 Vitality
+5% Neutral Resistance
+5% Earth Resistance
+5% Fire Resistance
+5% Water Resistance
+5% Air Resistance
+
+Brakmarian Boon
+Level 1
+1100 Pods
+Linked to account 62 days since creation
+
+Brakmarian Bow Meow
+Level 1
+55 Lock
+Linked to account 62 days since creation
+
+Brakmarian Godron
+Level 1
+65 Critical Resistance
+Linked to account 62 days since creation
+
+Brakmarian Tofu
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Brindled Bow Wow
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Brindled Minifoux
+Level 1
+90 Prospecting
+Linked to account 62 days since creation
+
+Bulbutting
+Level 1
+1100 Pods
+Linked to account 62 days since creation
+
+Bworky
+Level 1
+1100 Pods
+
+Charming Boon
+Level 1
+22% Water Resistance
+Linked to account 62 days since creation
+
+Charming Bow Meow
+Level 1
+22 Water Damage
+Linked to account 62 days since creation
+
+Charming Godron
+Level 1
+44 Water Resistance
+Linked to account 62 days since creation
+
+Charming Tofu
+Level 1
+90 Chance
+Linked to account 62 days since creation
+
+Crocodyl
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Cromagmunk
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Cromigmite
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Croum (Air)
+Level 1
+26% Air Resistance
+Linked to account 62 days since creation
+
+Croum (Earth)
+Level 1
+26% Earth Resistance
+Linked to account 62 days since creation
+
+Croum (Earth/Air)
+Level 1
+13% Earth Resistance
+13% Air Resistance
+Linked to account 62 days since creation
+
+Croum (Earth/Fire)
+Level 1
+13% Earth Resistance
+13% Fire Resistance
+Linked to account 62 days since creation
+
+Croum (Earth/Water)
+Level 1
+13% Earth Resistance
+13% Water Resistance
+Linked to account 62 days since creation
+
+Croum (Fire)
+Level 1
+26% Fire Resistance
+Linked to account 62 days since creation
+
+Croum (Fire/Air)
+Level 1
+13% Fire Resistance
+13% Air Resistance
+Linked to account 62 days since creation
+
+Croum (Fire/Water)
+Level 1
+13% Fire Resistance
+13% Water Resistance
+Linked to account 62 days since creation
+
+Croum (Neutral)
+Level 1
+26% Neutral Resistance
+Linked to account 62 days since creation
+
+Croum (Neutral/Air)
+Level 1
+13% Neutral Resistance
+13% Air Resistance
+Linked to account 62 days since creation
+
+Croum (Neutral/Earth)
+Level 1
+13% Neutral Resistance
+13% Earth Resistance
+Linked to account 62 days since creation
+
+Croum (Neutral/Fire)
+Level 1
+13% Neutral Resistance
+13% Fire Resistance
+Linked to account 62 days since creation
+
+Croum (Neutral/Water)
+Level 1
+13% Neutral Resistance
+13% Water Resistance
+Linked to account 62 days since creation
+
+Croum (Water)
+Level 1
+26% Water Resistance
+Linked to account 62 days since creation
+
+Croum (Water/Air)
+Level 1
+13% Water Resistance
+13% Air Resistance
+Linked to account 62 days since creation
+
+Earth Bwak
+Level 1
+Earth Kwak Set
+90 Strength
+
+El Scarador (Air)
+Level 1
+26% Air Resistance
+Linked to account 62 days since creation
+
+El Scarador (Earth)
+Level 1
+26% Earth Resistance
+Linked to account 62 days since creation
+
+El Scarador (Fire)
+Level 1
+26% Fire Resistance
+Linked to account 62 days since creation
+
+El Scarador (Neutral)
+Level 1
+26% Neutral Resistance
+Linked to account 62 days since creation
+
+El Scarador (Water)
+Level 1
+26% Water Resistance
+Linked to account 62 days since creation
+
+Feanor
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Fire Bwak
+Level 1
+Fire Kwak Set
+90 Intelligence
+
+Fosfor
+Level 1
+1100 Pods
+Linked to account 62 days since creation
+
+Friendrake
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+Stomp emote
+Inflame emote
+
+Frozen Tofu
+Level 1
+11 Reflect
+
+Gerbean
+Level 1
+Linked to account
+
+Ghast
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Ginger Bow Meowette
+Level 1
+15 Vitality
+Linked to account
+
+Glub
+Level 1
+90 Prospecting
+Linked to account 62 days since creation
+
+Gobtubby
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Golden Dragoone
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Grauler
+Level 1
+28 Wisdom
+28 Power
+Linked to account 62 days since creation
+
+Green Piwin
+Level 1
+90 Strength
+Linked to account 62 days since creation
+
+Gupin
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Icky Boon
+Level 1
+22% Earth Resistance
+Linked to account 62 days since creation
+
+Icky Bow Meow
+Level 1
+22 Earth Damage
+Linked to account 62 days since creation
+
+Icky Godron
+Level 1
+44 Earth Resistance
+Linked to account 62 days since creation
+
+Icky Tofu
+Level 1
+90 Strength
+Linked to account 62 days since creation
+
+Improved Quaquack
+Level 1
+22 Prospecting
+220 Initiative
+
+Jellifrost
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Jellufo
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Kerubaby
+Level 1
+1100 Pods
+Linked to account 62 days since creation
+
+Krolimea
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Leopardo
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Little Black Bow Wow
+Level 1
+55 Power
+
+Little White Bow Meow
+Level 1
+1100 Initiative
+
+Mastostroke
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Maulleycat
+Level 1
+1100 Initiative
+
+Measured Boon
+Level 1
+22% Air Resistance
+Linked to account 62 days since creation
+
+Measured Bow Meow
+Level 1
+22 Air Damage
+Linked to account 62 days since creation
+
+Measured Godron
+Level 1
+44 Air Resistance
+Linked to account 62 days since creation
+
+Measured Tofu
+Level 1
+90 Agility
+Linked to account 62 days since creation
+
+Mekrab
+Level 1
+11 Damage
+
+Minifoux
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Minikrone
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Minimino
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Miniminotot
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Mini Wa (Agility)
+Level 1
+90 Agility
+Linked to account 62 days since creation
+
+Mini Wa (Chance)
+Level 1
+90 Chance
+Linked to account 62 days since creation
+
+Mini Wa (Intelligence)
+Level 1
+90 Intelligence
+Linked to account 62 days since creation
+
+Mini Wa (Strength)
+Level 1
+90 Strength
+Linked to account 62 days since creation
+
+Mischievous Squirrel
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Moowitty
+Level 1
+33 Wisdom
+33 Prospecting
+Linked to account 62 days since creation
+
+Mouselet
+Level 1
+110 Vitality
+110 Initiative
+Linked to account 62 days since creation
+
+Nomoon
+Level 1
+90 Prospecting
+
+Ogrine Seeker
+Level 1
+55 Power
+Linked to account 62 days since creation
+Ogrine emote
+
+Pandawa Cub
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Paunchy Boon
+Level 1
+22% Fire Resistance
+Linked to account 62 days since creation
+
+Paunchy Bow Meow
+Level 1
+22 Fire Damage
+Linked to account 62 days since creation
+
+Paunchy Godron
+Level 1
+44 Fire Resistance
+Linked to account 62 days since creation
+
+Paunchy Tofu
+Level 1
+90 Intelligence
+Linked to account 62 days since creation
+
+Phoenix
+Level 1
+33 Wisdom
+33 Prospecting
+Linked to account 62 days since creation
+
+Pingoku
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Pink Dragoone
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Pink Piwin
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Platypus
+Level 1
+11 Damage
+
+Plop
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Plump Tofurby
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Purple Piwin
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Quaquack
+Level 1
+20 Prospecting
+200 Initiative
+
+Ratcham
+Level 1
+440 Vitality
+Linked to account 62 days since creation
+
+Red Piwin
+Level 1
+90 Intelligence
+Linked to account 62 days since creation
+
+Ross
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Rushu's Shushu
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Scarakiri
+Level 1
+7 Reflect
+7 Damage
+Linked to account 62 days since creation
+
+Smush
+Level 1
+11 Heals
+Linked to account 62 days since creation
+
+Snailmate
+Level 1
+42 Critical Damage
+Linked to account 62 days since creation
+
+Snickermite
+Level 1
+44 Pushback Damage
+Linked to account 62 days since creation
+
+Snoofle
+Level 1
+45 Prospecting
+Linked to account 62 days since creation
+
+Snow Bow Meow
+Level 1
+45 Prospecting
+Linked to account 62 days since creation
+
+Snowfoux
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Solid Plissken
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Sting
+Level 1
+90 Prospecting
+Linked to account 62 days since creation
+
+Stone-Washed Borbat
+Level 1
+11 Reflect
+Linked to account 62 days since creation
+
+Tabby Bow Meow
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Tanuk
+Level 1
+44 Pushback Damage
+Linked to account 62 days since creation
+
+Tarzantula
+Level 1
+11 Reflect
+Linked to account 62 days since creation
+
+Tatouh
+Level 1
+44 Pushback Damage
+Linked to account 62 days since creation
+
+The Godfather's Gobtubby
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Thing
+Level 1
+440 Vitality
+Linked to account 62 days since creation
+
+Tiwabbit Wosungwee
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Tofrazzle
+Level 1
+11 Damage
+Linked to account 62 days since creation
+
+Tofume
+Level 1
+11 Reflect
+Linked to account 62 days since creation
+
+Toucantankerous (Air)
+Level 1
+44 Air Resistance
+Linked to account 62 days since creation
+
+Toucantankerous (Earth)
+Level 1
+44 Earth Resistance
+Linked to account 62 days since creation
+
+Toucantankerous (Fire)
+Level 1
+44 Fire Resistance
+Linked to account 62 days since creation
+
+Toucantankerous (Neutral)
+Level 1
+44 Neutral Resistance
+Linked to account 62 days since creation
+
+Toucantankerous (Water)
+Level 1
+44 Water Resistance
+Linked to account 62 days since creation
+
+Treechster
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Tubskito
+Level 1
+27 Wisdom
+Linked to account 62 days since creation
+
+Vampirina
+Level 1
+165 Vitality
+Linked to account 62 days since creation
+
+Wabbit (Agility)
+Level 1
+90 Agility
+
+Wabbit (Chance)
+Level 1
+90 Chance
+
+Wabbit (Intelligence)
+Level 1
+90 Intelligence
+
+Wabbit (Strength)
+Level 1
+90 Strength
+
+Wabbit (Wisdom)
+Level 1
+30 Wisdom
+
+Water Bwak
+Level 1
+Ice Kwak Set
+90 Chance
+
+White Bow Meow
+Level 1
+15 Vitality
+
+Willy Peninzias
+Level 1
+55 Power
+Linked to account 62 days since creation
+
+Yellow Piwin
+Level 1
+90 Agility
+Linked to account 62 days since creation
+
+Young Wild Boar
+Level 1
+55 Power
+Linked to account 62 days since creation

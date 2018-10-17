@@ -1,0 +1,134 @@
+
+Madreggon
+Level 100
+55 Power
+Linked to account 62 days since creation
+
+Alabaster Skrot
+Level 60
+27 Critical Damage
+Linked to account 62 days since creation
+
+Boarhog
+Level 60
+1100 Pods
+Linked to account 62 days since creation
+
+Brulay
+Level 60
+-100 Vitality
+140 Intelligence
+Gotta fly now emote
+Earthworm emote
+
+Dehluge
+Level 60
+-100 Vitality
+140 Chance
+Gotta fly now emote
+Earthworm emote
+
+Dhrellthat
+Level 60
+90 Agility
+Linked to account 62 days since creation
+
+Drhellakna
+Level 60
+90 Chance
+Linked to account 62 days since creation
+
+Drhellilax
+Level 60
+90 Intelligence
+Linked to account 62 days since creation
+
+Drhexler
+Level 60
+5 Critical Hits
+1 MP
+Drhell the ground emote
+Sniff the ground emote
+Roar emote
+
+Gobbalator
+Level 60
+65 Critical Resistance
+Bontarian Flames emote
+
+Gobbalux
+Level 60
+42 Critical Damage
+Brakmarian Flames emote
+
+Karmeleon
+Level 60
+50 Power
+5% Neutral Resistance
+5% Earth Resistance
+5% Fire Resistance
+5% Water Resistance
+5% Air Resistance
+Stick out its tongue emote
+Karmouflaged emote
+
+Kompost
+Level 60
+-100 Vitality
+140 Strength
+Gotta fly now emote
+Earthworm emote
+
+Kwyness
+Level 60
+25 Power
+1 AP
+Gotta fly now emote
+Earthworm emote
+
+Mechadrhell
+Level 60
+90 Strength
+Linked to account 62 days since creation
+
+Razorbuck
+Level 60
+27 Critical Damage
+Linked to account 62 days since creation
+
+Sirocco
+Level 60
+-100 Vitality
+140 Agility
+Gotta fly now emote
+Earthworm emote
+
+Skrot
+Level 60
+1100 Initiative
+Linked to account 62 days since creation
+
+Slayhound
+Level 60
+90 Prospecting
+Linked to account 62 days since creation
+
+Boonax
+Level 1
+440 Vitality
+Linked to account 62 days since creation
+
+Dragnir
+Level 1
+44 Pushback Damage
+Linked to account 62 days since creation
+
+Jumbow Meow
+Level 1
+55 Wisdom
+Linked to account 62 days since creation
+
+Tofury
+Level 1
+90 Prospecting
+Linked to account 62 days since creation

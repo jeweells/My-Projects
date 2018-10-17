@@ -1,0 +1,82 @@
+{
+	"Madreggon": {
+		"power": 55
+	},
+	"Alabaster Skrot": {
+		"critical_damage": 27
+	},
+	"Boarhog": {
+		"pods": 1100
+	},
+	"Brulay": {
+		"vitality": -100,
+		"intelligence": 140
+	},
+	"Dehluge": {
+		"vitality": -100,
+		"chance": 140
+	},
+	"Dhrellthat": {
+		"agility": 90
+	},
+	"Drhellakna": {
+		"chance": 90
+	},
+	"Drhellilax": {
+		"intelligence": 90
+	},
+	"Drhexler": {
+		"critical_hits": 5,
+		"mp": 1
+	},
+	"Gobbalator": {
+		"critical_resistance": 65
+	},
+	"Gobbalux": {
+		"critical_damage": 42
+	},
+	"Karmeleon": {
+		"power": 50,
+		"per_neutral_resistance": 5,
+		"per_earth_resistance": 5,
+		"per_fire_resistance": 5,
+		"per_water_resistance": 5,
+		"per_air_resistance": 5
+	},
+	"Kompost": {
+		"vitality": -100,
+		"strength": 140
+	},
+	"Kwyness": {
+		"power": 25,
+		"ap": 1
+	},
+	"Mechadrhell": {
+		"strength": 90
+	},
+	"Razorbuck": {
+		"critical_damage": 27
+	},
+	"Sirocco": {
+		"vitality": -100,
+		"agility": 140
+	},
+	"Skrot": {
+		"initiative": 1100
+	},
+	"Slayhound": {
+		"prospecting": 90
+	},
+	"Boonax": {
+		"vitality": 440
+	},
+	"Dragnir": {
+		"pushback_damage": 44
+	},
+	"Jumbow Meow": {
+		"wisdom": 55
+	},
+	"Tofury": {
+		"prospecting": 90
+	}
+}

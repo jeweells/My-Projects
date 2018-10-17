@@ -1,0 +1,573 @@
+{
+	"Brockheart": {
+		"set": "Murderous Set",
+		"air_damage": 22
+	},
+	"Bulbisou": {
+		"set": "Contrabanned Set",
+		"earth_damage": 22
+	},
+	"Kanigloopy": {
+		"set": "Fluvial Set",
+		"water_damage": 22
+	},
+	"Teddybearbarian": {
+		"set": "Infernal Set",
+		"fire_damage": 22
+	},
+	"Blokus": {
+		"lock": 55
+	},
+	"Bowzai": {
+		"mp": 1,
+		"dodge": 22
+	},
+	"Cube": {
+		"vitality": 440
+	},
+	"Dauge": {
+		"vitality": 440
+	},
+	"Drhellbert": {
+		"power": 33,
+		"mp": 1
+	},
+	"Eliom": {
+		"vitality": 440
+	},
+	"Groogler": {
+		"vitality": 440
+	},
+	"Homlett": {
+		"vitality": 440
+	},
+	"Molekound": {
+		"vitality": 220,
+		"critical_hits": 11
+	},
+	"Peki Peki": {
+		"vitality": 440
+	},
+	"Air Bwak": {
+		"set": "Wind Kwak Set",
+		"agility": 90
+	},
+	"Angora Bow Meow": {
+		"power": 55
+	},
+	"Atooin": {
+		"set": "Turtle Set",
+		"damage": 11
+	},
+	"Baby Crowdzilla": {
+		"set": "Crow Set",
+		"prospecting": 45
+	},
+	"Bilby": {
+		"damage": 11
+	},
+	"Black Bow Wow": {
+		"vitality": 15
+	},
+	"Black Dragoone": {
+		"wisdom": 55
+	},
+	"Black Quaquack": {
+		"heals": 11
+	},
+	"Black Tiwabbit": {
+		"damage": 11
+	},
+	"Bloalak": {
+		"prospecting": 90
+	},
+	"Bloody Koalak": {
+		"wisdom": 55
+	},
+	"Blue Piwin": {
+		"chance": 90
+	},
+	"Bontarian Boon": {
+		"heals": 11
+	},
+	"Bontarian Bow Meow": {
+		"dodge": 55
+	},
+	"Bontarian Godron": {
+		"critical_damage": 44
+	},
+	"Bontarian Tofu": {
+		"initiative": 1100
+	},
+	"Bontick": {
+		"vitality": 100,
+		"per_neutral_resistance": 5,
+		"per_earth_resistance": 5,
+		"per_fire_resistance": 5,
+		"per_water_resistance": 5,
+		"per_air_resistance": 5
+	},
+	"Borbat": {
+		"pods": 1100
+	},
+	"Bow Meow (Agility)": {
+		"agility": 90
+	},
+	"Bow Meow (Chance)": {
+		"chance": 90
+	},
+	"Bow Meow (Intelligence)": {
+		"intelligence": 90
+	},
+	"Bow Meow (Neutral)": {
+		"per_neutral_resistance": 23
+	},
+	"Bow Meow (Strength)": {
+		"strength": 90
+	},
+	"Bow Meow (Vitality)": {
+		"vitality": 90
+	},
+	"Bow Wow": {
+		"wisdom": 20
+	},
+	"Bracarina": {
+		"vitality": 100,
+		"per_neutral_resistance": 5,
+		"per_earth_resistance": 5,
+		"per_fire_resistance": 5,
+		"per_water_resistance": 5,
+		"per_air_resistance": 5
+	},
+	"Brakmarian Boon": {
+		"pods": 1100
+	},
+	"Brakmarian Bow Meow": {
+		"lock": 55
+	},
+	"Brakmarian Godron": {
+		"critical_resistance": 65
+	},
+	"Brakmarian Tofu": {
+		"power": 55
+	},
+	"Brindled Bow Wow": {
+		"damage": 11
+	},
+	"Brindled Minifoux": {
+		"prospecting": 90
+	},
+	"Bulbutting": {
+		"pods": 1100
+	},
+	"Bworky": {
+		"pods": 1100
+	},
+	"Charming Boon": {
+		"per_water_resistance": 22
+	},
+	"Charming Bow Meow": {
+		"water_damage": 22
+	},
+	"Charming Godron": {
+		"water_resistance": 44
+	},
+	"Charming Tofu": {
+		"chance": 90
+	},
+	"Crocodyl": {
+		"power": 55
+	},
+	"Cromagmunk": {
+		"damage": 11
+	},
+	"Cromigmite": {
+		"vitality": 165
+	},
+	"Croum (Air)": {
+		"per_air_resistance": 26
+	},
+	"Croum (Earth)": {
+		"per_earth_resistance": 26
+	},
+	"Croum (Earth/Air)": {
+		"per_earth_resistance": 13,
+		"per_air_resistance": 13
+	},
+	"Croum (Earth/Fire)": {
+		"per_earth_resistance": 13,
+		"per_fire_resistance": 13
+	},
+	"Croum (Earth/Water)": {
+		"per_earth_resistance": 13,
+		"per_water_resistance": 13
+	},
+	"Croum (Fire)": {
+		"per_fire_resistance": 26
+	},
+	"Croum (Fire/Air)": {
+		"per_fire_resistance": 13,
+		"per_air_resistance": 13
+	},
+	"Croum (Fire/Water)": {
+		"per_fire_resistance": 13,
+		"per_water_resistance": 13
+	},
+	"Croum (Neutral)": {
+		"per_neutral_resistance": 26
+	},
+	"Croum (Neutral/Air)": {
+		"per_neutral_resistance": 13,
+		"per_air_resistance": 13
+	},
+	"Croum (Neutral/Earth)": {
+		"per_neutral_resistance": 13,
+		"per_earth_resistance": 13
+	},
+	"Croum (Neutral/Fire)": {
+		"per_neutral_resistance": 13,
+		"per_fire_resistance": 13
+	},
+	"Croum (Neutral/Water)": {
+		"per_neutral_resistance": 13,
+		"per_water_resistance": 13
+	},
+	"Croum (Water)": {
+		"per_water_resistance": 26
+	},
+	"Croum (Water/Air)": {
+		"per_water_resistance": 13,
+		"per_air_resistance": 13
+	},
+	"Earth Bwak": {
+		"set": "Earth Kwak Set",
+		"strength": 90
+	},
+	"El Scarador (Air)": {
+		"per_air_resistance": 26
+	},
+	"El Scarador (Earth)": {
+		"per_earth_resistance": 26
+	},
+	"El Scarador (Fire)": {
+		"per_fire_resistance": 26
+	},
+	"El Scarador (Neutral)": {
+		"per_neutral_resistance": 26
+	},
+	"El Scarador (Water)": {
+		"per_water_resistance": 26
+	},
+	"Feanor": {
+		"power": 55
+	},
+	"Fire Bwak": {
+		"set": "Fire Kwak Set",
+		"intelligence": 90
+	},
+	"Fosfor": {
+		"pods": 1100
+	},
+	"Friendrake": {
+		"wisdom": 55
+	},
+	"Frozen Tofu": {
+		"reflect": 11
+	},
+	"Gerbean": {
+
+	},
+	"Ghast": {
+		"vitality": 165
+	},
+	"Ginger Bow Meowette": {
+		"vitality": 15
+	},
+	"Glub": {
+		"prospecting": 90
+	},
+	"Gobtubby": {
+		"vitality": 165
+	},
+	"Golden Dragoone": {
+		"wisdom": 55
+	},
+	"Grauler": {
+		"wisdom": 28,
+		"power": 28
+	},
+	"Green Piwin": {
+		"strength": 90
+	},
+	"Gupin": {
+		"vitality": 165
+	},
+	"Icky Boon": {
+		"per_earth_resistance": 22
+	},
+	"Icky Bow Meow": {
+		"earth_damage": 22
+	},
+	"Icky Godron": {
+		"earth_resistance": 44
+	},
+	"Icky Tofu": {
+		"strength": 90
+	},
+	"Improved Quaquack": {
+		"prospecting": 22,
+		"initiative": 220
+	},
+	"Jellifrost": {
+		"heals": 11
+	},
+	"Jellufo": {
+		"vitality": 165
+	},
+	"Kerubaby": {
+		"pods": 1100
+	},
+	"Krolimea": {
+		"power": 55
+	},
+	"Leopardo": {
+		"power": 55
+	},
+	"Little Black Bow Wow": {
+		"power": 55
+	},
+	"Little White Bow Meow": {
+		"initiative": 1100
+	},
+	"Mastostroke": {
+		"vitality": 165
+	},
+	"Maulleycat": {
+		"initiative": 1100
+	},
+	"Measured Boon": {
+		"per_air_resistance": 22
+	},
+	"Measured Bow Meow": {
+		"air_damage": 22
+	},
+	"Measured Godron": {
+		"air_resistance": 44
+	},
+	"Measured Tofu": {
+		"agility": 90
+	},
+	"Mekrab": {
+		"damage": 11
+	},
+	"Minifoux": {
+		"wisdom": 55
+	},
+	"Minikrone": {
+		"wisdom": 55
+	},
+	"Minimino": {
+		"power": 55
+	},
+	"Miniminotot": {
+		"power": 55
+	},
+	"Mini Wa (Agility)": {
+		"agility": 90
+	},
+	"Mini Wa (Chance)": {
+		"chance": 90
+	},
+	"Mini Wa (Intelligence)": {
+		"intelligence": 90
+	},
+	"Mini Wa (Strength)": {
+		"strength": 90
+	},
+	"Mischievous Squirrel": {
+		"power": 55
+	},
+	"Moowitty": {
+		"wisdom": 33,
+		"prospecting": 33
+	},
+	"Mouselet": {
+		"vitality": 110,
+		"initiative": 110
+	},
+	"Nomoon": {
+		"prospecting": 90
+	},
+	"Ogrine Seeker": {
+		"power": 55
+	},
+	"Level 1": {
+		"power": 55
+	},
+	"Paunchy Boon": {
+		"per_fire_resistance": 22
+	},
+	"Paunchy Bow Meow": {
+		"fire_damage": 22
+	},
+	"Paunchy Godron": {
+		"fire_resistance": 44
+	},
+	"Paunchy Tofu": {
+		"intelligence": 90
+	},
+	"Phoenix": {
+		"wisdom": 33,
+		"prospecting": 33
+	},
+	"Pingoku": {
+		"power": 55
+	},
+	"Pink Dragoone": {
+		"wisdom": 55
+	},
+	"Pink Piwin": {
+		"heals": 11
+	},
+	"Platypus": {
+		"damage": 11
+	},
+	"Plop": {
+		"heals": 11
+	},
+	"Plump Tofurby": {
+		"wisdom": 55
+	},
+	"Purple Piwin": {
+		"damage": 11
+	},
+	"Quaquack": {
+		"prospecting": 20,
+		"initiative": 200
+	},
+	"Ratcham": {
+		"vitality": 440
+	},
+	"Red Piwin": {
+		"intelligence": 90
+	},
+	"Ross": {
+		"heals": 11
+	},
+	"Rushu's Shushu": {
+		"vitality": 165
+	},
+	"Scarakiri": {
+		"reflect": 7,
+		"damage": 7
+	},
+	"Smush": {
+		"heals": 11
+	},
+	"Snailmate": {
+		"critical_damage": 42
+	},
+	"Snickermite": {
+		"pushback_damage": 44
+	},
+	"Snoofle": {
+		"prospecting": 45
+	},
+	"Snow Bow Meow": {
+		"prospecting": 45
+	},
+	"Snowfoux": {
+		"wisdom": 55
+	},
+	"Solid Plissken": {
+		"damage": 11
+	},
+	"Sting": {
+		"prospecting": 90
+	},
+	"Stone-Washed Borbat": {
+		"reflect": 11
+	},
+	"Tabby Bow Meow": {
+		"power": 55
+	},
+	"Tanuk": {
+		"pushback_damage": 44
+	},
+	"Tarzantula": {
+		"reflect": 11
+	},
+	"Tatouh": {
+		"pushback_damage": 44
+	},
+	"The Godfather's Gobtubby": {
+		"vitality": 165
+	},
+	"Thing": {
+		"vitality": 440
+	},
+	"Tiwabbit Wosungwee": {
+		"power": 55
+	},
+	"Tofrazzle": {
+		"damage": 11
+	},
+	"Tofume": {
+		"reflect": 11
+	},
+	"Toucantankerous (Air)": {
+		"air_resistance": 44
+	},
+	"Toucantankerous (Earth)": {
+		"earth_resistance": 44
+	},
+	"Toucantankerous (Fire)": {
+		"fire_resistance": 44
+	},
+	"Toucantankerous (Neutral)": {
+		"neutral_resistance": 44
+	},
+	"Toucantankerous (Water)": {
+		"water_resistance": 44
+	},
+	"Treechster": {
+		"power": 55
+	},
+	"Tubskito": {
+		"wisdom": 27
+	},
+	"Vampirina": {
+		"vitality": 165
+	},
+	"Wabbit (Agility)": {
+		"agility": 90
+	},
+	"Wabbit (Chance)": {
+		"chance": 90
+	},
+	"Wabbit (Intelligence)": {
+		"intelligence": 90
+	},
+	"Wabbit (Strength)": {
+		"strength": 90
+	},
+	"Wabbit (Wisdom)": {
+		"wisdom": 30
+	},
+	"Water Bwak": {
+		"set": "Ice Kwak Set",
+		"chance": 90
+	},
+	"White Bow Meow": {
+		"vitality": 15
+	},
+	"Willy Peninzias": {
+		"power": 55
+	},
+	"Yellow Piwin": {
+		"agility": 90
+	},
+	"Young Wild Boar": {
+		"power": 55
+	}
+}

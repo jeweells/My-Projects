@@ -1,0 +1,265 @@
+
+
+Minor Fire Destroyer
+Level 50
+3 Fire Damage
+
+Minor Fire Destroyer
+Level 50
+5 Fire Damage
+Conditions
+Set Bonus < 2
+
+Minor Fire Wrecker
+Level 50
+5 Fire Damage
+-2% Earth Resistance
+
+Minor Forerunner
+Level 50
+-25 Vitality
+200 Initiative
+
+Minor Fortification
+Level 50
+8 Critical Resistance
+Conditions
+Set Bonus < 2
+
+Minor Friction
+Level 50
+3 MP Reduction
+
+Minor Fugitive
+Level 50
+4 MP Resistance
+
+Minor Goliath
+Level 50
+-50 Vitality
+25 Strength
+
+Minor Gymnast
+Level 50
+-50 Vitality
+25 Agility
+
+Minor Healer
+Level 50
+4 Heals
+
+Minor Instigator
+Level 50
+100 Initiative
+
+Minor Intellectual
+Level 50
+25 Intelligence
+Conditions
+Set Bonus < 2
+
+Minor Jostler
+Level 50
+-8 Lock
+16 Pushback Damage
+
+Minor Locker
+Level 50
+4 Lock
+
+Minor Luckster
+Level 50
+25 Chance
+Conditions
+Set Bonus < 2
+
+Minor Maniac
+Level 50
+15 Strength
+
+Minor Miracle Man
+Level 50
+80 Vitality
+Conditions
+Set Bonus < 2
+
+Minor Motivator
+Level 50
+200 Initiative
+Conditions
+Set Bonus < 2
+
+Minor Neutral Bulwark
+Level 50
+-2% Water Resistance
+10 Neutral Resistance
+
+Minor Neutral Carapace
+Level 50
+3% Neutral Resistance
+Conditions
+Set Bonus < 2
+
+Minor Neutral Defender
+Level 50
+6 Neutral Resistance
+
+Minor Neutral Destroyer
+Level 50
+5 Neutral Damage
+Conditions
+Set Bonus < 2
+
+Minor Neutral Destroyer
+Level 50
+3 Neutral Damage
+
+Minor Neutral Wrecker
+Level 50
+5 Neutral Damage
+-2% Water Resistance
+
+Minor Obstructor
+Level 50
+8 Lock
+Conditions
+Set Bonus < 2
+
+Minor Oppressor
+Level 50
+3 AP Reduction
+
+Minor Paralyser
+Level 50
+6 AP Reduction
+-6 MP Resistance
+
+Minor Player
+Level 50
+15 Chance
+
+Minor Powerhouse
+Level 50
+20 Power
+-3 Critical Hits
+
+Minor Rabid
+Level 50
+25 Strength
+Conditions
+Set Bonus < 2
+
+Minor Repellant
+Level 50
+8 Pushback Damage
+
+Minor Scholar
+Level 50
+15 Intelligence
+
+Minor Shackler
+Level 50
+6 MP Reduction
+-6 AP Resistance
+
+Minor Slimeball
+Level 50
+-8 AP Resistance
+8 MP Resistance
+
+Minor Solid
+Level 50
+24 Pushback Resistance
+Conditions
+Set Bonus < 2
+
+Minor Stalwart
+Level 50
+-8 Dodge
+24 Pushback Resistance
+
+Minor Stickler
+Level 50
+8 Lock
+-8 Dodge
+
+Minor Stunner
+Level 50
+6 AP Reduction
+Conditions
+Set Bonus < 2
+
+Minor Stunter
+Level 50
+25 Agility
+Conditions
+Set Bonus < 2
+
+Minor Survivor
+Level 50
+40 Vitality
+
+Minor Tease
+Level 50
+-50 Vitality
+25 Chance
+
+Minor Transporter
+Level 50
+250 Pods
+
+Minor Untouchable
+Level 50
+8 AP Resistance
+-8 MP Resistance
+
+Minor Vagabond
+Level 50
+-8 Lock
+8 Dodge
+
+Minor Vigour
+Level 50
+20 Power
+Conditions
+Set Bonus < 2
+
+Minor Water Bulwark
+Level 50
+-2% Neutral Resistance
+10 Water Resistance
+
+Minor Water Carapace
+Level 50
+3% Water Resistance
+Conditions
+Set Bonus < 2
+
+Minor Water Defender
+Level 50
+6 Water Resistance
+
+Minor Water Destroyer
+Level 50
+5 Water Damage
+Conditions
+Set Bonus < 2
+
+Minor Water Destroyer
+Level 50
+3 Water Damage
+
+Minor Water Wrecker
+Level 50
+5 Water Damage
+-2% Neutral Resistance
+
+Observer
+Level 50
+2 Range
+Conditions
+Set Bonus < 2
+
+Twitcher
+Level 50
+1 Range

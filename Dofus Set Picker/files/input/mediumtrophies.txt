@@ -1,0 +1,446 @@
+
+Acrobat
+Level 100
+30 Agility
+
+Adamantin
+Level 100
+24 Pushback Resistance
+
+Air Bulwark
+Level 100
+-4% Fire Resistance
+20 Air Resistance
+
+Air Carapace
+Level 100
+6% Air Resistance
+Conditions
+Set Bonus < 2
+
+Air Defender
+Level 100
+12 Air Resistance
+
+Air Destroyer
+Level 100
+10 Air Damage
+Conditions
+Set Bonus < 2
+
+Air Destroyer
+Level 100
+6 Air Damage
+
+Air Wrecker
+Level 100
+10 Air Damage
+-4% Fire Resistance
+
+Barbarian
+Level 100
+6 Neutral Damage
+6 Earth Damage
+6 Fire Damage
+6 Water Damage
+6 Air Damage
+-12 Critical Damage
+
+Barrier
+Level 100
+6 Critical Resistance
+
+Bastion
+Level 100
+-16 Critical Damage
+16 Critical Resistance
+
+Bloodthirst
+Level 100
+6 Damage
+Conditions
+Set Bonus < 2
+
+Brainbox
+Level 100
+-100 Vitality
+50 Intelligence
+
+Curer
+Level 100
+16 Heals
+Conditions
+Set Bonus < 2
+
+Delayer
+Level 100
+12 MP Reduction
+Conditions
+Set Bonus < 2
+
+Deserter
+Level 100
+16 Dodge
+Conditions
+Set Bonus < 2
+
+Doctor
+Level 100
+-100 Vitality
+16 Heals
+
+Dynamo
+Level 100
+20 Power
+
+Earth Bulwark
+Level 100
+-4% Air Resistance
+20 Earth Resistance
+
+Earth Carapace
+Level 100
+6% Earth Resistance
+Conditions
+Set Bonus < 2
+
+Earth Defender
+Level 100
+12 Earth Resistance
+
+Earth Destroyer
+Level 100
+10 Earth Damage
+Conditions
+Set Bonus < 2
+
+Earth Destroyer
+Level 100
+6 Earth Damage
+
+Earth Wrecker
+Level 100
+10 Earth Damage
+-4% Air Resistance
+
+Escapee
+Level 100
+16 MP Resistance
+Conditions
+Set Bonus < 2
+
+Escapist
+Level 100
+8 Dodge
+
+Evader
+Level 100
+8 AP Resistance
+
+Evader
+Level 100
+16 AP Resistance
+Conditions
+Set Bonus < 2
+
+Feller
+Level 100
+32 Pushback Damage
+Conditions
+Set Bonus < 2
+
+Fire Bulwark
+Level 100
+-4% Earth Resistance
+20 Fire Resistance
+
+Fire Carapace
+Level 100
+6% Fire Resistance
+Conditions
+Set Bonus < 2
+
+Fire Defender
+Level 100
+12 Fire Resistance
+
+Fire Destroyer
+Level 100
+10 Fire Damage
+Conditions
+Set Bonus < 2
+
+Fire Destroyer
+Level 100
+6 Fire Damage
+
+Fire Wrecker
+Level 100
+10 Fire Damage
+-4% Earth Resistance
+
+Forerunner
+Level 100
+-50 Vitality
+400 Initiative
+
+Fortification
+Level 100
+16 Critical Resistance
+Conditions
+Set Bonus < 2
+
+Friction
+Level 100
+6 MP Reduction
+
+Fugitive
+Level 100
+8 MP Resistance
+
+Goliath
+Level 100
+-100 Vitality
+50 Strength
+
+Gymnast
+Level 100
+-100 Vitality
+50 Agility
+
+Healer
+Level 100
+8 Heals
+
+Instigator
+Level 100
+200 Initiative
+
+Intellectual
+Level 100
+50 Intelligence
+Conditions
+Set Bonus < 2
+
+Jackanapes
+Level 100
+1 AP
+-1 MP
+Conditions
+MP < 6
+
+Jostler
+Level 100
+-16 Lock
+32 Pushback Damage
+
+Locker
+Level 100
+8 Lock
+
+Luckster
+Level 100
+50 Chance
+Conditions
+Set Bonus < 2
+
+Maniac
+Level 100
+30 Strength
+
+Miracle Man
+Level 100
+160 Vitality
+Conditions
+Set Bonus < 2
+
+Motivator
+Level 100
+400 Initiative
+Conditions
+Set Bonus < 2
+
+Neutral Bulwark
+Level 100
+-4% Water Resistance
+20 Neutral Resistance
+
+Neutral Carapace
+Level 100
+6% Neutral Resistance
+Conditions
+Set Bonus < 2
+
+Neutral Defender
+Level 100
+12 Neutral Resistance
+
+Neutral Destroyer
+Level 100
+10 Neutral Damage
+Conditions
+Set Bonus < 2
+
+Neutral Destroyer
+Level 100
+6 Neutral Damage
+
+Neutral Wrecker
+Level 100
+10 Neutral Damage
+-4% Water Resistance
+
+Nomad
+Level 100
+20 Power
+1 MP
+Conditions
+Set Bonus < 2
+
+Obstructor
+Level 100
+16 Lock
+Conditions
+Set Bonus < 2
+
+Oppressor
+Level 100
+6 AP Reduction
+
+Paralyser
+Level 100
+12 AP Reduction
+-12 MP Resistance
+
+Player
+Level 100
+30 Chance
+
+Powerhouse
+Level 100
+40 Power
+-6 Critical Hits
+
+Rabid
+Level 100
+50 Strength
+Conditions
+Set Bonus < 2
+
+Repellant
+Level 100
+16 Pushback Damage
+
+Scholar
+Level 100
+30 Intelligence
+
+Shackler
+Level 100
+12 MP Reduction
+-12 AP Resistance
+
+Shaker
+Level 100
+50 Vitality
+1 AP
+Conditions
+Set Bonus < 2
+
+Slimeball
+Level 100
+-16 AP Resistance
+16 MP Resistance
+
+Solid
+Level 100
+48 Pushback Resistance
+Conditions
+Set Bonus < 2
+
+Stalwart
+Level 100
+-16 Dodge
+48 Pushback Resistance
+
+Stickler
+Level 100
+16 Lock
+-16 Dodge
+
+Stunner
+Level 100
+12 AP Reduction
+Conditions
+Set Bonus < 2
+
+Stunter
+Level 100
+50 Agility
+Conditions
+Set Bonus < 2
+
+Survivor
+Level 100
+80 Vitality
+
+Tease
+Level 100
+-100 Vitality
+50 Chance
+
+Transporter
+Level 100
+500 Pods
+
+Untouchable
+Level 100
+16 AP Resistance
+-16 MP Resistance
+
+Vagabond
+Level 100
+-16 Lock
+16 Dodge
+
+Vigour
+Level 100
+40 Power
+Conditions
+Set Bonus < 2
+
+Voyager
+Level 100
+1 MP
+-30 Lock
+-30 Dodge
+
+Water Bulwark
+Level 100
+-4% Neutral Resistance
+20 Water Resistance
+
+Water Carapace
+Level 100
+6% Water Resistance
+Conditions
+Set Bonus < 2
+
+Water Defender
+Level 100
+12 Water Resistance
+
+Water Destroyer
+Level 100
+6 Water Damage
+
+Water Destroyer
+Level 100
+10 Water Damage
+Conditions
+Set Bonus < 2
+
+Water Wrecker
+Level 100
+10 Water Damage
+-4% Neutral Resistance

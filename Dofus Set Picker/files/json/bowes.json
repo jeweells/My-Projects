@@ -1,0 +1,106 @@
+{
+	"Archon's Bow": {
+		"vitality": 250,
+		"intelligence": 50,
+		"wisdom": 50,
+		"power": 50,
+		"critical_hits": -6,
+		"range": 1,
+		"fire_damage": 12,
+		"water_damage": 12,
+		"air_damage": 12,
+		"initiative": 300,
+		"dodge": 10,
+		"mp_reduction": 7,
+		"per_neutral_resistance": 8,
+		"per_water_resistance": 8,
+		"per_air_resistance": 8,
+		"constraints":{
+			"intelligence>": 559
+		}
+	},
+	"Arc Volkorne": {
+		"vitality": 350,
+		"wisdom": 40,
+		"power": 70,
+		"critical_hits": 5,
+		"neutral_damage": 15,
+		"earth_damage": 15,
+		"fire_damage": 15,
+		"water_damage": 15,
+		"air_damage": 15,
+		"dodge": 10,
+		"per_neutral_resistance": 5,
+		"constraints":{
+			"strength>": 350,
+			"intelligence>": 350,
+			"chance>": 350,
+			"agility>": 350
+		}
+	},
+	"Catseye Bow": {
+		"vitality": 400,
+		"strength": 80,
+		"wisdom": 40,
+		"critical_hits": 6,
+		"range": 1,
+		"neutral_damage": 15,
+		"earth_damage": 15,
+		"lock": -30,
+		"mp_resistance": 10,
+		"pushback_damage": 25,
+		"per_fire_resistance": 10,
+		"per_air_resistance": 7
+	},
+	"Corrupted Bow": {
+		"vitality": 350,
+		"intelligence": 70,
+		"wisdom": 40,
+		"critical_hits": 4,
+		"range": 1,
+		"fire_damage": 15,
+		"prospecting": 15,
+		"dodge": 10,
+		"ap_reduction": 7,
+		"per_water_resistance": 7,
+		"per_air_resistance": 7,
+		"critical_resistance": 25
+	},
+	"Koutoulou Bow": {
+		"vitality": 350,
+		"agility": 60,
+		"chance": 60,
+		"wisdom": 50,
+		"critical_hits": 2,
+		"range": 1,
+		"water_damage": 15,
+		"air_damage": 15,
+		"prospecting": 15,
+		"ap_resistance": 15,
+		"per_earth_resistance": 7,
+		"per_fire_resistance": 7,
+		"constraints":{
+			"chance>": 400,
+			"agility>": 400
+		}
+	},
+	"Necrotick Bow": {
+		"vitality": 350,
+		"intelligence": 60,
+		"chance": 60,
+		"wisdom": 40,
+		"critical_hits": 3,
+		"range": -1,
+		"summons": 1,
+		"fire_damage": 15,
+		"water_damage": 15,
+		"ap_reduction": 5,
+		"per_neutral_resistance": 7,
+		"per_earth_resistance": 7,
+		"per_air_resistance": 10,
+		"constraints":{
+			"intelligence>": 550,
+			"chance>": 550
+		}
+	}
+}

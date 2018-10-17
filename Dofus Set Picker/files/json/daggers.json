@@ -1,0 +1,62 @@
+{
+	"Daguanos": {
+		"vitality": 400,
+		"chance": 80,
+		"wisdom": 50,
+		"critical_hits": 6,
+		"range": 1,
+		"water_damage": 20,
+		"ap_reduction": 10,
+		"per_neutral_resistance": 7,
+		"per_fire_resistance": 7
+	},
+	"Flinty Daggers": {
+		"vitality": 400,
+		"strength": 50,
+		"intelligence": 50,
+		"agility": 50,
+		"wisdom": 40,
+		"range": 1,
+		"summons": 2,
+		"earth_damage": 15,
+		"fire_damage": 15,
+		"air_damage": 15,
+		"dodge": 10,
+		"per_water_resistance": 10,
+		"critical_resistance": 15,
+		"constraints":{
+			"strength>": 450,
+			"agility>": 450
+		}
+	},
+	"Ilyzaelle Daggers": {
+		"vitality": 400,
+		"strength": 70,
+		"wisdom": 50,
+		"critical_hits": 4,
+		"neutral_damage": 15,
+		"earth_damage": 15,
+		"prospecting": 15,
+		"dodge": -20,
+		"mp_reduction": 7,
+		"critical_damage": 15,
+		"per_fire_resistance": 10,
+		"pushback_resistance": 40
+	},
+	"Srambad Daggers": {
+		"vitality": 400,
+		"strength": 70,
+		"chance": 70,
+		"wisdom": 40,
+		"range": 1,
+		"neutral_damage": 20,
+		"earth_damage": 20,
+		"water_damage": 20,
+		"per_fire_resistance": 10,
+		"critical_resistance": 25,
+		"constraints":{
+			"strength>": 449,
+			"chance>": 449
+		}
+	}
+}

@@ -1,0 +1,69 @@
+{
+	"Bitrydent": {
+		"vitality": 350,
+		"strength": 70,
+		"intelligence": 70,
+		"wisdom": 40,
+		"critical_hits": 4,
+		"summons": 1,
+		"neutral_damage": 12,
+		"earth_damage": 12,
+		"fire_damage": 12,
+		"heals": 10,
+		"prospecting": 15,
+		"lock": 10,
+		"mp_reduction": 7,
+		"per_air_resistance": 10,
+		"constraints":{
+			"intelligence>": 400,
+			"strength>": 400
+		}
+	},
+	"Corrupted Spear": {
+		"vitality": 400,
+		"strength": 70,
+		"agility": 70,
+		"wisdom": 30,
+		"critical_hits": -5,
+		"neutral_damage": 20,
+		"earth_damage": 20,
+		"air_damage": 20,
+		"prospecting": 15,
+		"lock": 10,
+		"ap_resistance": 6,
+		"pushback_damage": 30,
+		"per_water_resistance": 10,
+		"constraints":{
+			"agility>": 449,
+			"strength>": 449
+		}
+	},
+	"Ensorcel Lance": {
+		"vitality": 350,
+		"agility": 80,
+		"wisdom": 40,
+		"critical_hits": 5,
+		"summons": 1,
+		"air_damage": 12,
+		"dodge": 7,
+		"ap_reduction": 7,
+		"critical_damage": 12,
+		"per_neutral_resistance": 7,
+		"per_fire_resistance": 10,
+		"pushback_resistance": -30
+	},
+	"King Playa's Scepta": {
+		"vitality": 400,
+		"chance": 80,
+		"wisdom": 50,
+		"critical_hits": 3,
+		"summons": 1,
+		"water_damage": 20,
+		"prospecting": 15,
+		"dodge": 10,
+		"ap_reduction": 7,
+		"critical_damage": 10,
+		"per_neutral_resistance": 7,
+		"per_earth_resistance": 10
+	}
+}

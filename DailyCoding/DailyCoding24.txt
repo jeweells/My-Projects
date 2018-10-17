@@ -1,0 +1,39 @@
+class Node:
+	var num_children_locked = 0
+	var locked = false
+	var father = null
+	var left = null
+	var right = null
+
+function Node.checkAncestors():
+	Node n = father;
+	while(n != null):
+		if(n.is_locked()) return false
+		n = n.father
+	return true
+function Node.checkDescendants():
+	return num_children_locked == 0
+
+function Node.lock():
+	if(is_locked()) return true
+	if(checkAncestors() or checkDescendants()):
+		locked = true
+		Node n = this.father
+		while(n != null):
+			n.num_children_locked++
+			n = n.father
+	else return false
+
+	return true
+
+function Node.is_locked():
+	return locked
+
+function Node.unlock():
+	if(!is_locked()) return false
+	locked = false
+	Node n = this.father
+	while(n != null):
+		n.num_children_locked--
+		n = n.father
+	return true
