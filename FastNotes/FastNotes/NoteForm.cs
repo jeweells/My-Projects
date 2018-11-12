@@ -12,9 +12,33 @@ using System.Windows.Forms;
 using Accord.Imaging;
 namespace FastNotes
 {
-	public partial class NoteForm : Form
-	{
-		protected override CreateParams CreateParams
+    public partial class NoteForm : Form
+    {
+
+        Bitmap pinBtnImage = global::FastNotes.Properties.Resources.fixedIcons_0006_pin;
+        Bitmap pinnedBtnImage = global::FastNotes.Properties.Resources.fixedIcons_0005_pinned;
+
+        LinkedListNode<Form> thisNode; // Reference to the node in the group of notes declared in Program.availableForms
+        NoteData ndata = null; // Current data
+        bool changed = false; // Let outside classes know when this note hasn't saved its data
+
+        /// <summary>
+        /// When closing all notes if there are no notes and this is true, the application will be requested to exit
+        /// </summary>
+        public bool CloseWithTheLastNoteOpened { get; set; } = true;
+        /// <summary>
+        /// When this variable is set to true, the confirmation to delete the note will be ignored and assumed as "yes"
+        /// </summary>
+        public bool CloseDialog { get; set; } = true;
+        /// <summary>
+        /// Do not perform any operations about data when this note is closing
+        /// </summary>
+        public bool ForgetDataWhenClosing { get; set; } = false;
+
+        /// <summary>
+        /// Overriding this does nothing I believe
+        /// </summary>
+        protected override CreateParams CreateParams
 		{
 			get
 			{
@@ -23,27 +47,43 @@ namespace FastNotes
 				return cp;
 			}
 		}
-		LinkedListNode<Form> thisNode;
-		public NoteForm(LinkedListNode<Form> thisNode)
-		{
-			this.thisNode = thisNode;
-			InitializeComponent();
-			addNoteBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-			moreBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-			closeBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-			fontBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-			pinBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-		}
 
-		NoteData ndata = null;
-		bool changed = false;
+        public NoteForm(LinkedListNode<Form> thisNode)
+        {
+            this.thisNode = thisNode; // Save a reference of the node in the current notes list
+            DoubleBuffered = true; // Helps flickering although I think here does nothing, it was solved when inheriting Panel class and doing it there
+            InitializeComponent();
+
+            // Make buttons' borders transparent
+            addNoteBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            moreBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            closeBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            fontBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            pinBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            Load += (x, y) =>{
+                if (ndata == null)
+                { // Painting randomly the note (Only when it hasn't loaded the data which means it has already been painted)
+                    Random r = new Random(DateTime.Now.Millisecond);
+                    int rgb = Math.Abs(r.Next(0, 0x1000000)); // Random in [0, 256)
+                    PaintNote(Color.FromArgb((rgb & 0xFF0000) >> 16, (rgb & 0xFF00) >> 8, rgb & 0xFF)); // Create and paint our note randomly
+                }
+            };
+        }
+        /// <summary>
+        /// Leaves a mark that tells this note data hasn't been saved
+        /// </summary>
 		public bool Changed { get { return changed;  }
 			set {
 				changed = value;
 				if (changed)
-					StartupForm.saved = false;
+					StartupForm.dataSaved = false;
 			}
 		}
+
+        /// <summary>
+        /// The note data including position, text, color, etc.
+        /// If not initialized, it intializes itself when calling it
+        /// </summary>
 		public NoteData Data
 		{
 			get
@@ -78,27 +118,39 @@ namespace FastNotes
 			}
 		}
 
+        /// <summary>
+        /// Happens when touching the note topbar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void panel1_MouseDown(object sender, MouseEventArgs e)
 		{
-			TopBarActions.MouseDown(Handle, e);
-			Changed = true;
+			TopBarActions.MouseDown(Handle, e); // This makes the top bar move the form
+			Changed = true; // Data has changed
 		}
 
+        /// <summary>
+        /// Clicking the erase note button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void button1_Click(object sender, EventArgs e)
 		{
-			if (textBox.Text == "" || DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this note?", "Deleting note", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-			{
-				Program.availableForms.Remove(thisNode);
-				StartupForm.saved = false; // Let father know there are changes
-				if (Program.availableForms.Count == 0)
-				{
-					Application.Exit();
-				}
-				else
-				{
-					Close();
-				}
-			}
+            Close();
+
+			//if (textBox.Text == "" || DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this note?", "Deleting note", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+			//{
+			//	Program.availableForms.Remove(thisNode);
+			//	StartupForm.dataSaved = false; // Let father know there are changes
+			//	if (Program.availableForms.Count == 0)
+			//	{
+			//		Application.Exit();
+			//	}
+			//	else
+			//	{
+			//		Close();
+			//	}
+			//}
 		}
 
 		protected struct SCROLLINFO
@@ -118,7 +170,10 @@ namespace FastNotes
 		protected static extern bool GetScrollInfo(IntPtr hwnd, int fnBar, ref SCROLLINFO lpsi);
 		
 
-
+        /// <summary>
+        /// Makes the note resizable
+        /// </summary>
+        /// <param name="m"></param>
 		protected override void WndProc(ref Message m)
 		{
 			int grab = 16;
@@ -145,12 +200,22 @@ namespace FastNotes
 			}
 		}
 
+        /// <summary>
+        /// Implements when a note is created
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void button3_Click(object sender, EventArgs e)
 		{
 			Program.CreateNote().Show(Program.startupForm);
-			StartupForm.saved = false; // Let father know there are changes
+			StartupForm.dataSaved = false; // Let father know there are changes
 		}
 		ColorPicker colorPicker;
+        /// <summary>
+        /// Implements when it's wanted to change the color of a note
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void button2_Click(object sender, EventArgs e)
 		{
 			if (colorPicker == null)
@@ -168,6 +233,8 @@ namespace FastNotes
 				Changed = true;
 			}
 		}
+
+
 		float RelativeIuminanceHelper(float component)
 		{
 
@@ -219,9 +286,10 @@ namespace FastNotes
 			get { return TopMost; }
 		}
 
-		Bitmap pinBtnImage = global::FastNotes.Properties.Resources.fixedIcons_0006_pin;
-		Bitmap pinnedBtnImage = global::FastNotes.Properties.Resources.fixedIcons_0005_pinned;
-
+        /// <summary>
+        /// Paints this note to a specific color
+        /// </summary>
+        /// <param name="color"></param>
 		public void PaintNote(Color color)
 		{
 			float percent = 0.1f;
@@ -270,13 +338,13 @@ namespace FastNotes
 
 		private void NoteForm_Shown(object sender, EventArgs e)
 		{
-			if(ndata == null)
-			{
-				Random r = new Random(DateTime.Now.Millisecond);
-				int rgb = Math.Abs(r.Next(0, 0x1000000));
-				PaintNote(Color.FromArgb((rgb & 0xFF0000) >> 16, (rgb & 0xFF00) >> 8, rgb & 0xFF)); // Create and paint our note randomly
-			}
-		}
+            //if (ndata == null)
+            //{
+            //    Random r = new Random(DateTime.Now.Millisecond);
+            //    int rgb = Math.Abs(r.Next(0, 0x1000000));
+            //    PaintNote(Color.FromArgb((rgb & 0xFF0000) >> 16, (rgb & 0xFF00) >> 8, rgb & 0xFF)); // Create and paint our note randomly
+            //}
+        }
 
 		private void textBox_TextChanged(object sender, EventArgs e)
 		{
@@ -338,12 +406,15 @@ namespace FastNotes
 			fontPicker.Font = textBox.SelectionFont;
 			if(DialogResult.OK == fontPicker.ShowDialog())
 			{
-				textBox.SelectionFont = fontPicker.Font;
+				if (textBox.SelectionLength == 0)
+					textBox.Font = fontPicker.Font;
+				else
+					textBox.SelectionFont = fontPicker.Font;
 				Changed = true;
 			}
 		}
-
-		private void boldToolStripMenuItem_Click(object sender, EventArgs e)
+        #region RightClickFunctions
+        private void boldToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			textBox.BoldSelection();
 		}
@@ -422,5 +493,56 @@ namespace FastNotes
 		{
 			textBox.SelectionAlignment = HorizontalAlignment.Right;
 		}
-	}
+        #endregion
+
+        private void NoteForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (ForgetDataWhenClosing) return;
+            switch (e.CloseReason)
+            {
+                case CloseReason.None:
+                    // Idk
+                    throw new NotSupportedException("Close reason: None");
+                case CloseReason.WindowsShutDown:
+                    // Close without notifying 
+                    break;
+                case CloseReason.MdiFormClosing:
+                    // Never should happen
+                    throw new NotSupportedException("Close reason: MdiFormClosing");
+                case CloseReason.UserClosing:
+                    // Ask confirmation
+                    if (!CloseDialog || textBox.Text == "" || DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this note?", "Deleting note", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    {
+                        RemoveNoteNoDialog();
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                    break;
+                case CloseReason.TaskManagerClosing:
+                    // Close without notifying
+                    break;
+                case CloseReason.FormOwnerClosing:
+                    // Close without notifying
+                    break;
+                case CloseReason.ApplicationExitCall:
+                    // Close without notifying
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Removes the note as normally but it doesn't ask if you really want to delete it
+        /// </summary>
+        void RemoveNoteNoDialog()
+        {
+            Program.availableForms.Remove(thisNode);
+            StartupForm.dataSaved = false; // Let father know there are changes
+            if (CloseWithTheLastNoteOpened && Program.availableForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
+    }
 }

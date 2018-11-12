@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FastNotesUpdater.Styles">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    
+    <!-- Maximize Icon -->
+    <Viewbox  x:Key="MaximizeIcon" Width="16" Height="16">
+        <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path Data="M4,4H20V20H4V4M6,8V18H18V8H6Z" Fill="White" />
+        </Canvas>
+    </Viewbox>
+
+    <!-- Minimize Icon -->
+    <Viewbox  x:Key="MinimizeIcon" Width="16" Height="16">
+        <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path Data="M20,14H4V10H20" Fill="White" />
+        </Canvas>
+    </Viewbox>
+
+    <!-- Close icon -->
+    <Viewbox  x:Key="CloseIcon" Width="16" Height="16">
+        <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" Fill="White" />
+        </Canvas>
+    </Viewbox>
+
+
+    <!-- App Logo -->
+    <Viewbox x:Key="logoIcon"  Width="16" Height="16">
+        <Grid>
+            <Path Data="M169,371L244,291 300,330 308,318 300,271 347,191 372,192 379,183 265,106 258,115 270,139 212,212 164,222 157,233 214,272z M351,491L466,385 467,22 69,22 67,490z" Fill="{StaticResource LogoColorVeryLightBrush}"/>
+            <Path Data="M316.257,140.621L265,106 258,115 270,139 268.807,140.5 69,140 69,22 467,22 467,141z M268.807,140.502L316.257,140.621 M351,491L351,385 466,385z" Fill="{StaticResource LogoColorLightBrush}"/>
+        </Grid>
+    </Viewbox>
+
+</ResourceDictionary>

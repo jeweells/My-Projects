@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FastNotesUpdater.Styles">
+    <Color x:Key="MainColorDark">#0e232b</Color>
+    <SolidColorBrush x:Key="MainColorDarkBrush" Color="{StaticResource MainColorDark}"></SolidColorBrush>
+    
+    <Color x:Key="MainColorLight">#235569</Color>
+    <SolidColorBrush x:Key="MainColorLightBrush" Color="{StaticResource MainColorLight}"></SolidColorBrush>
+    
+   
+    <Color x:Key="MainColorVeryLight">#357f9e</Color>
+    <SolidColorBrush x:Key="MainColorVeryLightBrush" Color="{StaticResource MainColorVeryLight}"></SolidColorBrush>
+
+    <Color x:Key="CommonText">#ffffff</Color>
+    <SolidColorBrush x:Key="CommonTextBrush" Color="{StaticResource CommonText}" />
+
+    <Color x:Key="TitleText">#ffffff</Color>
+    <SolidColorBrush x:Key="TitleTextBrush" Color="{StaticResource TitleText}" />
+
+
+
+    <Color x:Key="LogoColorVeryLight">#357f9e</Color>
+    <SolidColorBrush x:Key="LogoColorVeryLightBrush" Color="{StaticResource LogoColorVeryLight}"></SolidColorBrush>
+    
+    <Color x:Key="LogoColorLight">#235569</Color>
+    <SolidColorBrush x:Key="LogoColorLightBrush" Color="{StaticResource LogoColorLight}"></SolidColorBrush>
+
+
+    <Color x:Key="ContentBackgroundColor">#ffffff</Color>
+    <SolidColorBrush x:Key="ContentBackgroundColorBrush" Color="{StaticResource ContentBackgroundColor}"></SolidColorBrush>
+   
+    <Color x:Key="ContentForegroundColor">#444444</Color>
+    <SolidColorBrush x:Key="ContentForegroundColorBrush" Color="{StaticResource ContentForegroundColor}"></SolidColorBrush>
+
+
+
+</ResourceDictionary>

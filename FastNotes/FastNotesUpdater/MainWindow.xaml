@@ -1,0 +1,125 @@
+﻿<Window x:Class="FastNotesUpdater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastNotesUpdater"
+        x:Name="AppWindow"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        MinHeight="{Binding WindowMinHeight}"
+        MinWidth="{Binding WindowMinWidth}"
+        Title="FastNotes Updater"
+        Icon="Images/Icons/icon.png"
+        Height="213" Width="500">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!-- Outer border with drop shadow -->
+                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+                            <!-- Main window outline -->
+                            <Grid>
+
+                                <Border x:Name="Container" 
+                                        Background="{StaticResource MainColorDarkBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                                </Border>
+
+                                <!-- Window border and drop shadow-->
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" Background="White" BorderThickness="2">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="1"></DropShadowEffect>
+                                    </Border.Effect>
+                                </Border>
+
+
+
+
+                                <!-- The main window content -->
+                                <Grid>
+
+                                    <!-- Opacity mask for corners in a grid -->
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Grid.OpacityMask>
+
+                                    <Grid.RowDefinitions>
+                                        <!-- Title bar -->
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue={StaticResource TitleBarDefaultHeight}}"/>
+                                        <!-- Window Content -->
+                                        <RowDefinition  Height="*" />
+                                    </Grid.RowDefinitions>
+
+
+
+
+                                    <!-- Title bar-->
+                                    <Grid Background="{StaticResource MainColorDarkBrush}" Grid.Row="0" Panel.ZIndex="1">
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Icon -->
+                                            <ColumnDefinition Width="Auto"/>
+                                            <!-- Title -->
+                                            <ColumnDefinition Width="*"/>
+                                            <!-- Buttons -->
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <!-- Icon -->
+                                        <Button Padding="7" Style="{StaticResource TopBarIconButtonStyle}" Command="{Binding MenuCommand}" Grid.Column="0">
+                                            <ContentPresenter Content="{StaticResource logoIcon}" />
+                                            <!--<Image Source="Images/Icons/icon.png"/>-->
+                                        </Button>
+                                        <!-- Title-->
+                                        <TextBlock Style="{StaticResource TitleTextBlock}" Grid.Column="1" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue=FastNotes}"/>
+                                        <!-- Minmize, Maximize, Close Buttons -->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Content="{StaticResource MinimizeIcon}"  Style="{StaticResource WindowControlButton}" Command="{Binding MinimizeCommand}" />
+                                            <Button Content="{StaticResource CloseIcon}"  Style="{StaticResource WindowControlButton}" Command="{Binding CloseCommand}" />
+                                        </StackPanel>
+                                    </Grid>
+                                    <!-- Page content -->
+                                    <Border Grid.Row="1" Padding="15 0 15 0"  Background="{StaticResource ContentBackgroundColorBrush}" CornerRadius="{Binding WindowCornerRadiusBRBL}" BorderThickness="{Binding ContentBorderThickness}" BorderBrush="{StaticResource MainColorDarkBrush}">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </Border>
+
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="{Binding TittleHeight, FallbackValue={StaticResource TitleBarDefaultHeight}}"
+            GlassFrameThickness="0"
+            CornerRadius="0"
+            />
+    </WindowChrome.WindowChrome>
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock x:Name="logLabel"  TextWrapping="Wrap" VerticalAlignment="Center" />
+        </Grid>
+            
+        <local:LoadingBar x:Name="loadingBar" Grid.Row="1" Height="50" />
+
+        <Grid Grid.Row="2">
+            <TextBlock x:Name="downloadSpeed" TextWrapping="Wrap" VerticalAlignment="Center" />
+        </Grid>
+
+    </Grid>
+</Window>

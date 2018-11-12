@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +22,10 @@ namespace FastNotes
 		[STAThread]
 		static void Main()
 		{
-			Application.EnableVisualStyles();
+            Process[] pname = Process.GetProcessesByName("FastNotes");
+            if (pname.Length != 1)
+                return;
+            Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			AppDomain.CurrentDomain.UnhandledException += ExceptionLogWriter;
 			startupForm = new StartupForm();
@@ -29,10 +33,15 @@ namespace FastNotes
 		}
 		static void ExceptionLogWriter(object sender, UnhandledExceptionEventArgs e)
 		{
+
+			Exception ex = (Exception)e.ExceptionObject;
+			WriteExceptionToLog(ex);
+		}
+		public static void WriteExceptionToLog(Exception ex)
+		{
 			using (StreamWriter w = new StreamWriter(logPath, true))
 			{
 				w.WriteLine("".PadRight(30, '$'));
-				Exception ex = (Exception)e.ExceptionObject;
 				w.WriteLine(DateTime.Now.ToLongDateString() + " => Message: " + ex.Message);
 				w.WriteLine($"\tSource: {ex.Source}");
 				w.WriteLine($"\tStackTrace: {ex.StackTrace}");
