@@ -841,21 +841,13 @@ namespace FastNotes
         public void DeleteAllDesktops()
         {
             savable = false;
-            while(currentConfig.desktops.Count != 0)
+            int count = currentConfig.desktops.Count;
+            for (int i = 0; i < count; i++)
             {
+
                 // Delete silently
                 DeleteDesktop(desktopItems[0], 0, false, false);
             }
-            currentDesktop = new Desktop();
-            currentDesktop.Name = "Desktop 1";
-            currentConfig.selectedDesktop = 0;
-            currentConfig.desktops.Add(currentDesktop);
-            CloseCurrentDesktop(false); // Close current shown
-            LoadData(); // Loads the data of the new note
-            savable = true; // Makes everything savable again
-            SaveConfig(); // Saves the new config
-            LoadConfig(); // Loads the same configuration (The buttons needs to appear)
-            SaveData(); // Saves the current clean data
         }
 
         private void deleteAllDesktopsToolStripMenuItem_Click(object sender, EventArgs e)
