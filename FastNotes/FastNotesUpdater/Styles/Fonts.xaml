@@ -5,7 +5,7 @@
     <FontFamily x:Key="Quesha">/../Fonts/Quesha/#Quesha</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="TrenchStyle">
-        <Setter Property="FontFamily" Value="{StaticResource Trench}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Quesha}"/>
     </Style>
     <Style TargetType="{x:Type TextBlock}" x:Key="TrenchTextBlockStyle">
         <Setter Property="FontFamily" Value="{StaticResource Quesha}"/>

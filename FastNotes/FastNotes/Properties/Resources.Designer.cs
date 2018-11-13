@@ -183,26 +183,6 @@ namespace FastNotes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap note {
-            get {
-                object obj = ResourceManager.GetObject("note", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Byte[].
-        /// </summary>
-        internal static byte[] NovaSquare {
-            get {
-                object obj = ResourceManager.GetObject("NovaSquare", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PickerDot {
             get {
                 object obj = ResourceManager.GetObject("PickerDot", resourceCulture);

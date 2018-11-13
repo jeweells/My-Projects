@@ -80,7 +80,7 @@
             this.topbar.Size = new System.Drawing.Size(206, 35);
             this.topbar.TabIndex = 1;
             this.topbar.TabStop = true;
-            this.topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnTouchBarPressed);
             // 
             // pinBtn
             // 
@@ -94,7 +94,7 @@
             this.pinBtn.TabIndex = 6;
             this.pinBtn.TabStop = false;
             this.pinBtn.UseVisualStyleBackColor = true;
-            this.pinBtn.Click += new System.EventHandler(this.pinBtn_Click);
+            this.pinBtn.Click += new System.EventHandler(this.OnPinBtnClick);
             // 
             // fontBtn
             // 
@@ -108,7 +108,7 @@
             this.fontBtn.TabIndex = 5;
             this.fontBtn.TabStop = false;
             this.fontBtn.UseVisualStyleBackColor = true;
-            this.fontBtn.Click += new System.EventHandler(this.fontBtn_Click);
+            this.fontBtn.Click += new System.EventHandler(this.OnFontBtnClick);
             // 
             // addNoteBtn
             // 
@@ -122,7 +122,7 @@
             this.addNoteBtn.TabIndex = 2;
             this.addNoteBtn.TabStop = false;
             this.addNoteBtn.UseVisualStyleBackColor = true;
-            this.addNoteBtn.Click += new System.EventHandler(this.button3_Click);
+            this.addNoteBtn.Click += new System.EventHandler(this.OnCreateNoteBtnClick);
             // 
             // moreBtn
             // 
@@ -136,7 +136,7 @@
             this.moreBtn.TabIndex = 3;
             this.moreBtn.TabStop = false;
             this.moreBtn.UseVisualStyleBackColor = true;
-            this.moreBtn.Click += new System.EventHandler(this.button2_Click);
+            this.moreBtn.Click += new System.EventHandler(this.OnNoteColorChangeClick);
             // 
             // closeBtn
             // 
@@ -151,7 +151,7 @@
             this.closeBtn.TabIndex = 4;
             this.closeBtn.TabStop = false;
             this.closeBtn.UseVisualStyleBackColor = true;
-            this.closeBtn.Click += new System.EventHandler(this.button1_Click);
+            this.closeBtn.Click += new System.EventHandler(this.OnEraseBtnClick);
             // 
             // panel2
             // 
@@ -187,7 +187,7 @@
             this.textBox.Size = new System.Drawing.Size(196, 181);
             this.textBox.TabIndex = 1;
             this.textBox.Text = "";
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged_1);
+            this.textBox.TextChanged += new System.EventHandler(this.OnNoteContentChanged);
             // 
             // rightClicNoteText
             // 
@@ -354,7 +354,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Note";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NoteForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnNoteFormClosing);
             this.Shown += new System.EventHandler(this.NoteForm_Shown);
             this.topbar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

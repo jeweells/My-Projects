@@ -7,4 +7,5 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Margin" Value="0"/>
     </Style>
+    
 </ResourceDictionary>

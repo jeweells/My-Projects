@@ -11,6 +11,7 @@ using System.Drawing.Text;
 using System.Drawing;
 using System.IO.Compression;
 
+
 namespace FastNotes
 {
 	public partial class StartupForm : Form
@@ -20,7 +21,6 @@ namespace FastNotes
 		public static StartupForm Instance;
 		public static bool dataSaved = true;
 		public static bool configSaved = true;
-		public PrivateFontCollection customFonts = new PrivateFontCollection();
 		public FontFamily novaSquare;
 		static BinaryFormatter bf = new BinaryFormatter();
 
@@ -64,13 +64,6 @@ namespace FastNotes
                     AskToInstallNewVersion(currentConfig.lastVersionChecked = newestVersion);
                 }
             });
-            
-            byte[] novaSquareData = Properties.Resources.NovaSquare;
-            IntPtr data = Marshal.AllocCoTaskMem(novaSquareData.Length);
-            Marshal.Copy(novaSquareData, 0, data, novaSquareData.Length);
-            customFonts.AddMemoryFont(data, novaSquareData.Length);
-            novaSquare = customFonts.Families[0];
-
             runAtStartupContextMenuStrip.Checked = currentConfig.runAtStartup;
             LoadData(); // Initializes if the data doesn't exist
         }
@@ -158,7 +151,17 @@ namespace FastNotes
                 }
                 else
                 {
-                    currentDesktop = currentConfig.desktops[currentConfig.selectedDesktop];
+                    int[] ola = new int[3];
+                    try
+                    {
+                        currentDesktop = currentConfig.desktops[currentConfig.selectedDesktop];
+                    }
+                    catch (ArgumentOutOfRangeException)
+                    {
+                        // An unhandled error might have been thrown, we don't want the app to crash forever
+                        currentConfig.selectedDesktop = 0;
+                        currentDesktop = currentConfig.desktops[0];
+                    }
                 }
 			}
 			else
@@ -274,22 +277,30 @@ namespace FastNotes
         bool DeleteDesktop(ToolStripMenuItem renameBtn, int i, bool saveAfterDelete = true, bool changeIfCurrent = true)
         {
             // Ask if you're sure
-
+            savable = false;// We don't want it to be saved by the timer when we just deleted a desktop
             if (!currentConfig.desktops[i].Delete()) // Deletes its data
                 return false;
             desktopItems.Remove(renameBtn);
             desktopsToolStripMenuItem.DropDownItems.Remove(renameBtn); // Deletes from the interface
             currentConfig.desktops.RemoveAt(i); // Deletes from the list
-            if (currentConfig.selectedDesktop > i) currentConfig.selectedDesktop--; // Shifts the current desktop
+
+            if (currentConfig.desktops.Count == 0)
+            {
+                Desktop d = CreateDesktopData("Desktop 1");
+                ChangeDesktop(desktopItems[0], null, 0, true, false);
+            }
+            else if (currentConfig.selectedDesktop > i) currentConfig.selectedDesktop--; // Shifts the current desktop
             else if (currentConfig.selectedDesktop == i)
             {
                 // Change to a default desktop (0 in this case)
-                if(changeIfCurrent) ChangeDesktop(null, null, 0);
+                if (changeIfCurrent) ChangeDesktop(desktopItems[0], null, 0, true, false);
             }
-            if(saveAfterDelete)
+            savable = true;  // Now we can save changes
+            if (saveAfterDelete)
             {
                 configSaved = false; // The configuration has changed
                 SaveConfig(); // Save the configuration
+                SaveData();
             }
             return true;  
         }
@@ -332,16 +343,23 @@ namespace FastNotes
         /// <param name="e"></param>
         /// <param name="clickedIdx"></param>
         /// <param name="forceChange"></param>
-        void ChangeDesktop(object sender, EventArgs e, int clickedIdx, bool forceChange = false)
+        void ChangeDesktop(object sender, EventArgs e, int clickedIdx, bool forceChange = false, bool saveWhenClosing = true)
         {
             if (!forceChange && clickedIdx == currentConfig.selectedDesktop) return;
-            ((ToolStripMenuItem)desktopItems[currentConfig.selectedDesktop]).Checked = false; // This is not selected anymore
+            try
+            {
+                ((ToolStripMenuItem)desktopItems[currentConfig.selectedDesktop]).Checked = false; // This is not selected anymore
+            }
+            catch(ArgumentOutOfRangeException)
+            {
+                // Does nothing, this happens when the last one is deleted and also selected as current
+            }
             ToolStripMenuItem tsmi = ((ToolStripMenuItem)sender);
             if(tsmi !=null)
             {
                 tsmi.Checked = true;
             }
-            CloseCurrentDesktop(true);
+            CloseCurrentDesktop(saveWhenClosing);
             currentDesktop = currentConfig.desktops[clickedIdx];
             currentConfig.selectedDesktop = clickedIdx;
             LoadData();
@@ -893,7 +911,7 @@ namespace FastNotes
             configSaved = false;
             SaveConfig();
             SaveData();
-            System.Diagnostics.Process.Start(Path.Combine(Environment.CurrentDirectory, "FastNotesUpdater.exe"));
+            System.Diagnostics.Process.Start(Path.Combine(Environment.CurrentDirectory, "FastNotesUpdater.exe"), "update");
             Application.Exit();
         }
     }

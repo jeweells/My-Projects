@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fixedIcons_0001_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FixedIcons\fixedIcons_0001_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,9 +141,6 @@
   </data>
   <data name="fixedIcons_0004_font" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FixedIcons\fixedIcons_0004_font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NovaSquare" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NovaSquare.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fixedIcons_0007_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FixedIcons\fixedIcons_0007_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

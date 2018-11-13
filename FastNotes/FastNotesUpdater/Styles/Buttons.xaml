@@ -32,7 +32,7 @@
     <Style TargetType="{x:Type Button}" x:Key="WindowControlButton">
         <Setter Property="Padding" Value="7" />
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Background" Value="{StaticResource MainColorDarkBrush}"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -44,10 +44,79 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource MainColorLightBrush}" />
-            </Trigger>
+            <EventTrigger RoutedEvent="Button.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation 
+                  Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                  To="{StaticResource MainColorLight}" Duration="0:0:0.3" AutoReverse="False" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Button.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation 
+                  Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                  To="{StaticResource MainColorDark}" Duration="0:0:0.5" AutoReverse="False" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
         </Style.Triggers>
+        
+        
+        
+    </Style>
+
+
+
+    <Style x:Key="NormalButton" TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="{StaticResource MainColorDarkBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource NormalButtonForegroundBrush}"/>
+        <Setter Property="Padding" Value="15 7"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+
+            <EventTrigger RoutedEvent="Button.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation 
+                  Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                  From="{StaticResource MainColorDark}" To="{StaticResource MainColorLight}" Duration="0:0:0.3" AutoReverse="False" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Button.MouseLeave">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation 
+                  Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                  From="{StaticResource MainColorLight}" To="{StaticResource MainColorDark}" Duration="0:0:0.5" AutoReverse="False" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+            </EventTrigger>
+
+        </Style.Triggers>
+        
     </Style>
 
 </ResourceDictionary>

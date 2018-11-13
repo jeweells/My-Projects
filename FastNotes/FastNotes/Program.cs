@@ -26,7 +26,7 @@ namespace FastNotes
             if (pname.Length != 1)
                 return;
             Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
+			Application.SetCompatibleTextRenderingDefault(true);
 			AppDomain.CurrentDomain.UnhandledException += ExceptionLogWriter;
 			startupForm = new StartupForm();
 			Application.Run(startupForm);

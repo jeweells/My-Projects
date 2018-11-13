@@ -59,5 +59,35 @@ namespace FastNotesUpdater.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Microsoft_Windows_Shell {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Windows_Shell", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] ServerLogger {
+            get {
+                object obj = ResourceManager.GetObject("ServerLogger", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] TransferHelper {
+            get {
+                object obj = ResourceManager.GetObject("TransferHelper", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

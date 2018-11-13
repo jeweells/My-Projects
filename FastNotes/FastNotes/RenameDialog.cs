@@ -15,7 +15,11 @@ namespace FastNotes
         public RenameDialog()
         {
             InitializeComponent();
-            Shown += (x, y) => newNameTextBox.SelectAll();
+            Shown += (x, y) =>
+            {
+                newNameTextBox.SelectAll();
+                newNameTextBox.Focus();
+            };
         }
         public class EventArgs
         {

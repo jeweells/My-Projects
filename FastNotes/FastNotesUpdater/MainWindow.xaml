@@ -13,8 +13,7 @@
         MinHeight="{Binding WindowMinHeight}"
         MinWidth="{Binding WindowMinWidth}"
         Title="FastNotes Updater"
-        Icon="Images/Icons/icon.png"
-        Height="213" Width="500">
+        Icon="Images/Icons/icon.png" Width="500" SizeToContent="Height">
 
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
@@ -107,19 +106,41 @@
     </WindowChrome.WindowChrome>
     <Grid x:Name="grid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" VerticalAlignment="Center">
+        <!-- Row 0 -->
+        <Grid x:Name="logInfoRow" Grid.Row="0" Height="50" VerticalAlignment="Center">
             <TextBlock x:Name="logLabel"  TextWrapping="Wrap" VerticalAlignment="Center" />
         </Grid>
-            
+        <!-- End Row 0 -->
+        
+        <!-- Row 1 -->
         <local:LoadingBar x:Name="loadingBar" Grid.Row="1" Height="50" />
-
-        <Grid Grid.Row="2">
-            <TextBlock x:Name="downloadSpeed" TextWrapping="Wrap" VerticalAlignment="Center" />
+        <Grid Grid.Row="1" x:Name="folderPickerRow">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="currentDirectoryTextBox" Grid.Column="0" Text="{Binding CurrentDirectory, ElementName=AppWindow}" Height="30" Padding="6" FontSize="18" />
+            <Button x:Name="chooseBtn" Style="{StaticResource NormalButton}" Grid.Column="1" Margin="10 0 0 0" Content="Choose" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
+        <!-- End Row 1 -->
+        
+        <!-- Row 2 -->
+        <Grid x:Name="downloadInfoRow"  Grid.Row="2" Height="50">
+            <TextBlock  x:Name="downloadSpeed" TextWrapping="Wrap" VerticalAlignment="Center" />
+        </Grid>
+
+        <Grid Grid.Row="2" x:Name="installButtonRow">
+            <Button x:Name="installBtn" Margin="15" Style="{StaticResource NormalButton}" Content="Install" HorizontalAlignment="Center" />
+        </Grid>
+        <Grid Grid.Row="2" x:Name="openFastNotesButtonRow">
+            <Button x:Name="openFastNotesButton" Margin="15" Style="{StaticResource NormalButton}" Content="Open FastNotes" HorizontalAlignment="Center" />
+        </Grid>
+
+        <!-- End Row 2 -->
 
     </Grid>
 </Window>

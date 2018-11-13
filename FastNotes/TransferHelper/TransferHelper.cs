@@ -154,7 +154,7 @@ namespace TransferHelper
             long iterationsLeft = remaningBytes / ((dif != 0) ? dif : 1L);
             long timeLeft = iterationsLeft * msFrecuency;
             long timeLeftDivisor = 1L;
-            string timeLeftUnit = (timeLeft == 1L) ? "milisecond" : "miliseconds";
+            string timeLeftUnit = (timeLeft == 1L) ? "millisecond" : "milliseconds";
             if (timeLeft > 999L) // It'd be seconds
             {
                 if (timeLeft > 59999L) // It'd be minutes

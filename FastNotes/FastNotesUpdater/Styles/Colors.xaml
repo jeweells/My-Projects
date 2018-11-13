@@ -32,6 +32,7 @@
     <Color x:Key="ContentForegroundColor">#444444</Color>
     <SolidColorBrush x:Key="ContentForegroundColorBrush" Color="{StaticResource ContentForegroundColor}"></SolidColorBrush>
 
-
+    <Color x:Key="NormalButtonForeground">#ffffff</Color>
+    <SolidColorBrush x:Key="NormalButtonForegroundBrush" Color="{StaticResource NormalButtonForeground}"/>
 
 </ResourceDictionary>

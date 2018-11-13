@@ -80,27 +80,6 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Accord.3.8.0\lib\net46\Accord.dll</HintPath>
-    </Reference>
-    <Reference Include="Accord.Imaging, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Accord.Imaging.3.8.0\lib\net46\Accord.Imaging.dll</HintPath>
-    </Reference>
-    <Reference Include="Accord.Imaging.Noncommercial, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Accord.Imaging.Noncommercial.3.8.0\lib\net46\Accord.Imaging.Noncommercial.dll</HintPath>
-    </Reference>
-    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Accord.Math.3.8.0\lib\net46\Accord.Math.dll</HintPath>
-    </Reference>
-    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Accord.Math.3.8.0\lib\net46\Accord.Math.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Accord.Statistics.3.8.0\lib\net46\Accord.Statistics.dll</HintPath>
-    </Reference>
-    <Reference Include="FastNotesUpdater">
-      <HintPath>..\FastNotesUpdater\bin\Release\FastNotesUpdater.exe</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Windows.Shell">
       <HintPath>..\FastNotesUpdater\bin\Release\Microsoft.Windows.Shell.dll</HintPath>
     </Reference>
@@ -134,7 +113,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorManager.cs" />
     <Compile Include="ColorPicker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +156,7 @@
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="ColorPicker.resx">
       <DependentUpon>ColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NoteForm.resx">
       <DependentUpon>NoteForm.cs</DependentUpon>
@@ -194,9 +173,11 @@
     </Compile>
     <EmbeddedResource Include="RenameDialog.resx">
       <DependentUpon>RenameDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StartupForm.resx">
       <DependentUpon>StartupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.manifest">
       <SubType>Designer</SubType>
@@ -212,7 +193,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\NovaSquare.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -284,18 +264,39 @@
     <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BuiltInFonts\BuiltInFonts.csproj">
+      <Project>{8cbb2dab-6144-4a33-a56c-f8b7b9ea23ad}</Project>
+      <Name>BuiltInFonts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorManager\ColorManager.csproj">
+      <Project>{e85a1635-fc9c-4c90-9172-a7d39f813c12}</Project>
+      <Name>ColorManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FastNotesUpdater\FastNotesUpdater.csproj">
+      <Project>{67be9a7f-3849-46d7-9098-7a6a52590bbb}</Project>
+      <Name>FastNotesUpdater</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServerLogger\ServerLogger.csproj">
       <Project>{4890da93-6a86-4cbe-aa7f-e21f2451831a}</Project>
       <Name>ServerLogger</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
   </Target>
   <PropertyGroup>
     <PostBuildEvent>
