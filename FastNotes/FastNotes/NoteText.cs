@@ -14,14 +14,6 @@ namespace FastNotes
         public NoteText()
         {
             InitializeComponent();
-            try
-            {
-                Font = new Font(StartupForm.Instance.novaSquare, 12);
-            }
-            catch
-            {
-
-            }
             LinkClicked += NoteText_LinkClicked;
             KeyDown += NoteText_KeyDown;
             KeyPress += NoteText_KeyPress;

@@ -41,30 +41,30 @@ namespace FastNotes
         #endregion
 
         #region Protected Members
-        protected struct SCROLLINFO
-        {
-            public uint cbSize;
-            public uint fMask;
-            public int nMin;
-            public int nMax;
-            public uint nPage;
-            public int nPos;
-            public int nTrackPos;
-        }
 
         #endregion
 
         #region Public Members
-        
+
+        /// <summary>
+        /// Happens when the note is created just after it is painted randomly
+        /// </summary>
+        public event Action OnAfterRandomlyPainted;
+
+        /// <summary>
+        /// Happens when the data is created for the first time (when ndata is null and stops being null)
+        /// </summary>
+        public event Action OnAfterDataCreated;
+
         /// <summary>
         /// Tells how dark (or light) the colors of the note's text will be of the background
         /// </summary>
-        public float TextInverseRelation { set; get; } = 0.9f;
+        public float TextInverseRelation { set; get; } = 0.3f;
         
         /// <summary>
         /// Tells how dark (or light) the colors of the icons on the top bar will be of the topbar
         /// </summary>
-        public float IconInverseRelation { set; get; } = 0.4f;
+        public float IconInverseRelation { set; get; } = 0.3f;
 
         /// <summary>
         /// Tells how dark (or light) the colors of the topbar will be of the background
@@ -89,7 +89,7 @@ namespace FastNotes
             {
                 changed = value;
                 if (changed)
-                    StartupForm.dataSaved = false;
+                    StartupForm.DataSaved = false;
             }
         }
 
@@ -102,7 +102,12 @@ namespace FastNotes
             get
             {
                 if (!changed && ndata != null) return ndata;
-                if (ndata == null) ndata = new NoteData();
+                bool dataCreated = false;
+                if (ndata == null)
+                {
+                    ndata = new NoteData();
+                    dataCreated = true;
+                }
                 ndata.mainColor = textBox.BackColor;
                 ndata.noteSize = new Size(Width, Height);
                 ndata.noteLocation = Location;
@@ -111,6 +116,7 @@ namespace FastNotes
                 ndata.rtbInfo.rtf = textBox.Rtf;
                 ndata.rtbInfo.zoomFactor = textBox.ZoomFactor;
                 ndata.pinned = IsPinned;
+                if (dataCreated) OnAfterDataCreated?.Invoke(); // The data was just created
                 return ndata;
             }
             set
@@ -173,67 +179,16 @@ namespace FastNotes
                     Random r = new Random(DateTime.Now.Millisecond);
                     int rgb = Math.Abs(r.Next(0, 0x1000000)); // Random in [0, 256)
                     PaintNote(Color.FromArgb((rgb & 0xFF0000) >> 16, (rgb & 0xFF00) >> 8, rgb & 0xFF)); // Create and paint our note randomly
+                    OnAfterRandomlyPainted?.Invoke();
                 }
             };
+            
         }
 
         #endregion
 
         #region Private Methods
-
-        /// <summary>
-        /// Gets a color that can be seen given a background
-        /// </summary>
-        /// <param name="backColor"></param>
-        /// <param name="lumRatio"></param>
-        /// <returns></returns>
-        RGB ChooseBetterContrastByLuminance(RGB backColor, float lumRatio)
-        {
-            HSV hsvBackColor = new HSV(backColor);
-            float defaultLum = hsvBackColor.V;
-            hsvBackColor.V += lumRatio;
-            if (hsvBackColor.V > 1) hsvBackColor.V = 1;
-
-            RGB tmpColor1 = new RGB(hsvBackColor);
-
-            hsvBackColor.V = defaultLum - lumRatio;
-            if (hsvBackColor.V < 0) hsvBackColor.V = 0;
-
-            RGB tmpColor2 = new RGB(hsvBackColor);
-
-            RGB tmp = (ContrastRatio(tmpColor1, backColor) > ContrastRatio(backColor, tmpColor2)) ?
-                tmpColor1 :
-                tmpColor2;
-            //MessageBox.Show($"BackColor: ({backColor.Red},{backColor.Green},{backColor.Blue})\n" +
-            //	$"Color1: ({tmpColor1.Red}, {tmpColor1.Green},{tmpColor1.Blue}) ratio -> {ContrastRatio(ref tmpColor1, ref backColor).ToString()}" +
-            //	$"Color2: ({tmpColor2.Red}, {tmpColor2.Green},{tmpColor2.Blue}) ratio -> {ContrastRatio(ref backColor, ref tmpColor2).ToString()}");
-            return tmp;
-        }
-
-        float ContrastRatio(RGB color1, RGB color2)
-        {
-            float r1 = RelativeIuminance(color1);
-            float r2 = RelativeIuminance(color2);
-
-            //MessageBox.Show($"Rel of ({color1.ToString()}) is {r1.ToString()} \nRel of {color2.ToString()} is {r2}");
-            return (Math.Max(r1, r2) + 0.05f) / (Math.Min(r1, r2) + 0.05f);
-        }
-
-        float RelativeIuminanceHelper(float component)
-        {
-
-            return (component <= 0.03928) ? component / 12.92f :
-                (float)Math.Pow((component + 0.055) / 1.055, 2.4f);
-        }
-
-        float RelativeIuminance(RGB color)
-        {
-            float Rg = RelativeIuminanceHelper(color.R / 255f),
-                Gg = RelativeIuminanceHelper(color.G / 255f),
-                Bg = RelativeIuminanceHelper(color.B / 255f);
-            return 0.2126f * Rg + 0.7152f * Gg + 0.0722f * Bg;
-        }
-
+        
         /// <summary>
         /// Implements when it's wanted to change the color of a note
         /// </summary>
@@ -264,8 +219,18 @@ namespace FastNotes
         /// <param name="e"></param>
         private void OnCreateNoteBtnClick(object sender, EventArgs e)
         {
-            Program.CreateNote().Show(Program.startupForm);
-            StartupForm.dataSaved = false; // Let father know there are changes
+            var noteform = (NoteForm) Program.CreateNote();
+            noteform.OnAfterRandomlyPainted += () =>
+            {
+                noteform.Width = this.Width;
+                noteform.Height = this.Height;
+                noteform.textBox.Font = this.textBox.Font;
+                noteform.textBox.ZoomFactor = this.textBox.ZoomFactor;
+                if (this.IsPinned) noteform.PinNote();
+            };
+            noteform.Show(Program.startupForm);
+
+            StartupForm.DataSaved = false; // Let father know there are changes
         }
 
         /// <summary>
@@ -431,7 +396,7 @@ namespace FastNotes
         void RemoveNoteNoDialog()
         {
             Program.availableForms.Remove(thisNode);
-            StartupForm.dataSaved = false; // Let father know there are changes
+            StartupForm.DataSaved = false; // Let father know there are changes
             if (CloseWithTheLastNoteOpened && Program.availableForms.Count == 0)
             {
                 Application.Exit();
@@ -525,24 +490,11 @@ namespace FastNotes
 
         #region Protected Methods
 
-        /// <summary>
-        /// Overriding this does nothing I believe
-        /// </summary>
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                var cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;    // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
+
 
         [DllImport("user32.dll")]
 		protected static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
-		[DllImport("user32.dll")]
-		protected static extern bool GetScrollInfo(IntPtr hwnd, int fnBar, ref SCROLLINFO lpsi);
 
         /// <summary>
         /// Makes the note resizable
@@ -588,17 +540,14 @@ namespace FastNotes
 			RGB textBoxColor = new RGB(color);
 			
 			// Make topbar background color
-			HSV hslTopBarColor = new HSV(textBoxColor);
-			hslTopBarColor.V += (hslTopBarColor.V + TopBarInverseRelation > 1) ? -TopBarInverseRelation : TopBarInverseRelation;
-			RGB rgbTopBarColor = new RGB(hslTopBarColor);
+			HSL hslTopBarColor = new HSL(textBoxColor);
+			hslTopBarColor.L += (hslTopBarColor.L + TopBarInverseRelation > 1) ? -TopBarInverseRelation : TopBarInverseRelation;
+			RGB rgbTopBarColor = ColorManager.ColorManager.ChooseColorByContrastRatio(textBoxColor, TopBarInverseRelation);
 
-			// Make text color
-			HSV hslTextBoxTextColor = new HSV(textBoxColor);
-
-			RGB rgbTextBoxTextColor = ChooseBetterContrastByLuminance(textBoxColor, TextInverseRelation);
+            RGB rgbTextBoxTextColor = ColorManager.ColorManager.ChooseColorByContrastRatio(textBoxColor, TextInverseRelation);
 
 			// Make topbar icon color
-			RGB rgbTopbarTextColor = ChooseBetterContrastByLuminance(rgbTopBarColor, IconInverseRelation);
+			RGB rgbTopbarTextColor = ColorManager.ColorManager.ChooseColorByContrastRatio(textBoxColor, IconInverseRelation);
 			// Backgrund Colors
 			BackColor = rgbTopBarColor.ToColor();
 			topbar.BackColor = rgbTopBarColor.ToColor();

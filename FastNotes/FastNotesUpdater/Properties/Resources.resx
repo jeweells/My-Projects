@@ -121,6 +121,12 @@
   <data name="Microsoft_Windows_Shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\lib\Microsoft.Windows.Shell.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="PickerDot1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PickerDot.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PickerDotCursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PickerDotCursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ServerLogger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\lib\ServerLogger.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

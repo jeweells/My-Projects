@@ -106,6 +106,10 @@
             />
     </WindowChrome.WindowChrome>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="307*"/>
+        </Grid.ColumnDefinitions>
 
     </Grid>
 </Window>

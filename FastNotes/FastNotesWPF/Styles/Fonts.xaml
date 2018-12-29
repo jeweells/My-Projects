@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FastNotes.Styles">
+    <FontFamily x:Key="Trench">/../Fonts/Trench/#Trench</FontFamily>
+    <FontFamily x:Key="Quesha">/../Fonts/Quesha/#Quesha</FontFamily>
+
+    <Style TargetType="{x:Type Control}" x:Key="TrenchStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Quesha}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="TrenchTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Quesha}"/>
+        <Setter Property="FontSize" Value="20"></Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource TrenchStyle}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource TrenchStyle}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource TrenchStyle}" />
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource TrenchStyle}" />
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TrenchTextBlockStyle}" />
+    
+</ResourceDictionary>

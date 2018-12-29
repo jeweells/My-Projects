@@ -1,0 +1,23 @@
+﻿<local:XamlIconBase x:Name="xamlIconBase" x:Class="FastNotes.XamlIcon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FastNotes"
+             mc:Ignorable="d"
+                    Height="{Binding DesiredHeight, ElementName=xamlIconBase, FallbackValue=16}"
+                    Width="{Binding DesiredWidth, ElementName=xamlIconBase, FallbackValue=16}">
+    <local:XamlIconBase.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="GlobalResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </local:XamlIconBase.Resources>
+    <!--<Viewbox Height="{Binding DesiredHeight, FallbackValue=16}" Width="{Binding DesiredWidth, FallbackValue=16}">-->
+    <Canvas Width="{Binding DataWidth, ElementName=xamlIconBase, FallbackValue=24}" Height="{Binding DataHeight, ElementName=xamlIconBase, FallbackValue=24}">
+        <Path Data="{Binding Data, ElementName=xamlIconBase, TargetNullValue=M12\,2A9\,9 0 0\,0 3\,11C3\,14.03 4.53\,16.82 7\,18.47V22H9V19H11V22H13V19H15V22H17V18.46C19.47\,16.81 21\,14 21\,11A9\,9 0 0\,0 12\,2M8\,11A2\,2 0 0\,1 10\,13A2\,2 0 0\,1 8\,15A2\,2 0 0\,1 6\,13A2\,2 0 0\,1 8\,11M16\,11A2\,2 0 0\,1 18\,13A2\,2 0 0\,1 16\,15A2\,2 0 0\,1 14\,13A2\,2 0 0\,1 16\,11M12\,14L13.5\,17H10.5L12\,14Z}" Fill="{Binding FillColor, ElementName=xamlIconBase, TargetNullValue=White}"/>
+        <Path Data="{Binding Data2, ElementName=xamlIconBase}" Fill="{Binding FillColor, ElementName=xamlIconBase, TargetNullValue=White}"/>
+    </Canvas>
+    <!--</Viewbox>-->
+</local:XamlIconBase>

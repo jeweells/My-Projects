@@ -1,0 +1,75 @@
+/* CSS Document */
+
+/* Very frequently the default font */
+@font-face {
+    font-family: 'Quesha';
+    src: url('../fonts/Quesha.ttf');
+}
+
+
+body{
+	background-color:#21546c;
+	color:#d4f1fc;
+	margin:0;
+	font-family:Quesha;
+}
+
+/* Header father */
+header{
+	
+	background-color:rgba(14, 35, 43, 0.25);
+	height: 80px;
+}
+
+/* This is the header length */
+header ~ div{
+	width:1100px;
+}
+
+
+/* Here goes Jeweells */
+.authorText{
+	font-size: 12px;
+	position:relative;
+	top:-6px;
+	left:51px;
+}
+
+/* Here goes FastNotes */
+.productText{
+	font-size: 29px;
+	position:relative;
+	top:-22px;
+	left:50px;
+}
+
+/* Here goes the logo */
+logo{
+	width: 39px;
+	height: 43px;
+	display:block;
+	background-image:url('../images/icon');
+	background-size:cover;
+}
+
+/* These are the items of the navigation bar, such as Home, Contact, etc */
+#navigationBar > div{
+	font-size:18px;
+	padding:20px;
+	margin:0;
+}
+
+p{
+	font-size:30px;
+}
+h1{
+	font-size:72px;
+}
+
+notes{
+	width:502px;
+	height:482px;
+	background-image:url('../images/manynotes');
+	background-size:cover;
+	display: inline-block;
+}

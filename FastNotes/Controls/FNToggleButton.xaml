@@ -1,0 +1,78 @@
+﻿<local:FNToggleButtonBase x:Name="fNToggleButtonBase" x:Class="Controls.FNToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Controls"
+             mc:Ignorable="d" Style="{DynamicResource NoteButton}">
+
+    <local:FNToggleButtonBase.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="GlobalResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </local:FNToggleButtonBase.Resources>
+
+    <local:FNToggleButtonBase.Background>
+        <SolidColorBrush Color="{Binding NormalColor, ElementName=fNToggleButtonBase}" />
+    </local:FNToggleButtonBase.Background>
+
+    <local:FNToggleButtonBase.Triggers>
+        <EventTrigger RoutedEvent="local:FNToggleButtonBase.MouseEnterAfterChecked">
+            <EventTrigger.Actions>
+
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" To="{Binding HoverColor, ElementName=fNToggleButtonBase}" />
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)" To="{Binding HoverForeColor, ElementName=fNToggleButtonBase}" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+
+        <EventTrigger RoutedEvent="local:FNToggleButtonBase.MouseLeaveAfterChecked">
+            <EventTrigger.Actions>
+
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" To="{Binding NormalColor, ElementName=fNToggleButtonBase}" />
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)" To="{Binding NormalForeColor, ElementName=fNToggleButtonBase}" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+
+
+        <EventTrigger RoutedEvent="local:FNToggleButtonBase.ToggleEnter">
+            <EventTrigger.Actions>
+
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" To="{Binding PressedColor, ElementName=fNToggleButtonBase}" />
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)" To="{Binding PressedForeColor, ElementName=fNToggleButtonBase}" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+        <EventTrigger RoutedEvent="local:FNToggleButtonBase.ToggleLeave">
+            <EventTrigger.Actions>
+
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" To="{Binding HoverColor, ElementName=fNToggleButtonBase}" />
+                        <ColorAnimation Duration="0:0:0.3" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)" To="{Binding HoverForeColor, ElementName=fNToggleButtonBase}" />
+
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+
+
+    </local:FNToggleButtonBase.Triggers>
+
+</local:FNToggleButtonBase>

@@ -24,8 +24,8 @@ namespace FastNotes
 		{
 			SetStartColor(startColor);
 
-			selectBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); ;
-			cancelBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); ;
+			selectBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+			cancelBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 			font = customFont;
 			if(font != null)
 			{

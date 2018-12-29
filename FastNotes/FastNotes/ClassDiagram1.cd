@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FastNotes.ColorPicker" Collapsed="true">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EwJAIAFiMKASQBMBAQiAADAKASBhcAABI2QiRQEQAAA=</HashCode>
+      <FileName>ColorPicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.Config" Collapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAA=</HashCode>
+      <FileName>Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.DBPanel" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.Desktop" Collapsed="true">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAEAAAAAAAACQAAAECAACAAAAAAAAAgAA=</HashCode>
+      <FileName>Desktop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.DrawingControl" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAACAAAAAAAAAAAAAAAAAAABBAAAA=</HashCode>
+      <FileName>DrawingControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.NoteData" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAQAAEAAAAAAAQhAAAAAAAAAAA=</HashCode>
+      <FileName>NoteData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.NoteForm" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ShQAMQ8IRChI0sALFOKpgIcaAUYABFgp82A4RbEEoCE=</HashCode>
+      <FileName>NoteForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.NoteText" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACyAAAFAwCAAAAAABSCYEgACAIAAAABEABAAAIAABBA=</HashCode>
+      <FileName>NoteText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.Program" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQAAAAAAAAAIAAEQAAAQAAAAAAAAAAAABEAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.RenameDialog" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAQIBEAAgCAAEEiAAAAEABAAAAAAAAAAAA=</HashCode>
+      <FileName>RenameDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.StartupForm" Collapsed="true">
+    <Position X="1.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgybAAkEQGCQBDdoUh6BgIGSQ4gQqALKQAAFAgAANgE=</HashCode>
+      <FileName>StartupForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.Utilities" Collapsed="true">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.Properties.Resources" Collapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACciAAAAAIAAAAAAgABJMAAAQQAAQAAQAQAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNotes.Properties.Settings" Collapsed="true">
+    <Position X="7" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TopBarActions" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAgAAAAAAACAAAAAAAAAAEAAAAAAAAAAQAAA=</HashCode>
+      <FileName>TopBarActions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

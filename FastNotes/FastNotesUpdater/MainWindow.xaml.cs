@@ -34,7 +34,7 @@ namespace FastNotesUpdater
         string organization = "Jeweells";
         string applicationName = "FastNotes";
 
-        string currentDirectory = Environment.CurrentDirectory;
+        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
         /// <summary>
         /// Helps calculate the speed, time, etc related to the transfer
@@ -132,7 +132,7 @@ namespace FastNotesUpdater
             if (((int)currentCommands & (int) Commands.Update) == (int) Commands.Update)
             {
                 // Update method
-                CurrentDirectory = Environment.CurrentDirectory;
+                CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 // When this form is loaded do this
                 Loaded += (x, y) =>
                 {

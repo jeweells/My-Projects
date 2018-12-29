@@ -74,10 +74,11 @@
             this.topbar.Controls.Add(this.moreBtn);
             this.topbar.Controls.Add(this.closeBtn);
             this.topbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topbar.Location = new System.Drawing.Point(2, 2);
+            this.topbar.Location = new System.Drawing.Point(4, 4);
+            this.topbar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.topbar.Name = "topbar";
-            this.topbar.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.topbar.Size = new System.Drawing.Size(206, 35);
+            this.topbar.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.topbar.Size = new System.Drawing.Size(230, 35);
             this.topbar.TabIndex = 1;
             this.topbar.TabStop = true;
             this.topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnTouchBarPressed);
@@ -88,9 +89,9 @@
             this.pinBtn.FlatAppearance.BorderSize = 0;
             this.pinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pinBtn.Image = global::FastNotes.Properties.Resources.fixedIcons_0006_pin;
-            this.pinBtn.Location = new System.Drawing.Point(94, 0);
+            this.pinBtn.Location = new System.Drawing.Point(118, 0);
             this.pinBtn.Name = "pinBtn";
-            this.pinBtn.Size = new System.Drawing.Size(28, 33);
+            this.pinBtn.Size = new System.Drawing.Size(28, 31);
             this.pinBtn.TabIndex = 6;
             this.pinBtn.TabStop = false;
             this.pinBtn.UseVisualStyleBackColor = true;
@@ -102,9 +103,9 @@
             this.fontBtn.FlatAppearance.BorderSize = 0;
             this.fontBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fontBtn.Image = global::FastNotes.Properties.Resources.fixedIcons_0004_font;
-            this.fontBtn.Location = new System.Drawing.Point(122, 0);
+            this.fontBtn.Location = new System.Drawing.Point(146, 0);
             this.fontBtn.Name = "fontBtn";
-            this.fontBtn.Size = new System.Drawing.Size(28, 33);
+            this.fontBtn.Size = new System.Drawing.Size(28, 31);
             this.fontBtn.TabIndex = 5;
             this.fontBtn.TabStop = false;
             this.fontBtn.UseVisualStyleBackColor = true;
@@ -118,7 +119,7 @@
             this.addNoteBtn.Image = global::FastNotes.Properties.Resources.fixedIcons_0007_add;
             this.addNoteBtn.Location = new System.Drawing.Point(0, 0);
             this.addNoteBtn.Name = "addNoteBtn";
-            this.addNoteBtn.Size = new System.Drawing.Size(28, 33);
+            this.addNoteBtn.Size = new System.Drawing.Size(29, 31);
             this.addNoteBtn.TabIndex = 2;
             this.addNoteBtn.TabStop = false;
             this.addNoteBtn.UseVisualStyleBackColor = true;
@@ -130,9 +131,9 @@
             this.moreBtn.FlatAppearance.BorderSize = 0;
             this.moreBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.moreBtn.Image = global::FastNotes.Properties.Resources.fixedIcons_0000_colorPicker2;
-            this.moreBtn.Location = new System.Drawing.Point(150, 0);
+            this.moreBtn.Location = new System.Drawing.Point(174, 0);
             this.moreBtn.Name = "moreBtn";
-            this.moreBtn.Size = new System.Drawing.Size(28, 33);
+            this.moreBtn.Size = new System.Drawing.Size(28, 31);
             this.moreBtn.TabIndex = 3;
             this.moreBtn.TabStop = false;
             this.moreBtn.UseVisualStyleBackColor = true;
@@ -144,10 +145,10 @@
             this.closeBtn.FlatAppearance.BorderSize = 0;
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Image = global::FastNotes.Properties.Resources.fixedIcons_0002_trash;
-            this.closeBtn.Location = new System.Drawing.Point(178, 0);
+            this.closeBtn.Location = new System.Drawing.Point(202, 0);
             this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(28, 33);
+            this.closeBtn.Size = new System.Drawing.Size(28, 31);
             this.closeBtn.TabIndex = 4;
             this.closeBtn.TabStop = false;
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -157,9 +158,9 @@
             // 
             this.panel2.Controls.Add(this.textBoxPanel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(2, 37);
+            this.panel2.Location = new System.Drawing.Point(4, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 191);
+            this.panel2.Size = new System.Drawing.Size(230, 232);
             this.panel2.TabIndex = 2;
             // 
             // textBoxPanel
@@ -167,9 +168,10 @@
             this.textBoxPanel.Controls.Add(this.textBox);
             this.textBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxPanel.Location = new System.Drawing.Point(0, 0);
+            this.textBoxPanel.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.textBoxPanel.Name = "textBoxPanel";
             this.textBoxPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.textBoxPanel.Size = new System.Drawing.Size(206, 191);
+            this.textBoxPanel.Size = new System.Drawing.Size(230, 232);
             this.textBoxPanel.TabIndex = 1;
             this.textBoxPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -184,7 +186,7 @@
             this.textBox.Location = new System.Drawing.Point(5, 5);
             this.textBox.Name = "textBox";
             this.textBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(196, 181);
+            this.textBox.Size = new System.Drawing.Size(220, 222);
             this.textBox.TabIndex = 1;
             this.textBox.Text = "";
             this.textBox.TextChanged += new System.EventHandler(this.OnNoteContentChanged);
@@ -339,17 +341,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(210, 230);
+            this.ClientSize = new System.Drawing.Size(238, 275);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.topbar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NoteForm";
-            this.Padding = new System.Windows.Forms.Padding(2);
-            this.ShowIcon = false;
+            this.Padding = new System.Windows.Forms.Padding(4);
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Note";

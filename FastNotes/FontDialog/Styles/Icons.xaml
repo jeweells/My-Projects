@@ -1,0 +1,84 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FontDialog.Styles"
+                    xmlns:global="clr-namespace:FontDialog"
+                    xmlns:fn="clr-namespace:FastNotes">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    
+    <!-- Maximize Icon -->
+    <Viewbox  x:Key="MaximizeIcon" Width="16" Height="16">
+        <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path Data="M4,4H20V20H4V4M6,8V18H18V8H6Z" Fill="White" />
+        </Canvas>
+    </Viewbox>
+
+    <!-- Minimize Icon -->
+    <Viewbox  x:Key="MinimizeIcon" Width="16" Height="16">
+        <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path Data="M20,14H4V10H20" Fill="White" />
+        </Canvas>
+    </Viewbox>
+
+    <!-- Close icon -->
+    <Viewbox  x:Key="CloseIcon" Width="16" Height="16">
+        <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" Fill="White" />
+        </Canvas>
+    </Viewbox>
+
+
+    <!-- App Logo -->
+    <Viewbox x:Key="logoIcon"  Width="16" Height="16">
+        <Grid>
+            <Path Data="M169,371L244,291 300,330 308,318 300,271 347,191 372,192 379,183 265,106 258,115 270,139 212,212 164,222 157,233 214,272z M351,491L466,385 467,22 69,22 67,490z" Fill="{StaticResource LogoColorVeryLightBrush}"/>
+            <Path Data="M316.257,140.621L265,106 258,115 270,139 268.807,140.5 69,140 69,22 467,22 467,141z M268.807,140.502L316.257,140.621 M351,491L351,385 466,385z" Fill="{StaticResource LogoColorLightBrush}"/>
+        </Grid>
+    </Viewbox>
+
+    <!-- Bold Icon -->
+    <Style x:Key="BoldIconStyle" TargetType="{x:Type fn:XamlIcon}">
+        <Setter Property="DesiredHeight" Value="16"/>
+        <Setter Property="DesiredWidth" Value="16"/>
+        <Setter Property="DataHeight" Value="24"/>
+        <Setter Property="DataWidth" Value="24"/>
+        <Setter Property="Data" Value="M13.5,15.5H10V12.5H13.5A1.5,1.5 0 0,1 15,14A1.5,1.5 0 0,1 13.5,15.5M10,6.5H13A1.5,1.5 0 0,1 14.5,8A1.5,1.5 0 0,1 13,9.5H10M15.6,10.79C16.57,10.11 17.25,9 17.25,8C17.25,5.74 15.5,4 13.25,4H7V18H14.04C16.14,18 17.75,16.3 17.75,14.21C17.75,12.69 16.89,11.39 15.6,10.79Z"/>
+
+    </Style>
+
+
+    <!-- Itallic Icon -->
+    <Style x:Key="ItalicIconStyle" TargetType="{x:Type fn:XamlIcon}">
+        <Setter Property="DesiredHeight" Value="16"/>
+        <Setter Property="DesiredWidth" Value="16"/>
+        <Setter Property="DataHeight" Value="24"/>
+        <Setter Property="DataWidth" Value="24"/>
+        <Setter Property="Data" Value="M10,4V7H12.21L8.79,15H6V18H14V15H11.79L15.21,7H18V4H10Z"/>
+
+    </Style>
+
+    <!-- Strikethrough Icon -->
+    <Style x:Key="StrikethroughIconStyle" TargetType="{x:Type fn:XamlIcon}">
+        <Setter Property="DesiredHeight" Value="16"/>
+        <Setter Property="DesiredWidth" Value="16"/>
+        <Setter Property="DataHeight" Value="24"/>
+        <Setter Property="DataWidth" Value="24"/>
+        <Setter Property="Data" Value="M3,14H21V12H3M5,4V7H10V10H14V7H19V4M10,19H14V16H10V19Z"/>
+
+    </Style>
+
+    <!-- Underline Icon -->
+    <Style x:Key="UnderlineIconStyle" TargetType="{x:Type fn:XamlIcon}">
+        <Setter Property="DesiredHeight" Value="16"/>
+        <Setter Property="DesiredWidth" Value="16"/>
+        <Setter Property="DataHeight" Value="24"/>
+        <Setter Property="DataWidth" Value="24"/>
+        <Setter Property="Data" Value="M5,21H19V19H5V21M12,17A6,6 0 0,0 18,11V3H15.5V11A3.5,3.5 0 0,1 12,14.5A3.5,3.5 0 0,1 8.5,11V3H6V11A6,6 0 0,0 12,17Z"/>
+
+    </Style>
+
+
+</ResourceDictionary>

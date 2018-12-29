@@ -35,7 +35,8 @@ namespace FastNotes
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.desktopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DesktopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAllDesktopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,7 +45,6 @@ namespace FastNotes
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.runAtStartupContextMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,25 +65,32 @@ namespace FastNotes
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
-            this.desktopsToolStripMenuItem,
+            this.DesktopsToolStripMenuItem,
             this.runAtStartupContextMenuStrip,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 92);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // desktopsToolStripMenuItem
+            // updateToolStripMenuItem
             // 
-            this.desktopsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // DesktopsToolStripMenuItem
+            // 
+            this.DesktopsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newDesktopToolStripMenuItem,
             this.deleteAllDesktopsToolStripMenuItem,
             this.toolStripSeparator1,
             this.importDesktopToolStripMenuItem,
             this.exportAllDesktopsToolStripMenuItem,
             this.toolStripSeparator2});
-            this.desktopsToolStripMenuItem.Name = "desktopsToolStripMenuItem";
-            this.desktopsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.desktopsToolStripMenuItem.Text = "Desktops";
+            this.DesktopsToolStripMenuItem.Name = "DesktopsToolStripMenuItem";
+            this.DesktopsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.DesktopsToolStripMenuItem.Text = "Desktops";
             // 
             // newDesktopToolStripMenuItem
             // 
@@ -128,23 +135,16 @@ namespace FastNotes
             this.runAtStartupContextMenuStrip.Checked = true;
             this.runAtStartupContextMenuStrip.CheckState = System.Windows.Forms.CheckState.Checked;
             this.runAtStartupContextMenuStrip.Name = "runAtStartupContextMenuStrip";
-            this.runAtStartupContextMenuStrip.Size = new System.Drawing.Size(180, 22);
+            this.runAtStartupContextMenuStrip.Size = new System.Drawing.Size(148, 22);
             this.runAtStartupContextMenuStrip.Text = "Run at startup";
             this.runAtStartupContextMenuStrip.Click += new System.EventHandler(this.runAtStartupContextMenuStrip_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // StartupForm
             // 
@@ -183,7 +183,7 @@ namespace FastNotes
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem runAtStartupContextMenuStrip;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem desktopsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DesktopsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newDesktopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteAllDesktopsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

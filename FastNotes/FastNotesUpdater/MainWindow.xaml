@@ -84,7 +84,7 @@
                                         </StackPanel>
                                     </Grid>
                                     <!-- Page content -->
-                                    <Border Grid.Row="1" Padding="15 0 15 0"  Background="{StaticResource ContentBackgroundColorBrush}" CornerRadius="{Binding WindowCornerRadiusBRBL}" BorderThickness="{Binding ContentBorderThickness}" BorderBrush="{StaticResource MainColorDarkBrush}">
+                                    <Border Grid.Row="1" Padding="15 0 15 0"  Background="{StaticResource ContentBackgroundColorBrush}" CornerRadius="{Binding WindowCornerRadiusBRBL}" BorderThickness="0" BorderBrush="{StaticResource MainColorDarkBrush}">
                                         <ContentPresenter Content="{TemplateBinding Content}"/>
                                     </Border>
 
@@ -99,26 +99,30 @@
     <WindowChrome.WindowChrome>
         <WindowChrome 
             ResizeBorderThickness="{Binding ResizeBorderThickness}"
-            CaptionHeight="{Binding TittleHeight, FallbackValue={StaticResource TitleBarDefaultHeight}}"
+            CaptionHeight="{Binding TitleHeight, FallbackValue={StaticResource TitleBarDefaultHeight}}"
             GlassFrameThickness="0"
             CornerRadius="0"
             />
     </WindowChrome.WindowChrome>
     <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="439*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <!-- Row 0 -->
-        <Grid x:Name="logInfoRow" Grid.Row="0" Height="50" VerticalAlignment="Center">
+        <Grid x:Name="logInfoRow" Grid.Row="0" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <TextBlock x:Name="logLabel"  TextWrapping="Wrap" VerticalAlignment="Center" />
         </Grid>
         <!-- End Row 0 -->
-        
+
         <!-- Row 1 -->
-        <local:LoadingBar x:Name="loadingBar" Grid.Row="1" Height="50" />
-        <Grid Grid.Row="1" x:Name="folderPickerRow">
+        <local:LoadingBar x:Name="loadingBar" Grid.Row="1" Height="50" Grid.ColumnSpan="2" />
+        <Grid Grid.Row="1" x:Name="folderPickerRow" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="Auto" />
@@ -127,16 +131,16 @@
             <Button x:Name="chooseBtn" Style="{StaticResource NormalButton}" Grid.Column="1" Margin="10 0 0 0" Content="Choose" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
         <!-- End Row 1 -->
-        
+
         <!-- Row 2 -->
-        <Grid x:Name="downloadInfoRow"  Grid.Row="2" Height="50">
+        <Grid x:Name="downloadInfoRow"  Grid.Row="2" Height="50" Grid.ColumnSpan="2" Margin="0,5">
             <TextBlock  x:Name="downloadSpeed" TextWrapping="Wrap" VerticalAlignment="Center" />
         </Grid>
 
-        <Grid Grid.Row="2" x:Name="installButtonRow">
+        <Grid Grid.Row="2" x:Name="installButtonRow" Grid.ColumnSpan="2">
             <Button x:Name="installBtn" Margin="15" Style="{StaticResource NormalButton}" Content="Install" HorizontalAlignment="Center" />
         </Grid>
-        <Grid Grid.Row="2" x:Name="openFastNotesButtonRow">
+        <Grid Grid.Row="2" x:Name="openFastNotesButtonRow" Grid.ColumnSpan="2">
             <Button x:Name="openFastNotesButton" Margin="15" Style="{StaticResource NormalButton}" Content="Open FastNotes" HorizontalAlignment="Center" />
         </Grid>
 

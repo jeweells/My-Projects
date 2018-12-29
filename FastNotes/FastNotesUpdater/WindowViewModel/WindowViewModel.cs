@@ -186,6 +186,7 @@ namespace FastNotesUpdater
         #region Constructor
         public WindowViewModel(Window window)
         {
+           
             this.window = window;
             this.window.StateChanged += (sender, e) =>
             {

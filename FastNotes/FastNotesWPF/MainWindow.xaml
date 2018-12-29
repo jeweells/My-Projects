@@ -1,0 +1,139 @@
+﻿<Window x:Class="FastNotes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastNotes"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:cv="clr-namespace:FastNotes.Converters"
+        xmlns:c="clr-namespace:Controls;assembly=Controls"
+        mc:Ignorable="d"
+        x:Name="window"
+        Title="FastNotes" Height="450" Width="800" Opacity="0" AllowsTransparency="True" WindowStyle="None" WindowState="Maximized" 
+        Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <cv:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
+            <Style TargetType="{x:Type Separator}" BasedOn="{DynamicResource FNSeparator}" />
+
+            <Style x:Key="MenuItemTextBox" TargetType="TextBox">
+                <Setter Property="IsTabStop" Value="False" />
+                <Setter Property="CaretBrush" Value="White" />
+                <Setter Property="SelectionBrush" Value="White" />
+                <Setter Property="FontFamily" Value="{StaticResource Quesha}" />
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="OverridesDefaultStyle" Value="True" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <ScrollViewer BorderThickness="0" FocusVisualStyle="{x:Null}" IsTabStop="False" BorderBrush="Transparent" Margin="0" Padding="0" x:Name="PART_ContentHost"/>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="TextDecorations" Value="None" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="True">
+                                    <Setter Property="TextDecorations" Value="Underline" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+
+                </Setter>
+            </Style>
+
+
+            <Style x:Key="MenuItemEditable" TargetType="{x:Type c:HighlightableMenuItem}" BasedOn="{StaticResource CommonMenuItem}">
+                <Setter Property="HeaderTemplate">
+                    <Setter.Value>
+                        <DataTemplate DataType="{x:Type TextBox}">
+                            <Grid HorizontalAlignment="Stretch">
+                                <ContentControl Content="{Binding}">
+                                    <ContentControl.Visibility>
+                                        <Binding Path="IsEnabled" Converter="{StaticResource BoolVisibilityConverter}">
+                                            <Binding.ConverterParameter>
+                                                <sys:Boolean>false</sys:Boolean>
+                                            </Binding.ConverterParameter>
+                                        </Binding>
+                                    </ContentControl.Visibility>
+                                </ContentControl>
+                                <TextBox Text="{Binding Text}" Style="{Binding Style}" IsEnabled="False">
+                                    <TextBox.Visibility>
+                                        <Binding Path="IsEnabled" Converter="{StaticResource BoolVisibilityConverter}">
+                                            <Binding.ConverterParameter>
+                                                <sys:Boolean>true</sys:Boolean>
+                                            </Binding.ConverterParameter>
+                                        </Binding>
+                                    </TextBox.Visibility>
+                                </TextBox>
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ContextMenus.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid x:Name="ContentGrid" Focusable="True" >
+        <tb:TaskbarIcon x:Name="NotifyIcon"
+                    Visibility="Visible"
+                    IconSource="icon.ico"
+                    MenuActivation="RightClick" TrayLeftMouseDown="NotifyIcon_TrayLeftMouseDown" >
+            <tb:TaskbarIcon.ContextMenu  >
+                <ContextMenu Style="{StaticResource FNMenu}" x:Name="NotifyContextMenu" >
+                    <c:HighlightableMenuItem Icon="{StaticResource UpdateIcon}" Header="Update" Click="Update_MenuItemClick" />
+
+
+                    <c:HighlightableMenuItem x:Name="DesktopsItemContainer" Icon="{StaticResource DesktopIcon}" StaysOpenOnClick="True" Header="Desktops">
+                        <!-- Desktop modifiers -->
+                        <c:HighlightableMenuItem Icon="{StaticResource AddDesktopIcon}" Header="New desktop" StaysOpenOnClick="True" Click="NewDesktop_MenuItemClick" />
+                        <c:HighlightableMenuItem Icon="{StaticResource DeleteAllDesktopsIcon}" Header="Delete all desktops" Click="DeleteAllDesktops_MenuItemClick" />
+                        <Separator Style="{StaticResource FNSeparator}"/>
+                        <c:HighlightableMenuItem Icon="{StaticResource ImportDataInDestkopIcon}" Header="Import desktops" Click="ImportDesktops_MenuItemClick" />
+                        <c:HighlightableMenuItem Icon="{StaticResource ExportDataIcon}" Header="Export all desktops" Click="ExportAllDesktops_MenuItemClick" />
+                        <Separator Style="{StaticResource FNSeparator}"/>
+
+                        <!-- End Desktop modifiers -->
+                    </c:HighlightableMenuItem>
+
+
+
+                    <c:HighlightableMenuItem x:Uid="SettingsMenuItem" Icon="{StaticResource SettingsIcon}" Header="Settings" >
+                        <c:HighlightableMenuItem x:Uid="RunAtStartupMenuItem" Header="Run at startup" Click="RunAtStartup_MenuItemClick" />
+                        <c:HighlightableMenuItem x:Uid="AutomaticallyHideOnBar" Header="Automatically hide on bar" Click="AutomacaticallyHideOnBar_MenuItemClick" />
+                        <c:HighlightableMenuItem x:Uid="askWhenClosingANote" Header="Ask when closing a note" Click="AskWhenClosingANote_MenuItemClick" />
+                    </c:HighlightableMenuItem>
+                    
+                    <c:HighlightableMenuItem x:Uid="ShowHideItem" Icon="{StaticResource EyeOff}"  Header="Hide" Click="HideShow_MenuItemClick" />
+
+                    <c:HighlightableMenuItem Icon="{StaticResource ExitIcon}" Header="Exit" Click="Exit_MenuItemClick" />
+                </ContextMenu>
+            
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+
+
+        <!--<Popup x:Name="NotifyIconPopup" IsOpen="False" Placement="Mouse" LostFocus="NotifyIconPopup_LostFocus">
+            <StackPanel>
+                <TextBlock Name="McTextBlock"   
+             Background="LightBlue" >  
+            This is popup text
+                </TextBlock>
+                <Button Content="This is button on a Pupup" />
+            </StackPanel>
+        </Popup>-->
+    </Grid>
+</Window>

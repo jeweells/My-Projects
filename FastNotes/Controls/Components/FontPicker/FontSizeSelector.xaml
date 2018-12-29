@@ -1,0 +1,34 @@
+﻿<local:FontSizeSelectorBase x:Name="userControl" x:Class="Controls.Components.FontPicker.FontSizeSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Controls.Components.FontPicker"
+             mc:Ignorable="d" Width="70" Height="Auto"
+                  IsEditable="True"
+                            SelectedIndex="5"
+                            Text="{Binding SelectedFontSize, Mode=TwoWay, FallbackValue=14}">
+    <local:FontSizeSelectorBase.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Controls;component/GlobalResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </local:FontSizeSelectorBase.Resources>
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="8" Text="8" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="9" Text="9" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="10" Text="10" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="11" Text="11" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="12" Text="12" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="14" Text="14" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="16" Text="16" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="18" Text="18" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="22" Text="20" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="22" Text="22" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="24" Text="24" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="26" Text="26" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="28" Text="28" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="36" Text="36" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="48" Text="48" />
+    <TextBlock  FontFamily="{Binding SelectedFontFamily}"  FontSize="72" Text="72" />
+</local:FontSizeSelectorBase>

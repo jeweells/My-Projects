@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -142,6 +143,11 @@ namespace ServerLogger
                         newestVersion = sr.ReadLine();
                     }
                 }
+            }
+            if(!Regex.Match(version, "^[0-9]+.[0-9]+.[0-9]+.[0-9]+$").Success)
+            { // Can be an error with the server
+                newestVersion = version;
+                return true;
             }
             if (newestVersion == version)
             {

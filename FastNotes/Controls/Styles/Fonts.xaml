@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Controls.Styles">
+    <FontFamily x:Key="Trench">/Controls;component/Fonts/Trench/#Trench</FontFamily>
+    <FontFamily x:Key="Quesha">/Controls;component/Fonts/Quesha/#Quesha</FontFamily>
+    <FontFamily x:Key="Zekton">/Controls;component/Fonts/Zekton/#Zekton Rg</FontFamily>
+    <FontFamily x:Key="Roboto">/Controls;component/Fonts/Roboto/#Roboto</FontFamily>
+
+    <Style TargetType="{x:Type Control}" x:Key="TrenchStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Trench}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="TrenchTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Trench}"/>
+        <Setter Property="FontSize" Value="20"></Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type Control}" x:Key="QueshaStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Quesha}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="QueshaTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Quesha}"/>
+        <Setter Property="FontSize" Value="18"></Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type Control}" x:Key="ZektonStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Zekton}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="ZektonTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Zekton}"/>
+        <Setter Property="FontSize" Value="12"></Setter>
+    </Style>
+
+
+
+
+    <Style TargetType="{x:Type Control}" x:Key="RobotoStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Zekton}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="RobotoTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="12"></Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource QueshaStyle}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource QueshaStyle}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource QueshaStyle}" />
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource QueshaStyle}" />
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource QueshaTextBlockStyle}" />
+    
+</ResourceDictionary>

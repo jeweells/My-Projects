@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FontDialog.Styles">
+    <Color x:Key="MainColorDark">#0e232b</Color>
+    <SolidColorBrush x:Key="MainColorDarkBrush" Color="{DynamicResource MainColorDark}"></SolidColorBrush>
+    
+    <Color x:Key="MainColorLight">#235569</Color>
+    <SolidColorBrush x:Key="MainColorLightBrush" Color="{DynamicResource MainColorLight}"></SolidColorBrush>
+    
+   
+    <Color x:Key="MainColorVeryLight">#357f9e</Color>
+    <SolidColorBrush x:Key="MainColorVeryLightBrush" Color="{DynamicResource MainColorVeryLight}"></SolidColorBrush>
+
+    <Color x:Key="CommonText">#ffffff</Color>
+    <SolidColorBrush x:Key="CommonTextBrush" Color="{DynamicResource CommonText}" />
+
+    <Color x:Key="TitleText">#ffffff</Color>
+    <SolidColorBrush x:Key="TitleTextBrush" Color="{DynamicResource TitleText}" />
+
+
+
+    <Color x:Key="LogoColorVeryLight">#357f9e</Color>
+    <SolidColorBrush x:Key="LogoColorVeryLightBrush" Color="{DynamicResource LogoColorVeryLight}"></SolidColorBrush>
+    
+    <Color x:Key="LogoColorLight">#235569</Color>
+    <SolidColorBrush x:Key="LogoColorLightBrush" Color="{DynamicResource LogoColorLight}"></SolidColorBrush>
+
+
+    <Color x:Key="ContentBackgroundColor">#ffffff</Color>
+    <SolidColorBrush x:Key="ContentBackgroundColorBrush" Color="{DynamicResource ContentBackgroundColor}"></SolidColorBrush>
+   
+    <Color x:Key="ContentForegroundColor">#444444</Color>
+    <SolidColorBrush x:Key="ContentForegroundColorBrush" Color="{DynamicResource ContentForegroundColor}"></SolidColorBrush>
+
+    <Color x:Key="NormalButtonForeground">#ffffff</Color>
+    <SolidColorBrush x:Key="NormalButtonForegroundBrush" Color="{DynamicResource NormalButtonForeground}"/>
+
+</ResourceDictionary>
